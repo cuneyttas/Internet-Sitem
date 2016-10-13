@@ -86,13 +86,16 @@ function tema_solSutun() {
 // Menü fonksiyonu başı
 function tema_menu($sayfa) {
 
+	$siteIsmi = htmlspecialchars($_SERVER["HTTP_HOST"]);
+	$anasayfaBaglantisi = $siteIsmi == "localhost" ? "/cuneyttas/" : "/";
+
 ?>
 
 <nav class="menu satir">
 
 <ul class="sutun-12">
 
-	<li><a class="<?php if ($sayfa == "Anasayfa" ) echo "aktif" ?>" href="index.php"><i class="fa fa-user fa-3x menu-ikon"></i><br>Profil</a></li>
+	<li><a class="<?php if ($sayfa == "Anasayfa" ) echo "aktif" ?>" href="<?= $anasayfaBaglantisi ?>"><i class="fa fa-user fa-3x menu-ikon"></i><br>Profil</a></li>
 	<li><a class="<?php if ($sayfa == "Özgeçmiş" ) echo "aktif" ?>" href="ozgecmis.php"><i class="fa fa-file-text fa-3x menu-ikon"></i><br>Özgeçmiş</a></li>
 	<li><a class="<?php if ($sayfa == "Galeri" ) echo "aktif" ?>" href="galeri.php"><i class="fa fa-picture-o fa-3x menu-ikon"></i><br>Galeri</a></li>
 	<li><a class="<?php if ($sayfa == "Blog" ) echo "aktif" ?>" href="blog.php"><i class="fa fa-commenting fa-3x menu-ikon"></i><br>Blog</a></li>
