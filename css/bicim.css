@@ -1,0 +1,872 @@
+html, body {
+
+	margin: 0;
+	padding: 0;
+	height: 100%;
+
+}
+
+body {
+
+	background-color: #ECE9E7;
+	background-image: url("../resim/arkaplan.png");
+	font-family: Ubuntu, sans-serif;
+}
+
+hr.cizgi {
+
+	border-color: #39AAE0;
+    margin: 0;
+    border-top: 0;
+    margin-bottom: 10px;
+
+}
+
+
+.temizle {
+
+	clear: both;
+
+}
+
+a {
+
+	text-decoration: none;
+
+}
+
+div.ana {
+
+	margin: 0 auto;
+	width: 1200px;
+	height: 100%;
+	overflow-x: hidden;
+
+}
+
+
+section.solSutun {
+
+	height: 100%;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+
+}
+
+div.maviAlan {
+
+	height: 100%;
+	background-color: #2288BB;
+	position: relative;
+	padding: 30px;
+
+}
+
+img.cuneyt {
+
+	background-color: #3399CC;
+    border: 1px solid #5FCCFF;
+    padding: 10%;
+    width: 100%;
+
+}
+
+div.bilgi {
+
+	margin-top: 30px;
+
+}
+
+
+div.bilgi h1.isim {
+
+	font-size: 25.6px;
+	color: white;
+	margin: 0;
+
+}
+
+div.bilgi p.tanitim {
+
+	font-size: .9em;
+    color: #5FCCFF;
+    line-height: 18px;
+
+}
+
+div.bilgi p.baslik {
+
+	font-size: 1em;
+	line-height: 1.5em;
+	color: white;
+	margin: 0;
+
+}
+
+div.sosyal {
+
+	width: 100%;
+    bottom: 0;
+    position: absolute;
+    margin-left: -30px;
+    padding: 30px;
+
+}
+
+div.sosyal span {
+
+    margin: 0;
+	font-size: 1em;
+	line-height: 1.5em;
+	color: white;
+
+}
+
+div.sosyal a {
+
+	text-align: center;
+	width: 100%;
+    display: block;
+
+}
+
+div.sosyal a img {
+
+	max-width: 100%;
+
+}
+
+section.sagSutun {
+
+	position: relative;
+	height: 100%;
+
+}
+
+nav.menu {
+
+	margin-bottom: 30px;
+
+}
+
+
+i.menu-ikon {
+
+	margin-top: 18px;
+	margin-bottom: 5px
+
+}
+
+
+nav.menu > ul {
+
+
+	padding: 0px;
+	list-style-type: none;
+	margin: 0px;
+
+
+}
+
+nav.menu > ul > li {
+
+	font-size: .9em;
+    color: #5FCCFF;
+    line-height: 18px;
+	float: left;
+	text-align: center;
+	width: 102px;
+	margin: 0px;
+	padding: 0px;
+	margin-right: 30px;
+
+}
+
+nav.menu > ul > li:last-child {
+
+	float: right;
+	margin-right: 0;
+
+}
+
+nav.menu > ul > li > a {
+
+	color: #3399CC;
+	background-color: rgba(241, 254, 255, 0.91);
+	border: 1px solid;
+	border-color: #5FCCFF;
+	height: 100px;
+	width: 100%;
+	padding: 0px;
+	text-align: center;
+	display: block;
+
+}
+
+nav.menu > ul > li > a.aktif {
+
+	background-color: #3399CC;
+    color: white;
+
+}
+
+
+nav.menu > ul > li > a:hover {
+
+    background-color: #6BB4D7;
+    color: white;
+    border-color: white;
+
+}
+
+nav.menu li.acMenu > ul {
+
+	position: absolute;
+	z-index: 10;
+	right: 30px;
+	display: none;
+
+}
+
+li.acMenu > ul > li {
+
+	padding: 0;
+	background-color: #F0FCFD;
+	border-left: 1px solid #5FCCFF;
+	border-right: 1px solid #5FCCFF;
+	border-top: 1px solid #5FCCFF;
+
+}
+
+li.acMenu > ul > li:last-child{
+
+	border-bottom: 1px solid #5FCCFF;
+
+}
+
+li.acMenu > ul > li:hover {
+
+	background-color: #6BB4D7;
+
+}
+
+li.acMenu > ul > li > a{
+
+	color: #3399CC;
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding: 10px;
+
+}
+
+li.acMenu > ul > li > a:hover{
+
+	color: white;
+
+}
+
+div.icerik {
+
+    border: 1px solid #2288BC;
+    background-color: white;
+    position: absolute;
+    top: 160px;
+    bottom: 30px;
+    right: 30px;
+    left: 30px;
+    overflow-y: scroll;
+
+}
+
+h2 {
+
+	color: #44AADD;
+	font-size: 1.3em;
+	line-height: 1em;
+	margin: 0px;
+	font-weight: inherit;
+	border-bottom: 1px solid #44AADD;
+	padding-bottom: 6px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+
+}
+
+a {
+
+	color: #44AADD;
+
+}
+
+div.icerik h2:first-child {
+
+	margin-top: 0;
+
+}
+
+ul {
+
+	list-style: none;
+	padding: 0px;
+
+}
+
+ul.hakkimda > li {
+
+	margin: 0px;
+	padding: 5px 10px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-color: #55AADD;
+    font-size: .8em;
+}
+
+label {
+
+	color: #55AADD;
+
+}
+
+label.hakBaslik, span.hakBilgi {
+
+	padding: 0;
+
+}
+
+div.icerik p {
+
+	color: #666666;
+	font-size: .9em;
+    line-height: 1.3em;
+    margin: 10px 0 0;
+
+}
+
+span.yazar {
+
+	color: #39C;
+    font-size: .9em;
+    margin: 10px 0 0;
+    display: block;
+}
+
+img.anaResim {
+
+	height: auto;
+	max-width: 100%;
+	margin: 0 auto;
+    display: block;
+
+}
+
+div.altKisim {
+
+	position: absolute;
+    bottom: 0;
+    height: 30px;
+    right: 30px;
+
+}
+
+footer {
+
+    text-align: right;
+    font-size: .7em;
+    line-height: 30px;
+    padding: 0 !important;
+
+}
+
+footer p {
+
+	margin: 0;
+
+}
+
+ul.basliklar {
+
+	background: 0 0;
+    margin: 15px 0 30px;
+    padding: 0 0 1px;
+
+}
+
+h3.baslik, span.periyot {
+
+	padding: 0;
+
+}
+
+ul.basliklar > li {
+
+	margin: 10px 0 0;
+    padding: 8px 10px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #44AADD;
+    border-bottom: 3px solid #E9E9E9;
+    font-size: .8em;
+
+}
+
+h3 {
+    color: #636262;
+    font-size: 17.5px;
+}
+
+h3.baslik {
+
+	font-size: 1.2em;
+    line-height: 1em;
+    margin-bottom: 5px;
+    font-weight: inherit;
+    margin-top: 0px;
+
+}
+
+span.periyot {
+
+	float: right;
+    color: #999;
+	font-size: 11px;
+	text-align: right;
+
+}
+
+h4.isAdi {
+
+	font-size: 1em;
+	font-weight: inherit;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #4AD;
+}
+
+h5.dersler {
+
+	font-weight: inherit;
+	border-bottom: 2px solid #44AADD;
+	border-bottom-style: dotted;
+	width: 100px;
+	padding-bottom: 5px;
+	margin: 10px 0;
+
+}
+
+
+ul.ders {
+
+	margin-bottom: 20px;
+	padding: 0;
+
+}
+
+
+ul.ders > li {
+
+	list-style: disc;
+    margin: 0;
+    margin-left: 12px;
+    padding: 0;
+    border: 0;
+    font-size: .8em;
+    border-right: 2px solid #44AADD;
+
+}
+
+div.dersBolumu h6.sinif {
+
+	float: right;
+	margin: 0;
+	margin-top: 5px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	padding: 0;
+
+}
+
+ul.basliklar i {
+
+	margin-right: 5px;
+
+}
+
+div.ozSag h3 {
+
+    border-bottom: 1px solid;
+    display: inline;
+    padding-bottom: 3px;
+    padding-right: 40px;
+
+}
+
+span.yetenek {
+
+	font-size: 1.2em;
+    line-height: 1em;
+    font-weight: inherit;
+    padding: 0;
+
+}
+
+span.seviye {
+
+	padding: 0;
+	text-align: right;
+
+}
+
+span.seviye i.dolu {
+
+	color: #3399CC;
+
+}
+
+span.seviye i.bos {
+
+	color: #C5C5C5;
+
+}
+
+ul.kategori li{
+
+	margin: 0 5px 8px 0;
+    float: left;
+
+}
+
+a.btn, a.grup {
+
+	color: white;
+	background-color: #666666;
+	border: 1px solid #444444;
+
+}
+
+a.grup {
+
+	padding: 7px 10px;
+
+}
+
+a.btn {
+
+	margin: 0 5px 0 0;
+	font-size: .9em;
+	font-weight: 300;
+	display: inline-block;
+
+}
+
+a.btn:hover {
+
+	background-color: #39C;
+
+}
+
+#cboxTitle {
+
+    left: 40px !important;
+
+}
+
+#cboxOverlay {
+
+    background: none !important;
+    background-color: #2288bb !important;
+
+}
+
+ul.resimler li {
+
+	width: 25%;
+    float: left;
+
+}
+
+ul.resimler li img {
+
+	width: 100%;
+	border: 1px solid #FFF;
+	display: block;
+
+}
+ul.kategori li a.aktif {
+
+	background-color: #3399CC;
+    color: white;
+
+}
+
+div.ozetResim {
+
+	padding: 0;
+
+}
+
+div.ozetResim figure {
+
+	width: 241px;
+	height: 171px;
+	overflow: hidden;
+	border: 1px solid #2288BB;
+	margin: 0px;
+	padding: 0;
+
+}
+
+figure img {
+
+	width: 100%;
+	display: block;
+
+}
+
+div.blogOzet {
+
+	padding: 0;
+
+}
+
+div.blogOzet a.buton {
+
+	float: right;
+
+}
+
+a.buton {
+
+	margin-top: 10px;
+	color: #2288BB;
+	border: 1px solid #2288BB;
+	font-size: .9em;
+    padding: 8px;
+
+}
+
+a.buton:hover {
+
+	color: white;
+	background-color: #2288BB;
+
+}
+
+article.ozet:first-child {
+
+	padding-top: 0px;
+
+}
+
+article.ozet:last-child {
+
+	border-bottom: none;
+
+}
+
+article.ozet {
+
+	padding-bottom: 15px;
+	padding-top: 30px;
+	border-bottom: dotted #dddada 2px;
+
+}
+
+.sayfalama > .sag {
+
+	text-align: right;
+
+}
+
+figure.blogResim {
+
+	width: 385px;
+	height: auto;
+	overflow: hidden;
+	border: 1px solid #2288BB;
+	margin: 0px;
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+
+}
+
+article.blog > h1 {
+
+	color: #44AADD;
+    font-size: 1.3em;
+    line-height: 1em;
+    margin: 0px;
+    font-weight: inherit;
+    border-bottom: 1px solid #44AADD;
+    padding-bottom: 6px;
+    margin-bottom: 30px;
+
+}
+
+article.blog p:first-of-type:first-letter {
+
+	font-size: 40px;
+
+}
+
+div.blogBilgi {
+
+	margin-top: 10px;
+	padding: 0;
+
+}
+
+span.blogTarih {
+
+    color: #666666;
+    font-size: .9em;
+    line-height: 1.3em;
+}
+
+div.blogMenu {
+
+	width: 175px;
+	padding: 0;
+
+}
+
+i.blog-ikon {
+
+	margin-right: 5px;
+
+}
+
+div.blogMenu a {
+
+	margin-left: 5px;
+
+}
+
+a.buton.deaktif {
+
+	cursor: default;
+	border-color: gray;
+	color: gray;
+}
+
+a.buton.deaktif:hover {
+
+	background-color: white;
+	color: grey;
+
+}
+
+ul.hataMesajlari > li {
+
+	color: #ff0043;
+	font-size: 13px;
+
+}
+
+span.iletimDurumu {
+
+	font-size: 13px;
+	display: block;
+	margin-bottom: 15px;
+
+}
+
+span.iletimDurumu.gitti {
+
+	color: #00bc1a;
+
+}
+
+span.iletimDurumu.gitmedi {
+
+	color: #ff0043;
+
+}
+
+.girisKutusu {
+
+	margin-top: 10px;
+	padding: 8px 5px;
+	float: left;
+    border-width: 1px;
+    border-style: solid;
+    font-size: .8em;
+    border-color: #CCCCCC;
+    color: grey;
+    width: 100%;
+
+}
+
+.girisKutusu:focus {
+
+	border-color: #2288BB;
+	color: #28B;
+	outline: 0;
+
+}
+
+input#mesajAdi {
+
+	margin-top: 0px;
+    width: 50%;
+
+}
+
+input#mesajEposta {
+
+	margin-top: 0;
+    width: calc(50% - 10px);
+    margin-left: 10px;
+
+}
+
+textarea#mesajAlani {
+
+	min-height: 80px;
+    max-height: 80px;
+
+}
+
+input#mesajTemizle {
+
+	font-size: .9em;
+    font-weight: 300;
+	color: #FFFFFF;
+    background-color: #999999;
+    border-color: #999999;
+    width: 30%;
+
+}
+
+input#mesajTemizle:hover {
+
+	color: #FFFFFF;
+    background-color: #666666;
+    border-color: #666666;
+    cursor: pointer;
+
+}
+
+input#mesajGonder {
+
+	font-size: .9em;
+    font-weight: 300;
+	color: #FFFFFF;
+    background-color: #4AD;
+    border-color: #4AD;
+    width: 67%;
+    margin-left: 3%;
+
+}
+
+input#mesajGonder:hover {
+
+	color: #FFFFFF;
+    background-color: #28B;
+    border-color: #28B;
+    cursor: pointer;
+
+}

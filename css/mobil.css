@@ -1,0 +1,438 @@
+* {
+	
+    box-sizing: border-box;
+    
+}
+
+.sutun-1 {width: 8.33%;}
+.sutun-2 {width: 16.66%;}
+.sutun-3 {width: 25%;}
+.sutun-4 {width: 33.33%;}
+.sutun-5 {width: 41.66%;}
+.sutun-6 {width: 50%;}
+.sutun-7 {width: 58.33%;}
+.sutun-8 {width: 66.66%;}
+.sutun-9 {width: 75%;}
+.sutun-10 {width: 83.33%;}
+.sutun-11 {width: 91.66%;}
+.sutun-12 {width: 100%;}
+
+[class*="sutun-"] {
+	
+    float: left;
+    padding: 30px;
+  
+}
+
+.satir:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+@media only screen and (max-width: 385px) {
+	/* küçük cep telefonları için: */
+	
+	nav.menu > ul > li {
+    
+    	font-size: 0.4em !important;
+    	width: 40px !important;
+    	margin-right: 3px !important;
+    
+    }
+    
+    nav.menu > ul > li > a {
+	    
+	    height: 38px !important;
+	    width: 38px !important;
+	    
+    }
+	
+}
+
+@media only screen and (max-width: 480px) {
+    /* dik cep telefonları için: */
+    
+    [class*="sutun-"] {
+        width: 100%;
+    }
+    
+    div.ana {
+	    
+		overflow-x: visible;
+		
+	}
+    
+    section.solSutun {
+	    
+	    padding-right: 20px;
+	    height: auto;
+	    
+    }
+    
+    div.sosyal {
+	    
+	    position: static;
+	    padding: 30px 0 0 0;
+	    margin-left: 0;
+    }
+    
+    div.icerik {
+	    
+	    position: static;
+	    height: auto;
+	    margin-right: 0;
+	    
+    }
+    
+    div.altKisim {
+	    
+	    position: static;
+	    
+    }
+    
+    nav.menu > ul > li {
+    
+    	font-size: 0.6em;
+    	width: 50px;
+    	margin-right: 5px;
+    
+    }
+    
+    nav.menu > ul > li > a {
+	    
+	    height: 48px;
+	    width: 48px;
+	    
+    }
+    
+    i.menu-ikon {
+	    
+	    margin-top: 9px;
+	    margin-bottom: 10px;
+	    
+	}
+	
+	nav.menu > ul > li > a.aktif {
+		
+	    color: #2288BB;
+	    
+	}
+	
+	nav.menu > ul > li > a.aktif i {
+		
+	    color: #FFFFFF;
+	    
+	}
+	
+    ul.ders > li {
+		
+		border-right: none;
+		
+	}
+	
+	span.periyot {
+		
+		text-align: left;
+		
+	}
+	
+	span.seviye {
+		
+		margin-top: 5px;
+		text-align: left;
+		
+	}
+	
+	div.ozetResim figure {
+		
+		width: 100%;
+		
+	}
+	
+	[class*="sutun-"] {
+	
+    	padding: 20px;
+  
+	}
+	
+	div.maviAlan {
+		
+		padding: 20px;
+		
+	}
+	
+	div.blogOzet {
+		
+		margin-top: 10px;
+		
+	}
+	
+	figure.blogResim {
+		
+		width: 100%;
+		
+	}
+	
+	div.blogMenu {
+		
+		margin-top: 10px;
+		
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px){
+	/* yan cep telefonları için: */
+	
+	div.icerik [class*="sutun-"] {
+		
+        width: 100%;
+        
+    }
+    
+    div.ozetResim figure {
+	    
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-bottom: 10px;
+	    
+    }
+    
+	figure.blogResim {
+		
+		margin-right: 0;
+		width: 100%;
+		
+	}
+	
+	div.blogMenu {
+		
+		margin-top: 10px;
+		margin-bottom: 10px;
+		
+	}
+	
+	
+    
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1200px){
+	/* yan cep telefonları ve tabletler için: */
+	
+	[class*="sutun-"] {
+		
+        padding: 10px;
+        
+    }
+    
+    div.icerik {
+		
+		top: 82px;
+		margin-right: 10px;
+		bottom: 10px;
+		    
+	}
+    
+    h3.baslik, span.periyot {
+	    
+	    width: 50% !important;
+	    
+    }
+    
+    span.yetenek {
+	    
+	    width: 75% !important;
+	    
+    }
+    
+    span.seviye {
+	    
+	    width: 25% !important;
+	    
+    }
+	
+	nav.menu > ul > li {
+    
+    	font-size: 0.6em;
+    	width: 14%;
+    	margin-right: 10px;
+    
+    }	
+    
+    nav.menu > ul > li > a {
+    
+    	height: 62px;
+    	padding-bottom: 5px;
+    	padding-top: 5px;
+    
+    }	
+    
+    i.menu-ikon {
+	    
+	    margin: 0;
+	    
+	}
+	
+	div.maviAlan {
+	    
+	    height: 100%;
+	    padding: 10px;
+	    
+    }
+    
+    div.bilgi p:last-child {
+	    
+	    display: none;
+	    
+    }
+    
+    div.bilgi h1.isim {
+    
+    	font-size: 17px;
+    
+    }
+    
+    div.bilgi {
+	    
+	    margin-top: 5px;
+	    
+    }
+    
+    div.bilgi p.baslik {
+    	
+    	font-size: 9px;
+    	
+    }
+    
+    div.bilgi p.tanitim {
+	    
+		line-height: 12px;
+		margin-bottom: 5px;
+		font-size: 10px;
+    
+	}
+	
+	div.sosyal span {
+		
+		font-size: 0.7em;
+		
+	}
+	
+	div.sosyal a img {
+	 
+		max-width: 70%;
+	
+	}
+	
+	div.sosyal {
+	    
+	    padding: 10px !important;
+		margin-left: -10px !important;
+		position: absolute !important;
+	    
+    }
+    
+    div.altKisim {
+	    
+	    height: 10px;
+	    right: 10px;
+	    
+    }
+    
+    footer {
+	    
+	    font-size: 0.4em;
+	    line-height: 10px;
+	    
+	}
+	
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+	/* yan tabletler için */
+	
+	span.yetenek {
+	    
+	    width: 70% !important;
+	    
+    }
+    
+    span.seviye {
+	    
+	    width: 30% !important;
+	    
+    }
+    
+    div.bilgi p:last-child {
+	    
+	    display: block;
+	    
+    }
+    
+    div.bilgi h1.isim {
+    
+    	font-size: 25.6px;
+    
+    }
+    
+    div.bilgi {
+	    
+	    margin-top: 20px;
+	    
+    }
+    
+    div.bilgi p.baslik {
+    	
+    	font-size: 1em;
+    	
+    }
+    
+    div.bilgi p.tanitim {
+	    
+		line-height: 18px;
+		font-size: .9em;
+    
+	}
+	
+	div.sosyal span {
+		
+		font-size: 1em;
+		
+	}
+	
+	div.sosyal a img {
+	 
+		max-width: 100%;
+	
+	}
+	
+	div.blogOzet {
+		
+		padding: 10px;
+		
+	}
+	
+}
+
+@media only screen and (max-width: 1280px) {
+   
+    div.ana {
+	    
+	    width: 100%;
+	    
+    }
+    
+}
+
+@media only screen and (max-height: 620px) {
+    
+    div.sosyal {
+	    
+	    position: static;
+	    padding: 0;
+	    margin-left: 0;
+	    
+    }
+    
+}
+
