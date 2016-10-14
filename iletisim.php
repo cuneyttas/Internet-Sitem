@@ -96,10 +96,10 @@ function sayfaIcerigi() {
 <div class="sutun-6">
 
 	<h2>İletişim Bilgileri</h2>
-	<ul class="hakkimda">
+	<ul class="profil">
 
-		<li class="satir"><label class="hakBaslik sutun-4">Adres:</label><span class="hakBilgi sutun-8">Çorum</span></li>
-		<li class="satir"><label class="hakBaslik sutun-4">E-posta:</label><span class="hakBilgi sutun-8">cuneyttas@hotmail.com.tr</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">Adres:</label><span class="proBilgi sutun-8">Çorum</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">E-posta:</label><span class="proBilgi sutun-8">cuneyttas@hotmail.com.tr</span></li>
 
 	</ul>
 

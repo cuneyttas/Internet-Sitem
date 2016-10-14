@@ -6,12 +6,12 @@ function sayfaIcerigi() {
 ?>
 <div class="sutun-6">
 
-	<h2>Hakkımda</h2>
-	<ul class="hakkimda">
+	<h2>Profil Sayfası</h2>
+	<ul class="profil">
 
-		<li class="satir"><label class="hakBaslik sutun-4">İsim:</label><span class="hakBilgi sutun-8">Cüneyt TAŞ</span></li>
-		<li class="satir"><label class="hakBaslik sutun-4">E-posta:</label><span class="hakBilgi sutun-8">cuneyttas@hotmail.com.tr</span></li>
-		<li class="satir"><label class="hakBaslik sutun-4">Memleket:</label><span class="hakBilgi sutun-8">Çorum</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">İsim:</label><span class="proBilgi sutun-8">Cüneyt TAŞ</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">E-posta:</label><span class="proBilgi sutun-8">cuneyttas@hotmail.com.tr</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">Memleket:</label><span class="proBilgi sutun-8">Çorum</span></li>
 
 	</ul>
 	<p>Kişisel internet siteme hoşgeldiniz.</p>

@@ -313,7 +313,7 @@ ul {
 
 }
 
-ul.hakkimda > li {
+ul.profil > li {
 
 	margin: 0px;
 	padding: 5px 10px;
@@ -329,7 +329,7 @@ label {
 
 }
 
-label.hakBaslik, span.hakBilgi {
+label.proBaslik, span.proBilgi {
 
 	padding: 0;
 
