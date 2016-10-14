@@ -228,7 +228,6 @@
     div.icerik {
 
 		top: 82px;
-		margin-right: 10px;
 		bottom: 10px;
 		left: 10px;
 		right: 10px;
@@ -435,6 +434,18 @@
 	    margin-left: 0;
 
     }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    nav.menu > ul > li > a:hover {
+
+	    background-color: #6BB4D7;
+	    color: white;
+	    border-color: white;
+
+	}
 
 }
 

@@ -211,15 +211,6 @@ nav.menu > ul > li > a.aktif {
 
 }
 
-
-nav.menu > ul > li > a:hover {
-
-    background-color: #6BB4D7;
-    color: white;
-    border-color: white;
-
-}
-
 nav.menu li.acMenu > ul {
 
 	position: absolute;

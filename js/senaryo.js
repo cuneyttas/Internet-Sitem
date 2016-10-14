@@ -23,8 +23,8 @@ $(document).ready(function(){
 
    $("nav.menu li.acMenu > a").click(function(){
 
-	   $(this).next("ul:visible").slideUp("fast");
-	   $(this).next("ul:hidden").slideDown("fast");
+	   $(this).next("ul:visible").slideUp("fast").prev().removeClass("aktif");
+	   $(this).next("ul:hidden").slideDown("fast").prev().addClass("aktif");
 
 	   return false; // Tıklama işlemini yok saymak için. Yani link olan "a" etiketinin çalışmasını engeller
 
