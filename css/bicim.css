@@ -861,3 +861,38 @@ input#mesajGonder:hover {
     cursor: pointer;
 
 }
+
+ul.kitaplik > li{
+
+	border: 3px solid #3399CC;
+    height: 500px;
+    margin-bottom: 15px;
+    width: 32%;
+
+}
+
+ul.kitaplik > li:nth-child(3n-1) {
+
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+
+h2.kitIsmi {
+
+	text-align: center;
+	line-height: 25px;
+
+}
+
+div.kitBilgi {
+
+	margin: 10px -10px 0 -10px;
+
+}
+
+
+
+
+
+

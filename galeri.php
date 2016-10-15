@@ -4,6 +4,7 @@
 	$sayfa = "Galeri";
 
 function sayfaIcerigi() {
+
 	global $kategoriler, $fotograflar;
 
 ?>
