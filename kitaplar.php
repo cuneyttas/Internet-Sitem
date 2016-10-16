@@ -13,40 +13,36 @@ function sayfaIcerigi() {
 	<h2>Okumuş Olduğum Kitaplar</h2>
 	<ul class="satir kitaplik">
 
+		<?php
+
+		foreach ($kitaplar as $kitapNo => $kitapBilgi) {
+
+		?>
 		<li class="sutun-4">
 
 		<div class="kitAlani">
 
-			<img src="resim/kitap/od.jpg" alt="Od" width="202" height="250px">
+			<img src="resim/kitap/<?= $kitapBilgi["resim"] ?>" alt="<?= $kitapBilgi["isim"] ?>" width="250" height="310">
 
 			<div class="kitBilgi">
-			<h2 class="kitIsmi">Hz. Muhammed Hayatı ve Örnek Kişiliği</h2>
+			<h2 class="kitIsmi"><?= $kitapBilgi["isim"] ?></h2>
 		    <ul class="profil">
 
-				<li class="satir"><label class="proBaslik sutun-6">Yazar Adı:</label><span class="proBilgi sutun-6">Hatice Tatlı - Hasan İpek</span></li>
-				<li class="satir"><label class="proBaslik sutun-6">Sayfa Sayısı:</label><span class="proBilgi sutun-6">359</span></li>
-				<li class="satir"><label class="proBaslik sutun-6">Basım Yılı:</label><span class="proBilgi sutun-6">?</span></li>
-				<li class="satir"><label class="proBaslik sutun-6">Bitirdiğim Tarih:</label><span class="proBilgi sutun-6">15 Şubat 2016</span></li>
+				<li class="satir"><label class="proBaslik sutun-6">Yazar Adı:</label><span class="proBilgi sutun-6"><?= $kitapBilgi["yazar"] ?></span></li>
+				<li class="satir"><label class="proBaslik sutun-6">Sayfa Sayısı:</label><span class="proBilgi sutun-6"><?= $kitapBilgi["sayfa_no"] ?></span></li>
+				<li class="satir"><label class="proBaslik sutun-6">Basım Yılı:</label><span class="proBilgi sutun-6"><?= $kitapBilgi["basim_yili"] ?></span></li>
+				<li class="satir"><label class="proBaslik sutun-6">Bitirdiğim Tarih:</label><span class="proBilgi sutun-6"><?= $kitapBilgi["bitis_tarihi"] ?></span></li>
 
 			</ul>
 			</div> <!-- Kitap Bilgi Alanının Sonu -->
 
 		</div> <!-- Kitap Alanının Sonu -->
 
-
 		</li>
-		<li class="sutun-4"></li>
-		<li class="sutun-4"></li>
-		<li class="sutun-4"></li>
-		<li class="sutun-4"></li>
-		<li class="sutun-4"></li>
-		<li class="sutun-4"></li>
-		<li class="sutun-4"></li>
-		<li class="sutun-4"></li>
-
-
-	</div>
-
+		<?php
+		}
+		?>
+	</ul>
 
 </div> <!-- iceriğin sağ tarafının sonu -->
 

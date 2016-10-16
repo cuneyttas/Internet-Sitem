@@ -106,7 +106,7 @@ function tema_menu($sayfa) {
 
 			<ul>
 
-				<li><a href="#">Okuduğum Kitaplar (YAKINDA)</a></li>
+				<li><a href="kitaplar.php">Okuduğum Kitaplar</a></li>
 				<li><a href="#">Beğendiğim Filmler (YAKINDA)</a></li>
 
 			</ul>
@@ -134,7 +134,7 @@ function tema_altKisim() {
 
 	<footer class="sutun-12">
 
-		<p>Telif Hakkı © 2015-2016 Cüneyt TAŞ (Sürüm 1.3)</p>
+		<p>Telif Hakkı © 2015-2016 Cüneyt TAŞ (Sürüm 1.4)</p>
 
 	</footer>
 

@@ -864,8 +864,8 @@ input#mesajGonder:hover {
 
 ul.kitaplik > li{
 
-	border: 3px solid #3399CC;
-    height: 500px;
+	border: 2px solid #3399CC;
+    height: 520px;
     margin-bottom: 15px;
     width: 32%;
 
@@ -878,10 +878,19 @@ ul.kitaplik > li:nth-child(3n-1) {
 
 }
 
+div.kitAlani img {
+
+	width: 100%;
+	height: auto;
+
+}
+
 h2.kitIsmi {
 
 	text-align: center;
 	line-height: 25px;
+	border-bottom-width: 3px;
+	min-height: 60px;
 
 }
 
