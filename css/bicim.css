@@ -862,19 +862,26 @@ input#mesajGonder:hover {
 
 }
 
-ul.kitaplik > li{
+ul.kitaplik {
 
-	border: 2px solid #3399CC;
-    height: 520px;
-    margin-bottom: 15px;
-    width: 32%;
+	display: flex;
+	flex-wrap: wrap;
 
 }
 
-ul.kitaplik > li:nth-child(3n-1) {
+ul.kitaplik > li {
 
-    margin-left: 2%;
-    margin-right: 2%;
+    padding: 7px;
+    display: flex;
+
+}
+
+div.kitAlani {
+
+	padding: 30px;
+	border: 2px solid #3399CC;
+	margin-right: auto;
+	margin-left: auto;
 
 }
 

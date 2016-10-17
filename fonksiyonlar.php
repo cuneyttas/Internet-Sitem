@@ -134,7 +134,7 @@ function tema_altKisim() {
 
 	<footer class="sutun-12">
 
-		<p>Telif Hakkı © 2015-2016 Cüneyt TAŞ (Sürüm 1.4)</p>
+		<p>Telif Hakkı © 2015-2016 Cüneyt TAŞ (Sürüm 1.5)</p>
 
 	</footer>
 

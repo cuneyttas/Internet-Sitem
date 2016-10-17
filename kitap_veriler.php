@@ -679,7 +679,7 @@ $kitaplar[62] = array(
 	"isim" => "Ülkemizde Cuma Namazı Farzdır",
 	"yazar" => "Mürsel Şahinbaş",
 	"sayfa_no" => "138",
-	"basim_yili" => "?",
+	"basim_yili" => "1993",
 	"bitis_tarihi" => "12 Kasım 2012"
 
 );
