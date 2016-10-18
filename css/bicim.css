@@ -384,7 +384,7 @@ ul.basliklar {
 
 }
 
-h3.baslik, span.periyot {
+h3.baslik, span.periyot, span.tarih {
 
 	padding: 0;
 
@@ -417,7 +417,7 @@ h3.baslik {
 
 }
 
-span.periyot {
+span.periyot, span.tarih {
 
 	float: right;
     color: #999;
@@ -485,7 +485,7 @@ ul.basliklar i {
 
 }
 
-div.ozSag h3 {
+h3.yetBaslik {
 
     border-bottom: 1px solid;
     display: inline;
@@ -519,6 +519,23 @@ span.seviye i.dolu {
 span.seviye i.bos {
 
 	color: #C5C5C5;
+
+}
+
+h3.ozBilgi {
+
+	color: #4AD;
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px solid;
+	line-height: 25px;
+
+}
+
+div.sinavNotu > p {
+
+	font-size: 1.3em !important;
+	padding: 0;
 
 }
 

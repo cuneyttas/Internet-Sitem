@@ -6,6 +6,21 @@ function sayfaIcerigi() {
 ?>
 <div class="ozSol sutun-6">
 
+	<h2>Genel Bilgiler</h2>
+	<ul class="profil">
+
+		<li class="satir"><label class="proBaslik sutun-4">Memleketim:</label><span class="proBilgi sutun-8">Çorum</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">Yaşadığım Şehir:</label><span class="proBilgi sutun-8">Çorum</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">Doğum Yılım:</label><span class="proBilgi sutun-8">1988</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">Diller:</label><span class="proBilgi sutun-8">Türkçe (Ana Dil Seviyesi)<br>İngilizce (Başlangıç Seviyesi)</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">Dinî İnancım:</label><span class="proBilgi sutun-8">İslâm</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">Tuttuğum Takım:</label><span class="proBilgi sutun-8">Yok</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">İlgi Alanlarım:</label><span class="proBilgi sutun-8">Sinema, Kitap, Ev Hayvanları Bakımı, Bitki Yetiştirme, Koleksiyon, Bisiklet</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">Askerlik:</label><span class="proBilgi sutun-8">Tecilli (28 Ekim 2016)</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">Sürücü Belgesi:</label><span class="proBilgi sutun-8">B Sınıfı (2007)</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">Sigara ve Alkol Kullanımı:</label><span class="proBilgi sutun-8">Kullanmıyorum</span></li>
+
+	</ul>
 	<h2>İş Deneyimleri</h2>
 	<ul class="basliklar">
 
@@ -524,7 +539,7 @@ function sayfaIcerigi() {
 	<div class="ozSag sutun-6">
 
 		<h2>Yetenekler</h2>
-		<h3>Programlama Dilleri</h3>
+		<h3 class="yetBaslik">Programlama Dilleri</h3>
 		<ul class="basliklar">
 
 			<li class="satir">
@@ -649,7 +664,7 @@ function sayfaIcerigi() {
 			</li>
 
 		</ul>
-		<h3>Web Tasarım</h3>
+		<h3 class="yetBaslik">Web Tasarım</h3>
 		<ul class="basliklar">
 
 			<li class="satir">
@@ -726,7 +741,7 @@ function sayfaIcerigi() {
 			</li>
 
 		</ul>
-		<h3>Yazılım Geliştirme Araçları</h3>
+		<h3 class="yetBaslik">Yazılım Geliştirme Araçları</h3>
 		<ul class="basliklar">
 
 			<li class="satir">
@@ -828,7 +843,7 @@ function sayfaIcerigi() {
 
 		</ul>
 
-		<h3>Veritabanı</h3>
+		<h3 class="yetBaslik">Veritabanı</h3>
 		<ul class="basliklar">
 
 			<li class="satir">
@@ -893,7 +908,7 @@ function sayfaIcerigi() {
 			</li>
 
 		</ul>
-		<h3>Elektronik</h3>
+		<h3 class="yetBaslik">Elektronik</h3>
 		<ul class="basliklar">
 
 			<li class="satir">
@@ -958,7 +973,7 @@ function sayfaIcerigi() {
 			</li>
 
 		</ul>
-		<h3>Ağlar</h3>
+		<h3 class="yetBaslik">Ağlar</h3>
 		<ul class="basliklar">
 
 			<li class="satir">
@@ -987,7 +1002,7 @@ function sayfaIcerigi() {
 			</li>
 
 		</ul>
-		<h3>Grafik</h3>
+		<h3 class="yetBaslik">Grafik</h3>
 		<ul class="basliklar">
 
 			<li class="satir">
@@ -1004,7 +1019,7 @@ function sayfaIcerigi() {
 			</li>
 
 		</ul>
-		<h3>İşletim Sistemleri</h3>
+		<h3 class="yetBaslik">İşletim Sistemleri</h3>
 		<ul class="basliklar">
 
 			<li class="satir">
@@ -1093,7 +1108,141 @@ function sayfaIcerigi() {
 			</li>
 
 		</ul>
+		<h2>Sınavlar</h2>
+		<ul class="basliklar">
 
+		<li>
+
+			<div class="deneyim satir">
+
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>KPSS (Ortaöğretim)</h3>
+				<span class="tarih sutun-6">Eylül 2008</span>
+
+			</div>
+
+			<div class="sinavNotu satir">
+
+				<p class="sutun-2">Puan:</p>
+				<p class="sutun-10">77</p>
+
+			</div>
+			<p>KPSS P94 puan türü belirtilmektedir.</p>
+
+		</li>
+		<li>
+
+			<div class="deneyim satir">
+
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ÖSS</h3>
+				<span class="tarih sutun-6">Haziran 2010</span>
+
+			</div>
+
+			<div class="sinavNotu satir">
+
+				<p class="sutun-3">YGS Puanı:</p>
+				<p class="sutun-9">454</p>
+
+			</div>
+			<div class="sinavNotu satir">
+
+				<p class="sutun-3">LYS Puanı:</p>
+				<p class="sutun-9">412</p>
+
+			</div>
+			<p>YGS-1 ve MF-2 puan türlerinde "alanında" yerleştirme puanım belirtilmektedir.</p>
+
+		</li>
+		<li>
+
+			<div class="deneyim satir">
+
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>GUYS</h3>
+				<span class="tarih sutun-6">Kasım 2015</span>
+
+			</div>
+
+			<div class="sinavNotu satir">
+
+				<p class="sutun-2">Puan:</p>
+				<p class="sutun-10">68</p>
+
+			</div>
+			<p>Gelir İdaresi Başkanlığının açmış olduğu Gelir Uzman Yardımcılığı Sınavı. Bu sınavdan geçmek için 70 alınması gerekiyorken 2 puanla kaçırmıştım.</p>
+
+		</li>
+		<li>
+
+			<div class="deneyim satir">
+
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ALES</h3>
+				<span class="tarih sutun-6">Mayıs 2016</span>
+
+			</div>
+
+			<div class="sinavNotu satir">
+
+				<p class="sutun-2">Puan:</p>
+				<p class="sutun-10">74</p>
+
+			</div>
+			<p>ALES Sayısal Puanı belirtilmektedir.</p>
+
+		</li>
+		<li>
+
+			<div class="deneyim satir">
+
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>KPSS (Lisans)</h3>
+				<span class="tarih sutun-6">Mayıs 2016</span>
+
+			</div>
+
+			<div class="sinavNotu satir">
+
+				<p class="sutun-2">Puan:</p>
+				<p class="sutun-10">88</p>
+
+			</div>
+			<p>KPSS P3 puan türü belirtilmektedir.</p>
+
+		</li>
+		<li>
+
+			<div class="deneyim satir">
+
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>YDS</h3>
+				<span class="tarih sutun-6">Eylül 2016</span>
+
+			</div>
+
+			<div class="sinavNotu satir">
+
+				<p class="sutun-2">Puan:</p>
+				<p class="sutun-10">37</p>
+
+			</div>
+			<p>YDS'den başarılı sayılabilmek için en az 50 puan almak gerekiyor. Önceki sene çalışmadan girdiğim sınavdan 36 almıştım. Bu sene yaklaşık 1 hafta dil bilgisi çalıştıktan sonra 1 soru daha fazla doğru cevaplandırarak 37 puana yükseltmeyi başardım. İngilizce kursunun şart olduğunu böylece anlamış oldum. </p>
+
+		</li>
+
+	</ul>
+	<h2>Sertifikalar</h2>
+	<ul class="basliklar">
+
+		<li>
+
+			<div class="deneyim satir">
+
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-certificate" aria-hidden="true"></i>Akınsoft</h3>
+				<span class="tarih sutun-6">Aralık 2011</span>
+
+			</div>
+			<p>Katılım Sertifikası</p>
+
+		</li>
+
+	</ul>
 	</div> <!-- iceriğin sağ tarafının sonu -->
 
 <?php
