@@ -2,7 +2,15 @@
 include("fonksiyonlar.php");
 include("blog_veriler.php");
 
-$sayfa = "Blog";
+if ( !isset($_GET['blog']) || !is_numeric($_GET['blog']) ) {
+
+	$sayfa = "Blog";
+
+} else {
+
+	$sayfa = $bloglar[$_GET['blog']]['baslik'];
+
+}
 
 function sayfaIcerigi() {
 	global $bloglar;

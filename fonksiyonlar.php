@@ -35,6 +35,7 @@ function tema_head($baslik = "") {
  	<script src="js/jquery-2.1.4.min.js"></script>
  	<script src="js/colorbox/jquery.colorbox-min.js"></script>
  	<script src="js/senaryo.js"></script>
+ 	<?php include_once("analitik_izleme.php") ?>
 
 	</head>
 
@@ -134,7 +135,7 @@ function tema_altKisim() {
 
 	<footer class="sutun-12">
 
-		<p>Telif Hakkı © 2015-2016 Cüneyt TAŞ (Sürüm 1.6)</p>
+		<p>Telif Hakkı © 2015-2016 Cüneyt TAŞ (Sürüm 1.7)</p>
 
 	</footer>
 
