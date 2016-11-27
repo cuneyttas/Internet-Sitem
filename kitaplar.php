@@ -15,6 +15,7 @@ function sayfaIcerigi() {
 
 		<?php
 
+		krsort($kitaplar);
 		foreach ($kitaplar as $kitapNo => $kitapBilgi) {
 
 		?>

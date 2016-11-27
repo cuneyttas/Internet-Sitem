@@ -1134,3 +1134,14 @@ $kitaplar[103] = array(
 	"bitis_tarihi" => "16 Ekim 2016"
 
 );
+
+$kitaplar[104] = array(
+
+	"resim" => "uzun_beyaz_bulut_gelibolu.jpg",
+	"isim" => "Uzun Beyaz Bulut Gelibolu",
+	"yazar" => "Buket Uzuner",
+	"sayfa_no" => "323",
+	"basim_yili" => "2007",
+	"bitis_tarihi" => "10 Kasım 2016"
+
+);

@@ -16,7 +16,7 @@ function sayfaIcerigi() {
 		<li class="satir"><label class="proBaslik sutun-4">Dinî İnancım:</label><span class="proBilgi sutun-8">İslâm</span></li>
 		<li class="satir"><label class="proBaslik sutun-4">Tuttuğum Takım:</label><span class="proBilgi sutun-8">Yok</span></li>
 		<li class="satir"><label class="proBaslik sutun-4">İlgi Alanlarım:</label><span class="proBilgi sutun-8">Sinema, Kitap, Ev Hayvanları Bakımı, Bitki Yetiştirme, Koleksiyon, Bisiklet</span></li>
-		<li class="satir"><label class="proBaslik sutun-4">Askerlik:</label><span class="proBilgi sutun-8">Tecilli (28 Ekim 2016)</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">Askerlik:</label><span class="proBilgi sutun-8">Tecilli (3 Kasım 2016)</span></li>
 		<li class="satir"><label class="proBaslik sutun-4">Sürücü Belgesi:</label><span class="proBilgi sutun-8">B Sınıfı (2007)</span></li>
 		<li class="satir"><label class="proBaslik sutun-4">Sigara ve Alkol Kullanımı:</label><span class="proBilgi sutun-8">Kullanmıyorum</span></li>
 
