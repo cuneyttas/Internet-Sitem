@@ -16,7 +16,6 @@ function sayfaIcerigi() {
 		<li class="satir"><label class="proBaslik sutun-4">Dinî İnancım:</label><span class="proBilgi sutun-8">İslâm</span></li>
 		<li class="satir"><label class="proBaslik sutun-4">Tuttuğum Takım:</label><span class="proBilgi sutun-8">Yok</span></li>
 		<li class="satir"><label class="proBaslik sutun-4">İlgi Alanlarım:</label><span class="proBilgi sutun-8">Sinema, Kitap, Ev Hayvanları Bakımı, Bitki Yetiştirme, Koleksiyon, Bisiklet</span></li>
-		<li class="satir"><label class="proBaslik sutun-4">Askerlik:</label><span class="proBilgi sutun-8">Tecilli (3 Kasım 2016)</span></li>
 		<li class="satir"><label class="proBaslik sutun-4">Sürücü Belgesi:</label><span class="proBilgi sutun-8">B Sınıfı (2007)</span></li>
 		<li class="satir"><label class="proBaslik sutun-4">Sigara ve Alkol Kullanımı:</label><span class="proBilgi sutun-8">Kullanmıyorum</span></li>
 
@@ -1222,7 +1221,7 @@ function sayfaIcerigi() {
 				<p class="sutun-10">37</p>
 
 			</div>
-			<p>YDS'den başarılı sayılabilmek için en az 50 puan almak gerekiyor. Önceki sene çalışmadan girdiğim sınavdan 36 almıştım. Bu sene yaklaşık 1 hafta dil bilgisi çalıştıktan sonra 1 soru daha fazla doğru cevaplandırarak 37 puana yükseltmeyi başardım. İngilizce kursunun şart olduğunu böylece anlamış oldum. </p>
+			<p>YDS'den başarılı sayılabilmek için en az 50 puan almak gerekiyor. Önceki sene çalışmadan girdiğim sınavdan 36 almıştım. Bu sene yaklaşık 1 hafta dil bilgisi çalıştıktan sonra 1 soru daha fazla doğru cevaplandırarak 37 puana yükseltmeyi başardım. </p>
 
 		</li>
 
@@ -1239,6 +1238,51 @@ function sayfaIcerigi() {
 
 			</div>
 			<p>Katılım Sertifikası</p>
+
+		</li>
+
+	</ul>
+
+	<h2>Askerlik Bilgileri</h2>
+	<ul class="profil">
+
+		<li><h3 class="ozBilgi" style="color: grey; border-bottom: none"><i class="fa fa-flag" aria-hidden="true" style="margin-right: 5px"></i>Acemilik Dönemi</h3>
+
+			<li class="satir"><label class="proBaslik sutun-4">Eğitim Birliği:</label><span class="proBilgi sutun-8">İstihkam Okulu ve Eğitim Merkezi Komutanlığı</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Şehir:</label><span class="proBilgi sutun-8">İzmir/Narlıdere</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Giriş Tarihi:</label><span class="proBilgi sutun-8">3 Kasım 2016</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Ayrılış Tarihi:</label><span class="proBilgi sutun-8">25 Kasım 2016</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Kuvvet:</label><span class="proBilgi sutun-8">Kara Kuvvetleri Komutanlığı</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Ordu:</label><span class="proBilgi sutun-8">Ege Ordusu Komutanlığı (4. Ordu)</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Tabur:</label><span class="proBilgi sutun-8">2. Eğitim Taburu</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Bölük:</label><span class="proBilgi sutun-8">1. Temel Eğitim Bölüğü</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Takım:</label><span class="proBilgi sutun-8">2. Takım</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Manga:</label><span class="proBilgi sutun-8">7. Manga</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Sınıf:</label><span class="proBilgi sutun-8">İstihkam</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Rütbe:</label><span class="proBilgi sutun-8">Er</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Tertip:</label><span class="proBilgi sutun-8">365. Kısa Dönem</span></li>
+
+		</li>
+
+	</ul>
+	<ul class="profil">
+
+		<li><h3 class="ozBilgi" style="color: grey; border-bottom: none"><i class="fa fa-flag" aria-hidden="true" style="margin-right: 5px"></i>Ustalık Dönemi</h3>
+
+			<li class="satir"><label class="proBaslik sutun-4">Esas Birliği:</label><span class="proBilgi sutun-8">1. Motorlu Piyade Tugayı Taşkısığı Komutan Yardımcılığı Elmasağa Cephaneliği</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Şehir:</label><span class="proBilgi sutun-8">Sakarya/Adapazarı</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Giriş Tarihi:</label><span class="proBilgi sutun-8">27 Kasım 2016</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Ayrılış Tarihi:</label><span class="proBilgi sutun-8">18 Nisan 2017</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Kuvvet:</label><span class="proBilgi sutun-8">Kara Kuvvetleri Komutanlığı</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Ordu:</label><span class="proBilgi sutun-8">Ege Ordusu Komutanlığı (4. Ordu)</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Tabur:</label><span class="proBilgi sutun-8">1. Motorlu Piyade Taburu</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Bölük:</label><span class="proBilgi sutun-8">Karargâh ve Karargâh Bölüğü</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Takım:</label><span class="proBilgi sutun-8">Emniyet ve Muhafız Takım Komutanlığı</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Sınıf:</label><span class="proBilgi sutun-8">Piyade</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Rütbe:</label><span class="proBilgi sutun-8">Er</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Nöbet Sayısı:</label><span class="proBilgi sutun-8">82 (3 tanesi 1'er saat, diğerleri 2'şer saat)</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Silah Cinsi:</label><span class="proBilgi sutun-8">G3</span></li>
+			<li class="satir"><label class="proBaslik sutun-4">Görevler:</label><span class="proBilgi sutun-8">Telsiz-Telefon İşletmeni, Silahlık Görevlisi, Görüntü İzleme Uzmanı</span></li>
 
 		</li>
 

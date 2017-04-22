@@ -1145,3 +1145,91 @@ $kitaplar[104] = array(
 	"bitis_tarihi" => "10 Kasım 2016"
 
 );
+
+$kitaplar[105] = array(
+
+	"resim" => "ilahi_program_kader.jpg",
+	"isim" => "İlahî Program, Kader",
+	"yazar" => "İsmail Mutlu",
+	"sayfa_no" => "160",
+	"basim_yili" => "1992",
+	"bitis_tarihi" => "10 Aralık 2016"
+
+);
+
+$kitaplar[106] = array(
+
+	"resim" => "cumhuriyet_cocugu.jpg",
+	"isim" => "Cumhuriyet Çocuğu",
+	"yazar" => "Hekimoğlu İsmail",
+	"sayfa_no" => "190",
+	"basim_yili" => "2006",
+	"bitis_tarihi" => "17 Aralık 2016"
+
+);
+
+$kitaplar[107] = array(
+
+	"resim" => "karabasan.jpg",
+	"isim" => "Karabasan",
+	"yazar" => "Wulf Dorn",
+	"sayfa_no" => "397",
+	"basim_yili" => "2016",
+	"bitis_tarihi" => "26 Aralık 2016"
+
+);
+
+$kitaplar[108] = array(
+
+	"resim" => "bicak_sirti.jpg",
+	"isim" => "Bıçak Sırtı",
+	"yazar" => "Tess Gerritsen",
+	"sayfa_no" => "367",
+	"basim_yili" => "2014",
+	"bitis_tarihi" => "14 Ocak 2017"
+
+);
+
+$kitaplar[109] = array(
+
+	"resim" => "turklerin_hatalari.jpg",
+	"isim" => "Türklerin Hataları",
+	"yazar" => "Tarih ve Düşünce",
+	"sayfa_no" => "383",
+	"basim_yili" => "2016",
+	"bitis_tarihi" => "12 Şubat 2017"
+
+);
+
+$kitaplar[110] = array(
+
+	"resim" => "metal_firtina.jpg",
+	"isim" => "Metal Fırtına",
+	"yazar" => "Orkun Uçar - Burak Turna",
+	"sayfa_no" => "302",
+	"basim_yili" => "2005",
+	"bitis_tarihi" => "5 Mart 2017"
+
+);
+
+$kitaplar[111] = array(
+
+	"resim" => "illuminati_entrika_cemberi.jpg",
+	"isim" => "İlluminati, Entrika Çemberi",
+	"yazar" => "Texe Marrs",
+	"sayfa_no" => "287",
+	"basim_yili" => "2005",
+	"bitis_tarihi" => "22 Mart 2017"
+
+);
+
+$kitaplar[112] = array(
+
+	"resim" => "kendini_arayan_adam.jpg",
+	"isim" => "Kendini Arayan Adam",
+	"yazar" => "Halit Ertuğrul",
+	"sayfa_no" => "123",
+	"basim_yili" => "2011",
+	"bitis_tarihi" => "26 Mart 2017"
+
+);

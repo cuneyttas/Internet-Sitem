@@ -61,7 +61,7 @@ function tema_solSutun() {
  		<h1 class="isim">Cüneyt TAŞ</h1>
  		<p class="baslik">Bilgisayar Mühendisi</p>
  		<hr class="cizgi">
- 		<p class="tanitim">Konuşmak hoşuna giderse sus, susmak hoşuna giderse konuş. (Bişr-i Hafî) </p>
+ 		<p class="tanitim"> Askerliği de bitirdiğime göre arama-kurtarma faaliyetlerine başlamam gerek. (İş) Arama - (Kendimi) Kurtarma...   </p>
 
 		</div> <!-- bilgi sonu -->
 
@@ -135,7 +135,7 @@ function tema_altKisim() {
 
 	<footer class="sutun-12">
 
-		<p>Telif Hakkı © 2015-2016 Cüneyt TAŞ (Sürüm 1.7)</p>
+		<p>Telif Hakkı © 2015-2017 Cüneyt TAŞ (Sürüm 1.8)</p>
 
 	</footer>
 
