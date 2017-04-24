@@ -100,7 +100,7 @@ if ( !isset($blogNo) ) {
 	<?=$bloglar[$blogNo]['uzun_icerik']?>
 </article>
 <div class="temizle"></div>
-<div class="blogAlt satir">
+<div class="blogAlt satir" style="margin-top: 50px;">
 
 	<div class="blogBilgi sutun-9">
 

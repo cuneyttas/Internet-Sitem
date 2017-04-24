@@ -3,19 +3,19 @@
 $bloglar = array();
 
 $bloglar[1] = array(
-	"baslik" => "Android Kullanıcılarının Başı Bir Virüsle Dertte",
-	"kisa_icerik" => "Android işletim sistemi ile çalışan akıllı cihazlarda yeni bir zararlı yazılım saptandı...",
-	"uzun_icerik" => "<p>Android işletim sistemi kullanıcılar için büyük kolaylık sağlarken güvenlik açısından büyük zafiyetlere de sebep olabiliyor.</p>
+	"baslik" => "İnternet Sitem Artık Yayında",
+	"kisa_icerik" => "2015 senesinin yaz mevsiminde yapımına başladığım kişisel internet sitem nihayet 13 Ekim 2016’da kullanıma açıldı...",
+	"uzun_icerik" => "<p>2015 senesinin yaz mevsiminde yapımına başladığım kişisel internet sitem nihayet 13 Ekim 2016’da kullanıma açıldı. Uzun zamandır üzerinde çalıştığım bu site şu an görünümde diğer kişisel sitelerden pek de farklı görünmese de gitgide farklı bir yol izlemeye başlayacak. Facebook, Twitter gibi sosyal ağlardan paylaşımlar yapmak yerine kendi internet sitemden benzer paylaşımlar yapacağım. Tek kullanacağım sosyal iş ağı, LinkedIn olacak. Öncelikli hedefim paylaşımların daha çok kişiye ulaşması olmadığından siteme kaç kişinin girdiği, ne kadar durduğu, ne gibi yorumlar yaptığı gibi hususlar beni pek ilgilendirmeyecek. Bu siteyi geliştirmekteki asıl amacım, internet programlamadaki bilgilerimi tazelemek ve bu site üzerinden test etmek olacak. HTML, CSS, JavaScript, Jquery, PHP ve daha bir çok teknolojiyi bu site üzerinden öğrenip uygulama yapacağım. Dışardan gelen kullanıcılar sitenin bazı sayfalarında gördüğü tuhaf uygulamalara anlam veremeyebilirler. Ama aslında o anlamsız gibi görünen yerler benim test sayfam olabilecek.</p>
 
-	<p>Antivirüs ve mobil güvenlik uygulaması üreten güvenlik şirketi Lookout, Android için yeni bir zararlı yazılım olduğunu duyurdu. Şimdilik daha az sayıda kullanıcıyı tehdit eden bu yeni yazılımın adı henüz belli değil. </p>
+	<p>Bu site hakkında detaylı bilgi vererek başlayalım. Kişisel internet sitemi yapmak için öncelikle internette satışı yapılan hazır şablon siteleri inceledim. Ücretli olanları özellikle inceledim ki ücretsiz olanlara göre daha kaliteli internet sitelerini inceleyebiliyim. Amacım hazır olarak bu sitelerin birisini alıp onun üzerinde değişiklik yapıp kişisel internet sitemi oluşturmak değildi. Bunlardan bir tanesini seçip, onun tasarımına benzeterek sıfırdan yeni bir internet sitesi inşa etmekti. Öyle de yaptım. O zaman hoşuma giden bir tanesini örnek alarak HTML, CSS, JavaScript ve PHP kodlamalarıyla tıpkısının aynısı olmasa da kendime göre bu hale getirdim. Tabi kardeşim <a href='http://www.bilaltas.net/' title='Kardeşimin Kişisel İnternet Sitesi' target='_blank'>Bilal TAŞ</a>’ın yardımlarından da faydalandığımı söylemeden de olmaz. Kendisi internet tasarımcı ve programlayıcısı olan kardeşim de bana yardımlarını ve desteklerini esirgemediği için buradan bir daha teşekkürlerimi sunuyorum. </p>
 
-	<p>Ancak sisteme bulaşan bu virüsü silmek mümkün değil, yok etmek için yapılması gereken tek yol Android ROM’unu yeniden kurmak. </p>
+	<p>Dikkat ederseniz blog yazımdan ve sitemin diğer yerlerinden de görüleceği gibi mümkün olduğunca İngilizce kelimelerden kaçınmaya çalışıyorum. Bilgisayar alanında  çalışırken İngilizce kelimelerden kaçmak her ne kadar zor olsa da yine de “Web Sitem” yerine “İnternet Sitem” gibi kullanımları tercih ediyorum. İleride açık kaynak olarak sitemin kodlarını yayınlayacağım zaman görürsünüz. Mümkün olduğunca değişkenler, fonksiyon isimleri, dosya ve sayfa isimleri gibi kelimeleri %90 oranında Türkçe yazmaya gayret ettim. Çünkü dilimizin İngilizce gibi dillerin boyunduruğu altına girmesine karşıyım. Yanlış anlaşılmasın, İngilizce öğrenilmesine karşı değilim. Ben de öğreniyorum. Ama Türkçe konuşup yazarken, İngilizce kelimelerin araya girmesinden hoşlanmıyorum. </p>
 
-	<p>Google Play harici başka yerlerden indirilerek bulaşan bu virüsün şimdiye kadar 20 bin civarında telefona bulaştığı iddia ediliyor. Virüs en çok Almanya ve ABD’deki Android kullanıcılarını tehdit ediyor.</p>
+	<p>Sitemin sayfaları Profil, Özgeçmiş, Galeri ve İletişim isimli ana sayfalardan oluşuyor. Yardımcı sayfaları da günden güne ekleyeceğim. Şimdilik okuduğum kitapları listelediğim bir sayfam var. <a href='http://www.cuneyt-tas.com/' title='Profil Sayfası' target='_blank'>Profil</a> sayfasını daha interaktif hale getirmeyi düşünüyorum. Son güncellemelerin özeti burada gösterilecek. <a href='http://www.cuneyt-tas.com/ozgecmis.php' title='Özgeçmiş Sayfası' target='_blank'>Özgeçmiş</a>’te benim özgeçmişimin abartılı bir şekilde fazlasını görebilirsiniz. Abartıyı seviyorum. :) <a href='http://www.cuneyt-tas.com/galeri.php' title='Galeri Sayfası' target='_blank'>Galeri</a>‘ye beğendiğim ve paylaşmak istediğim genellikle kendi çektiğim fotoğrafları koyacağım. <a href='http://www.cuneyt-tas.com/iletisim.php' title='İletişim Sayfası' target='_blank'>İletişim</a>’den benle iletişime geçmek için e-posta gönderebilirsiniz. <a href='http://www.cuneyt-tas.com/blog.php' title='Blog Sayfası' target='_blank'>Blog</a> sayfamda da her konudan yazılarımı sizlerle paylaşacağım. Sitemin tasarımından çok da memnun olmasamda her şey rayına oturana kadar bu şekilde devam edecek. Siteye yaptığım her bir yenilikle sürüm numarasını 0.1 oranında artırıyorum.</p>
 
-	<p>Kaynak: NTV</p>",
-	"resim" => "android",
-	"tarih" => "19 Kasım 2015, Perşembe"
+	<p>İlk blog yazımın da sonuna gelmiş bulunuyoruz. Yeni bir yazıyla görüşmek üzere hoşçakalın.</p>",
+	"resim" => "internet_sitem",
+	"tarih" => "24 Nisan 2017, Pazartesi"
 );
 
 $bloglar[2] = array(

@@ -330,7 +330,7 @@ div.icerik p {
 
 	color: #666666;
 	font-size: .9em;
-    line-height: 1.3em;
+    line-height: 1.5em;
     margin: 10px 0 0;
 
 }
@@ -722,7 +722,7 @@ article.blog p:first-of-type:first-letter {
 
 div.blogBilgi {
 
-	margin-top: 10px;
+	margin-top: 0px;
 	padding: 0;
 
 }
