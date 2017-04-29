@@ -2,6 +2,31 @@
 
 $bloglar = array();
 
+$bloglar[0] = array(
+	"baslik" => "Deneme Sayfam",
+	"kisa_icerik" => "Bu blog deneme sayfası olarak kullanılacaktır. İçerisindeki yazılar anlam bütünlüğü olmayan saçma fakat benim bir şekilde kendime göre anlam çıkaracağım cümlelerden ibarettir. Site misafirlerinin okuması için yazılmamıştır. Bilginize...  ",
+	"uzun_icerik" => "
+	<p>Hayatta bazı anlar <b>önemlidir</b> sizin için. O anlardan bazıları diğerlerinden daha <strong>önemlidir</strong>. Bazı kapılardan geçerken <i>eğilmek</i> gerektir. Eğilmekle neyi <em>vurgulayacağımız</em> anlatılır bize. Bu davranış kendimizi <small>küçültmek</small> anlamına gelmez. <mark>Görkemli</mark> bir şekilde büyümektir. Her <del>yanlış</del> her doğruyu götüremez beraberinde. Şu konunun <ins>altını çizmek</ins> istiyorum:</p>
+
+	<p>E<sub>5</sub> = m . c<sup>2</sup></p>
+
+	<p>Bir büyük düşünür demiş:
+
+		<blockquote cite='https://www.neguzelsozler.com/unlu-sozleri/necip-fazil-kisakurek-sozleri.html'>Kader, beyaz kağıda sütle yazılmış yazı,Elindeyse, beyazdan gel de sıyır beyazı…</blockqoute>
+
+	</p>
+
+	<p><bdo dir='rtl'>Her şey tersine dönebilir.</bdo></p>
+
+
+
+
+
+	",
+	"resim" => "tavuk_deneme",
+	"tarih" => "29 Nisan 2017, Cumartesi"
+);
+
 $bloglar[1] = array(
 	"baslik" => "İnternet Sitem Artık Yayında",
 	"kisa_icerik" => "2015 senesinin yaz mevsiminde yapımına başladığım kişisel internet sitem nihayet 13 Ekim 2016’da kullanıma açıldı...",
@@ -19,33 +44,53 @@ $bloglar[1] = array(
 );
 
 $bloglar[2] = array(
-	"baslik" => "Müthiş İddia! Mars Yok mu Oluyor?",
-	"kisa_icerik" => "Ünlü bilimci Shoshanna Cole, Mars gezegeninde son yıllarda yok olan bazı kraterlerin neden yok olduklarına dair bir teori ortaya attı...",
-	"uzun_icerik" => "<p>Gezegendeki Gusev Krateri'ne bağlı Columbia ve Husband tepelerinde bulunan kayaların seneler içinde büyük oranda yok olduğunu söyleyen ünlü gezegen bilimci Cole, bu yok olmaya, Mars'ta yaşanan volkanik patlamalar sonucu ortaya çıkan asidik bulutların sebep olduğunu öne sürdü.</p>
+	"baslik" => "Vatan-Millet-Sakarya",
+	"kisa_icerik" => "Bu bloğu hem askerlik serüvenim için hatırat, hem de askere gidecekler için yol gösterici rehber olması için yazmaya karar verdim...",
+	"uzun_icerik" => "<p>Askerlik görevi, ülkemizde zorunlu olarak uygulanan en önemli vatanî görevlerden biridir. Kimimiz işe başlamak için bir engel olarak görür onu, kimimiz “Askere gtimeyene kız verilmez.” sözüne binaen evlilik hayallerini askerlikten sonraya bırakır. Bir an önce askerliği yapıp önümüzdeki en büyük engeli ortadan kaldırmak isteriz. Yine de ülkemiz tarihinde yüzyıllardan beri süregelen bu vatanî görevimizin kutsallığının farkında olup peygamber ocağı dediğimiz bu vazifeye saygımızı da her daim gösteririz. Gerekirse bu uğurda şehit düşer veya gazi olup sakat kalırız. Bu bloğu hem askerlik serüvenim için <cite>hatırat</cite>, hem de askere gideceklere yol gösterici rehber olması için yazmaya karar verdim. Askerliğimi kısa dönem olarak yaptığım için, bir kısa dönem askerin gözüyle notlar düşeceğim.</p>
 
-	<p>Araştırma kapsamında, Mars'taki söz konusu kayalıkların ilk hali ve asitle erimiş halini içeren resimleri de gösterildi.</p>
+	<p>Üniversiteden 2015 yılında mezun olduktan sonra askerlik şubesine gidip askerliğimi 2017 yılına kadar tecil ettirmiştim. Bu arada bir işe girip tecrübe edinme fikri vardı. Aynı zamanda boş kaldığım vakitte KPSS’ye de çalışacaktım. İşler benim umduğum gibi gitmedi. Askerlik her iş ilanında benim için büyük bir engel görünüyordu. Gireceğim işlerde de zaman geldiğinde askere gitmek için ayrılmam gerekecekti. Çok fazla umduğum gibi işler çıkmayınca mayıs ayındaki KPSS 2016 sınavından sonra tecili bozdurup o yıl askere gitmeyi planlamıştım. Haziranın ortaları gibi askerlik şubesine gidip tecili bozdurduğumda Kasım celbine asker olacağım söylenmişti. Ağustos celbini yaklaşık 15 günle kaçırmış, 5 ay sürecek uzun bir bekleyişe girmiş olacaktım. Buna çok dikkat etmeniz gerekiyor. Bir senede Şubat, Mayıs, Ağustos ve Kasım olmak üzere 4 celp dönemi var. Her bir dönemin de son başvuru tarihi var. Bu tarihleri geçirdiğinizde otomatik olarak bir sonraki celp dönemine sarkıyor.</p>
 
-	<p>Kaynak: Haber 7</p>",
-	"resim" => "mars",
-	"tarih" => "19 Kasım 2015, Perşembe"
-);
+	<p>Bu 5 aylık süre içerisinde ülke hain 15 Temmuz darbe girişimiyle şoka girmişti. Bu darbe girişimi Allah’ın izniyle önlenmişti. Ancak askerlik müessesinin itibarı halk nezdinde zedelenmişti. Darbeci askerlerin kendi halkına kurşun sıkması pek unutulacak bir hadise olmayacaktı. Ağustos celbine yetişemeyip kasım celbine askerliğe gitmem belki de olayların yatışması açısından hayırlı olmuştu benim için. Her ne kadar ülkede <abbr title='Olağanüstü Hal'>OHAL</abbr> varken askerlik yapsam da bu benim askerliğim açısından olumsuz bir durum oluşturmamıştı.</p>
 
-$bloglar[3] = array(
-	"baslik" => "Facebook’suz Daha Mutluyuz",
-	"kisa_icerik" => "Danimarkalı bilim insanlarının araştırmasına göre, Facebook’u kullanmamak insanları daha mutlu ediyor...",
-	"uzun_icerik" => "<p>1095 kişinin katılımıyla yapılan bir araştırmada, katılımcıların yarısı bir hafta boyunca Facebook'u kullanmadı, diğer yarısı ise sosyal ağı kullanmaya devam etti.</p>
+	<p>Sonunda askerliğimi yapacağım acemilik ve ustalık birliklerimin yerleri açıklandı: Acemi birliğim, İzmir’in Narlıdere ilçesinde İstihkam Okulu ve Eğitim Merkezi Komutanlığı olurken usta birliğimin yeri olarak da Sakarya’nın merkez Adapazarı ilçesindeki şu destansı isim yazıyordu: 1. Motorlu Piyade Tugayı Taşkısığı Komutan Yardımcılığı 1. Motorlu Piyade Taburu Karargâh ve Karargâh Bölüğü Elmasağa Emniyet ve Muhafız Takım Komutanlığı.</p>
 
-	<p>7 gün sonra yapılan analizlere göre, Facebook'u kullanmayanlar, kullananlara kıyasla daha hoşnut ve dengeli hissettiklerini bildirdi.</p>
+	<p>Bu yazımda kışlalardaki kurallar, düzenler ve buraların tanıtımı hakkında bilgi veremeyeceğim. Ama özet olarak bir kaç konuya değineyim. Acemi birliğimde acemi asker sayısı çok olduğundan hastalıklar daha fazla oluyor. Boğazı şişmeyen, gözleri kızarıp çapaklanmayan asker sayısı neredeyse yok gibiydi. Mümkün olduğunca burada temizliğe dikkat etmeniz gerekiyor. Acemilikte 3 hafta boyunca askerî eğitimden çok tören yürüyüşü yaptık. Yemeklere ve diğer eğitim alanlarına hep marşlar, sloganlarla uygun adım eşliğinde yürüdük. Bu yüzden acemilikte oluşan ve hala 6 aydır geçmeyen ayak başparmaklarımda uyuşukluk oluştu. Acemilik bir bakıma 3 hafta sonraki yemin töreninize hazırlık eğitimi gibi geçiyor. Ben bu yürüyüş eğitimi yerine bize verilecek askerî eğitimleri tercih ederdim.</p>
 
-	<p>Facebook'u kullanmayan grup, daha iyi konsantre olup, daha az stresli hissettiklerini de vurgularken, kurdukları sosyal iletişimlerden de oldukça memnundular.</p>
+	<p>Yemin töreninden sonra Narlıdere’ye veda ettiğimde asıl birliğimin heyecanı sarmıştı beni. Sakarya yolculuğu başlamıştı. Akşam üzeri zor da olsa kışlayı bulmuştuk. 1 gün geç katılım yapmıştım. Terhis olacağım zaman da 1 gün geç çıkacaktım. Usta birliğimde çok ilginç, çeşitli tevafuklar yaşadım. Silah mazgal numaramın Çorum’un plaka numarası olan 19’un düşmesi gibi. Benim için en önemli ve hayret verici tevafuk ise kışladaki en rütbeli komutan olan kışla komutanının isminin de Cüneyt olmasıydı. Kendisi de benden 10 gün önce bu kışlaya kışla komutanı olarak atanmıştı. Bununla da kalmayıp, Cüneyt komutanın aslen Çorumlu olması sadece beni değil tüm arkadaşları da şaşırtmıştı. İhtimallere vurulduğunu düşünürsek; Türkiye’deki 81 il ve yüzlerce kışla arasında Sakarya’ya düşmem, Sakarya’daki 4-5 kışla içinde Elmasağa’ya düşmem ve kışla komutanı olarak buraya tayin olabilecek komutanlar arasında ismi Cüneyt olup, aynı zamanda memleketi Çorum olan birinin buraya düşmesi belki milyon ihtimalde bir olacak. Komutanımız bana bu durumdan dolayı özel ilgi göstermedi. Diğer arkadaşlardan farklı davranmadı. Olması gereken de bu olmalıydı zaten. Ben de böyle olmasını isterdim. Belki arkadaşların ismi unutabilirim, fakat komutanımızın ismini hiç unutamayacağım.</p>
 
-	<p>Kopenhag merkezli Happines Research Enstitüsü'nden Meik Wiking, “Sonuçlar bizi şaşırttı“ dedi.</p>
+	<p>134 günüm silahlık ve santral görevlisi olarak geçti. Son bir haftamda nöbet mangasına geçerek yeni arkadaşlara devrettim görevi. İleriye baktığımızda bitmeyecek gibi görünen günler geçmiş, sonlara doğru <q>Ne de çabuk geçmiş 5 buçuk ay</q> dediğimiz günlere girmiştik. Böyle böyle askerliğin sonuna iyi-kötü ulaşmıştık. Değişik değişik insanlar, değişik değişik karakterler tanımıştık. Askeriyede işlerin hala ne kadar ağır işlediğinin farkına varmıştık. 2016 yılına gelinmesine rağmen 30-40 sene öncesinin mantığıyla bir grup askerin iktidara darbe yapıp, onu illegal yollarla devirebileceklerini düşünmelerini hiç kimse akıl sır erdiremezken, oraya gidince daha iyi anladık.</p>
 
-	<p>Wiking, iki grup arasındaki açık farkın görülebildiğini söyledi. </p>
+	<p>Artık Türkiye terörden çok çekti. Ne zaman şaha kalkmaya çalışsa ayaklarına çelme takmaya çalıştılar. Bunun için Türk Silahlı Kuvvetlerine, devletin yöneticilerine ve Türk halkına büyük iş düşüyor. <abbr title='Türk Silahlı Kuvvetleri'>TSK</abbr> revizyona gitmeli, çağın gerektirdikleri yenilliklere ayak uydurmalı. Zorunlu askerlik yerine artık profesyonel ordu kurulmalı. Bütün silahlarımız, aletlerimiz, cihazlarımız, araçlarımız, tanklarımız, uçaklarımız yerli olmalı. Askerimiz seve seve yapmalı işini. Askerler eğitimlerini en iyi şekilde almalı. Bu işi meslek olarak yapıp, hakettikleri maaşları da verilirse yaptıkları işleri daha çok benimser ve işlerinde daha uzman olurlar. Belki o zaman daha güçlü bir askerî yapımız olur kanaatindeyim.</p>
 
-	<p>Kaynak: NTV</p>",
-	"resim" => "facebook",
-	"tarih" => "19 Kasım 2015, Perşembe"
+	<p>Daha yazacak çok şey vardı. Yazmak isteyip de yazamadıklarım, birbirinden değerli silah arkadaşlarım, komutanlarım, daha bir çok askerlik anılarım… Ama şimdilik bu yazımı Necip Fazıl'ın Sakarya Türküsünden bir kesitle bitiriyorum, hoşçakalın.
+	<pre>
+
+	\"İnsan bu, su misali, kıvrım kıvrım akar ya;
+	Bir yanda akan benim, öbür yanda Sakarya.
+	Su iner yokuşlardan, hep basamak basamak;
+	Benimse alın yazım, yokuşlarda susamak.
+	Her şey akar, su, tarih, yıldız, insan ve fikir;
+	Oluklar çift; birinden nur akar; birinden kir.
+	Akışta demetlenmiş, büyük, küçük, kâinat;
+	Şu çıkan buluta bak, bu inen suya inat!
+	Fakat Sakarya başka, yokuş mu çıkıyor ne,
+	Kurşundan bir yük binmiş, köpükten gövdesine;
+	Çatlıyor, yırtınıyor yokuşu sökmek için.
+	Hey Sakarya, kim demiş suya vurulmaz perçin?
+	Rabbim isterse, sular büklüm büklüm burulur,
+	Sırtına Sakaryanın, Türk tarihi vurulur.
+	Eyvah, eyvah, Sakaryam, sana mı düştü bu yük?
+	Bu dâva hor, bu dâva öksüz, bu dâva büyük! ..
+
+	Ne ağır imtihandır, başındaki, Sakarya!
+	Binbir başlı kartalı nasıl taşır kanarya?
+
+	...										\"
+
+	</pre>
+	</p>",
+	"resim" => "elmasaga_kislasi",
+	"tarih" => "29 Nisan 2017, Cumartesi"
 );
 
 ?>

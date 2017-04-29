@@ -10,6 +10,10 @@ body {
 
 	background-color: #ECE9E7;
 	background-image: url("../resim/arkaplan.png");
+}
+
+body * {
+
 	font-family: Ubuntu, sans-serif;
 }
 
@@ -642,6 +646,15 @@ div.blogOzet {
 div.blogOzet a.buton {
 
 	float: right;
+
+}
+
+div.blogOzet span.blogTarih {
+
+	float: left;
+	margin-top: 10px;
+	font-size: 12px;
+	opacity: 0.8;
 
 }
 

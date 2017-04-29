@@ -2,6 +2,10 @@
 include("fonksiyonlar.php");
 include("blog_veriler.php");
 
+
+
+
+
 if ( !isset($_GET['blog']) || !is_numeric($_GET['blog']) ) {
 
 	$sayfa = "Blog";
@@ -35,6 +39,7 @@ if ( !isset($blogNo) ) {
 	$birSayfadakiBlog = 5;
 	$i = 0;
 	$dahaSayfaVar = false;
+	krsort($bloglar);
 
 	foreach ( $bloglar as $blogNo => $blogBilgi ) {
 
@@ -57,6 +62,8 @@ if ( !isset($blogNo) ) {
 
 		<h2><a href="?blog=<?=$blogNo?>"><?=$blogBilgi["baslik"]?></a></h2>
 		<p><?=$blogBilgi["kisa_icerik"]?></p>
+
+		<span class="blogTarih"><?=$blogBilgi["tarih"]?></span>
 		<a class="buton" href="?blog=<?=$blogNo?>">Devamını Oku</a>
 
 	</div> <!-- blogOzet sonu -->
@@ -64,6 +71,7 @@ if ( !isset($blogNo) ) {
 </article>
 
 <?php
+
 		if ( $i == $birSayfadakiBlog * $sayfaNo ) {
 
 			if (count($bloglar) > $i) $dahaSayfaVar = true;

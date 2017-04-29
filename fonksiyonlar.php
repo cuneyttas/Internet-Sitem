@@ -96,11 +96,11 @@ function tema_menu($sayfa) {
 
 <ul class="sutun-12">
 
-	<li><a class="<?php if ($sayfa == "Anasayfa" ) echo "aktif" ?>" href="<?= $anasayfaBaglantisi ?>"><i class="fa fa-user fa-3x menu-ikon"></i><br>Profil</a></li>
-	<li><a class="<?php if ($sayfa == "Özgeçmiş" ) echo "aktif" ?>" href="ozgecmis.php"><i class="fa fa-file-text fa-3x menu-ikon"></i><br>Özgeçmiş</a></li>
-	<li><a class="<?php if ($sayfa == "Galeri" ) echo "aktif" ?>" href="galeri.php"><i class="fa fa-picture-o fa-3x menu-ikon"></i><br>Galeri</a></li>
-	<li><a class="<?php if ($sayfa == "Blog" ) echo "aktif" ?>" href="blog.php"><i class="fa fa-commenting fa-3x menu-ikon"></i><br>Blog</a></li>
-	<li><a class="<?php if ($sayfa == "İletişim" ) echo "aktif" ?>" href="iletisim.php"><i class="fa fa-envelope fa-3x menu-ikon"></i><br>İletişim</a></li>
+	<li><a title="Profil" class="<?php if ($sayfa == "Anasayfa" ) echo "aktif" ?>" href="<?= $anasayfaBaglantisi ?>"><i class="fa fa-user fa-3x menu-ikon"></i><br>Profil</a></li>
+	<li><a title="Özgeçmiş" class="<?php if ($sayfa == "Özgeçmiş" ) echo "aktif" ?>" href="ozgecmis.php"><i class="fa fa-file-text fa-3x menu-ikon"></i><br>Özgeçmiş</a></li>
+	<li><a title="Galeri" class="<?php if ($sayfa == "Galeri" ) echo "aktif" ?>" href="galeri.php"><i class="fa fa-picture-o fa-3x menu-ikon"></i><br>Galeri</a></li>
+	<li><a title="Blog" class="<?php if ($sayfa == "Blog" ) echo "aktif" ?>" href="blog.php"><i class="fa fa-commenting fa-3x menu-ikon"></i><br>Blog</a></li>
+	<li><a title="İletişim" class="<?php if ($sayfa == "İletişim" ) echo "aktif" ?>" href="iletisim.php"><i class="fa fa-envelope fa-3x menu-ikon"></i><br>İletişim</a></li>
 	<li class="acMenu">
 
 		<a href="#" class="diger"><i class="fa fa-bars fa-3x menu-ikon"></i><br>Diğer</a>
@@ -135,7 +135,7 @@ function tema_altKisim() {
 
 	<footer class="sutun-12">
 
-		<p>Telif Hakkı © 2015-2017 Cüneyt TAŞ (Sürüm 1.9)</p>
+		<p>Telif Hakkı © 2015-2017 Cüneyt TAŞ (Sürüm 2.0)</p>
 
 	</footer>
 

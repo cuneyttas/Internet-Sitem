@@ -14,7 +14,7 @@ function sayfaIcerigi() {
 		<li class="satir"><label class="proBaslik sutun-4">Memleket:</label><span class="proBilgi sutun-8">Çorum</span></li>
 
 	</ul>
-	<p>Kişisel internet siteme hoşgeldiniz.</p>
+	<p>Kişisel internet siteme hoşgeldiniz.</p><br>
 	<p>Bu sitede blog yazıları, makaleler, paylaşımlar, fotoğraflar, okuyup beğendiğim kitaplar, önerdiğim filmler, özgeçmişime dair bilgiler ve daha bir çok şeyi sizlerle paylaşmayı düşünüyorum. Facebook ve Twitter hesaplarımı kapatalı yıllar oldu. Bu tür sosyal ağlar yerine kendi sitemden paylaşımlar yapmış olacağım, hem de internet sitemi sürekli geliştirerek internet programlama ve tasarımı bilgilerimi de bununla beraber geliştirmeyi düşünüyorum.</p>
 
 	<!-- <h2>Başlık</h2>
