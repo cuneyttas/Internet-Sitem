@@ -24,7 +24,8 @@ function tema_head($baslik = "") {
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  	<meta name="title" content="<?=$siteBaslik?>">
  	<meta name="description" content="<?=$siteBaslik?>">
- 	<meta name="keywords" content="cüneyt, taş, web tasarım, bilgisayar mühendisi">
+ 	<meta name="author" content="Cüneyt TAŞ">
+ 	<meta name="keywords" content="cüneyt, taş, web tasarım, bilgisayar mühendisi, çorum">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
  	<link rel="stylesheet" href="css/bicim.css">
  	<link rel="stylesheet" href="css/mobil.css">
@@ -50,11 +51,11 @@ function tema_solSutun() {
 
 ?>
 
-<section class="solSutun sutun-3">
+<section class="solSutun sutun-3 golge">
 
 	<div class="maviAlan">
 
- 	<img class="cuneyt" src="resim/cuneyt.jpg" alt="Cüneyt TAŞ">
+ 	<img class="cuneyt kivrikKose" src="resim/cuneyt.jpg" alt="Cüneyt TAŞ">
 
 		<div class="bilgi">
 
@@ -96,16 +97,16 @@ function tema_menu($sayfa) {
 
 <ul class="sutun-12">
 
-	<li><a title="Profil" class="<?php if ($sayfa == "Anasayfa" ) echo "aktif" ?>" href="<?= $anasayfaBaglantisi ?>"><i class="fa fa-user fa-3x menu-ikon"></i><br>Profil</a></li>
-	<li><a title="Özgeçmiş" class="<?php if ($sayfa == "Özgeçmiş" ) echo "aktif" ?>" href="ozgecmis.php"><i class="fa fa-file-text fa-3x menu-ikon"></i><br>Özgeçmiş</a></li>
-	<li><a title="Galeri" class="<?php if ($sayfa == "Galeri" ) echo "aktif" ?>" href="galeri.php"><i class="fa fa-picture-o fa-3x menu-ikon"></i><br>Galeri</a></li>
-	<li><a title="Blog" class="<?php if ($sayfa == "Blog" ) echo "aktif" ?>" href="blog.php"><i class="fa fa-commenting fa-3x menu-ikon"></i><br>Blog</a></li>
-	<li><a title="İletişim" class="<?php if ($sayfa == "İletişim" ) echo "aktif" ?>" href="iletisim.php"><i class="fa fa-envelope fa-3x menu-ikon"></i><br>İletişim</a></li>
-	<li class="acMenu">
+	<li class="golge kivrikKose"><a title="Profil" class="kivrikKose <?php if ($sayfa == "Anasayfa" ) echo "aktif" ?>" href="<?= $anasayfaBaglantisi ?>"><i class="fa fa-user fa-3x menu-ikon"></i><br>Profil</a></li>
+	<li class="golge kivrikKose"><a title="Özgeçmiş" class="kivrikKose <?php if ($sayfa == "Özgeçmiş" ) echo "aktif" ?>" href="ozgecmis.php"><i class="fa fa-file-text fa-3x menu-ikon"></i><br>Özgeçmiş</a></li>
+	<li class="golge kivrikKose"><a title="Galeri" class="kivrikKose <?php if ($sayfa == "Galeri" ) echo "aktif" ?>" href="galeri.php"><i class="fa fa-picture-o fa-3x menu-ikon"></i><br>Galeri</a></li>
+	<li class="golge kivrikKose"><a title="Blog" class="kivrikKose <?php if ($sayfa == "Blog" ) echo "aktif" ?>" href="blog.php"><i class="fa fa-commenting fa-3x menu-ikon"></i><br>Blog</a></li>
+	<li class="golge kivrikKose"><a title="İletişim" class="kivrikKose <?php if ($sayfa == "İletişim" ) echo "aktif" ?>" href="iletisim.php"><i class="fa fa-envelope fa-3x menu-ikon"></i><br>İletişim</a></li>
+	<li class="acMenu golge  kivrikKose">
 
-		<a href="#" class="diger"><i class="fa fa-bars fa-3x menu-ikon"></i><br>Diğer</a>
+		<a href="#" class="diger kivrikKose"><i class="fa fa-bars fa-3x menu-ikon"></i><br>Diğer</a>
 
-			<ul>
+			<ul class="golge">
 
 				<li><a href="kitaplar.php">Okuduğum Kitaplar</a></li>
 				<li><a href="#">Beğendiğim Filmler (YAKINDA)</a></li>
@@ -123,9 +124,6 @@ function tema_menu($sayfa) {
 
 }// Menü fonksiyonu sonu
 
-
-
-
 // Alt Kısım fonksiyonu başı
 function tema_altKisim() {
 
@@ -135,7 +133,7 @@ function tema_altKisim() {
 
 	<footer class="sutun-12">
 
-		<p>Telif Hakkı © 2015-2017 Cüneyt TAŞ (Sürüm 2.0)</p>
+		<p>Telif Hakkı © 2015-2017 Cüneyt TAŞ (Sürüm 2.2)</p>
 
 	</footer>
 
@@ -164,7 +162,7 @@ function tema_sablon($sayfa) {
 
  			<?php tema_Menu($sayfa); ?>
 
- 			<div class="icerik satir">
+ 			<div class="icerik satir golge kivrikKose">
 
 	 			<?php sayfaIcerigi(); ?>
 

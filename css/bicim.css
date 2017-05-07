@@ -17,6 +17,18 @@ body * {
 	font-family: Ubuntu, sans-serif;
 }
 
+.golge {
+
+	box-shadow: 6px 6px 20px 0px rgba(0,0,0,0.2);
+
+}
+
+.kivrikKose {
+
+	border-radius: 15px;
+
+}
+
 hr.cizgi {
 
 	border-color: #39AAE0;
@@ -328,6 +340,17 @@ label.proBaslik, span.proBilgi {
 
 	padding: 0;
 
+
+}
+
+::-moz-selection { /* Mozilla Firefox için */
+    color: white;
+    background: #5FCCFF;
+}
+
+::selection {
+    color: white;
+    background: #5FCCFF;
 }
 
 div.icerik p {
@@ -336,6 +359,8 @@ div.icerik p {
 	font-size: .9em;
     line-height: 1.5em;
     margin: 10px 0 0;
+    text-align: justify;
+    text-indent: 20px;
 
 }
 
@@ -604,8 +629,20 @@ ul.resimler li img {
 	width: 100%;
 	border: 1px solid #FFF;
 	display: block;
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* IE8 ve öncesi için*/
+	transition: opacity 1s;
 
 }
+
+ul.resimler li img:hover {
+
+	opacity: 1;
+	filter: alpha(opacity=100); /* IE8 ve öncesi için*/
+
+}
+
+
 ul.kategori li a.aktif {
 
 	background-color: #3399CC;
@@ -777,6 +814,12 @@ a.buton.deaktif:hover {
 
 	background-color: white;
 	color: grey;
+
+}
+
+address {
+
+	cursor: not-allowed;
 
 }
 

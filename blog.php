@@ -106,6 +106,12 @@ if ( !isset($blogNo) ) {
 
 	</figure>
 	<?=$bloglar[$blogNo]['uzun_icerik']?>
+	<?php
+
+		if($_GET['blog']==0) include("deneme.php");
+
+	?>
+
 </article>
 <div class="temizle"></div>
 <div class="blogAlt satir" style="margin-top: 50px;">

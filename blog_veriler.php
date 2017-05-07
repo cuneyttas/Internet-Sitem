@@ -5,26 +5,9 @@ $bloglar = array();
 $bloglar[0] = array(
 	"baslik" => "Deneme Sayfam",
 	"kisa_icerik" => "Bu blog deneme sayfası olarak kullanılacaktır. İçerisindeki yazılar anlam bütünlüğü olmayan saçma fakat benim bir şekilde kendime göre anlam çıkaracağım cümlelerden ibarettir. Site misafirlerinin okuması için yazılmamıştır. Bilginize...  ",
-	"uzun_icerik" => "
-	<p>Hayatta bazı anlar <b>önemlidir</b> sizin için. O anlardan bazıları diğerlerinden daha <strong>önemlidir</strong>. Bazı kapılardan geçerken <i>eğilmek</i> gerektir. Eğilmekle neyi <em>vurgulayacağımız</em> anlatılır bize. Bu davranış kendimizi <small>küçültmek</small> anlamına gelmez. <mark>Görkemli</mark> bir şekilde büyümektir. Her <del>yanlış</del> her doğruyu götüremez beraberinde. Şu konunun <ins>altını çizmek</ins> istiyorum:</p>
-
-	<p>E<sub>5</sub> = m . c<sup>2</sup></p>
-
-	<p>Bir büyük düşünür demiş:
-
-		<blockquote cite='https://www.neguzelsozler.com/unlu-sozleri/necip-fazil-kisakurek-sozleri.html'>Kader, beyaz kağıda sütle yazılmış yazı,Elindeyse, beyazdan gel de sıyır beyazı…</blockqoute>
-
-	</p>
-
-	<p><bdo dir='rtl'>Her şey tersine dönebilir.</bdo></p>
-
-
-
-
-
-	",
+	"uzun_icerik" => "",
 	"resim" => "tavuk_deneme",
-	"tarih" => "29 Nisan 2017, Cumartesi"
+	"tarih" => ""
 );
 
 $bloglar[1] = array(
@@ -36,7 +19,7 @@ $bloglar[1] = array(
 
 	<p>Dikkat ederseniz blog yazımdan ve sitemin diğer yerlerinden de görüleceği gibi mümkün olduğunca İngilizce kelimelerden kaçınmaya çalışıyorum. Bilgisayar alanında  çalışırken İngilizce kelimelerden kaçmak her ne kadar zor olsa da yine de “Web Sitem” yerine “İnternet Sitem” gibi kullanımları tercih ediyorum. İleride açık kaynak olarak sitemin kodlarını yayınlayacağım zaman görürsünüz. Mümkün olduğunca değişkenler, fonksiyon isimleri, dosya ve sayfa isimleri gibi kelimeleri %90 oranında Türkçe yazmaya gayret ettim. Çünkü dilimizin İngilizce gibi dillerin boyunduruğu altına girmesine karşıyım. Yanlış anlaşılmasın, İngilizce öğrenilmesine karşı değilim. Ben de öğreniyorum. Ama Türkçe konuşup yazarken, İngilizce kelimelerin araya girmesinden hoşlanmıyorum. </p>
 
-	<p>Sitemin sayfaları Profil, Özgeçmiş, Galeri ve İletişim isimli ana sayfalardan oluşuyor. Yardımcı sayfaları da günden güne ekleyeceğim. Şimdilik okuduğum kitapları listelediğim bir sayfam var. <a href='http://www.cuneyt-tas.com/' title='Profil Sayfası' target='_blank'>Profil</a> sayfasını daha interaktif hale getirmeyi düşünüyorum. Son güncellemelerin özeti burada gösterilecek. <a href='http://www.cuneyt-tas.com/ozgecmis.php' title='Özgeçmiş Sayfası' target='_blank'>Özgeçmiş</a>’te benim özgeçmişimin abartılı bir şekilde fazlasını görebilirsiniz. Abartıyı seviyorum. :) <a href='http://www.cuneyt-tas.com/galeri.php' title='Galeri Sayfası' target='_blank'>Galeri</a>‘ye beğendiğim ve paylaşmak istediğim genellikle kendi çektiğim fotoğrafları koyacağım. <a href='http://www.cuneyt-tas.com/iletisim.php' title='İletişim Sayfası' target='_blank'>İletişim</a>’den benle iletişime geçmek için e-posta gönderebilirsiniz. <a href='http://www.cuneyt-tas.com/blog.php' title='Blog Sayfası' target='_blank'>Blog</a> sayfamda da her konudan yazılarımı sizlerle paylaşacağım. Sitemin tasarımından çok da memnun olmasamda her şey rayına oturana kadar bu şekilde devam edecek. Siteye yaptığım her bir yenilikle sürüm numarasını 0.1 oranında artırıyorum.</p>
+	<p>Sitemin sayfaları Profil, Özgeçmiş, Galeri ve İletişim isimli ana sayfalardan oluşuyor. Yardımcı sayfaları da günden güne ekleyeceğim. Şimdilik okuduğum kitapları listelediğim bir sayfam var. <a href='http://www.cuneyt-tas.com/' title='Profil Sayfası' target='_blank'>Profil</a> sayfasını daha interaktif hale getirmeyi düşünüyorum. Son güncellemelerin özeti burada gösterilecek. <a href='http://www.cuneyt-tas.com/ozgecmis.php' title='Özgeçmiş Sayfası' target='_self'>Özgeçmiş</a>’te benim özgeçmişimin abartılı bir şekilde fazlasını görebilirsiniz. Abartıyı seviyorum. :) <a href='http://www.cuneyt-tas.com/galeri.php' title='Galeri Sayfası' target='_parent'>Galeri</a>‘ye beğendiğim ve paylaşmak istediğim genellikle kendi çektiğim fotoğrafları koyacağım. <a href='http://www.cuneyt-tas.com/iletisim.php' title='İletişim Sayfası' target='_top'>İletişim</a>’den benle iletişime geçmek için e-posta gönderebilirsiniz. <a href='http://www.cuneyt-tas.com/blog.php' title='Blog Sayfası' target='_blank'>Blog</a> sayfamda da her konudan yazılarımı sizlerle paylaşacağım. Sitemin tasarımından çok da memnun olmasamda her şey rayına oturana kadar bu şekilde devam edecek. Siteye yaptığım her bir yenilikle sürüm numarasını 0.1 oranında artırıyorum.</p>
 
 	<p>İlk blog yazımın da sonuna gelmiş bulunuyoruz. Yeni bir yazıyla görüşmek üzere hoşçakalın.</p>",
 	"resim" => "internet_sitem",
@@ -46,7 +29,7 @@ $bloglar[1] = array(
 $bloglar[2] = array(
 	"baslik" => "Vatan-Millet-Sakarya",
 	"kisa_icerik" => "Bu bloğu hem askerlik serüvenim için hatırat, hem de askere gidecekler için yol gösterici rehber olması için yazmaya karar verdim...",
-	"uzun_icerik" => "<p>Askerlik görevi, ülkemizde zorunlu olarak uygulanan en önemli vatanî görevlerden biridir. Kimimiz işe başlamak için bir engel olarak görür onu, kimimiz “Askere gtimeyene kız verilmez.” sözüne binaen evlilik hayallerini askerlikten sonraya bırakır. Bir an önce askerliği yapıp önümüzdeki en büyük engeli ortadan kaldırmak isteriz. Yine de ülkemiz tarihinde yüzyıllardan beri süregelen bu vatanî görevimizin kutsallığının farkında olup peygamber ocağı dediğimiz bu vazifeye saygımızı da her daim gösteririz. Gerekirse bu uğurda şehit düşer veya gazi olup sakat kalırız. Bu bloğu hem askerlik serüvenim için <cite>hatırat</cite>, hem de askere gideceklere yol gösterici rehber olması için yazmaya karar verdim. Askerliğimi kısa dönem olarak yaptığım için, bir kısa dönem askerin gözüyle notlar düşeceğim.</p>
+	"uzun_icerik" => "<p id='p1'>Askerlik görevi, ülkemizde zorunlu olarak uygulanan en önemli vatanî görevlerden biridir. Kimimiz işe başlamak için bir engel olarak görür onu, kimimiz “Askere gtimeyene kız verilmez.” sözüne binaen evlilik hayallerini askerlikten sonraya bırakır. Bir an önce askerliği yapıp önümüzdeki en büyük engeli ortadan kaldırmak isteriz. Yine de ülkemiz tarihinde yüzyıllardan beri süregelen bu vatanî görevimizin kutsallığının farkında olup peygamber ocağı dediğimiz bu vazifeye saygımızı da her daim gösteririz. Gerekirse bu uğurda şehit düşer veya gazi olup sakat kalırız. Bu bloğu hem askerlik serüvenim için <cite>hatırat</cite>, hem de askere gideceklere yol gösterici rehber olması için yazmaya karar verdim. Askerliğimi kısa dönem olarak yaptığım için, bir kısa dönem askerin gözüyle notlar düşeceğim.</p>
 
 	<p>Üniversiteden 2015 yılında mezun olduktan sonra askerlik şubesine gidip askerliğimi 2017 yılına kadar tecil ettirmiştim. Bu arada bir işe girip tecrübe edinme fikri vardı. Aynı zamanda boş kaldığım vakitte KPSS’ye de çalışacaktım. İşler benim umduğum gibi gitmedi. Askerlik her iş ilanında benim için büyük bir engel görünüyordu. Gireceğim işlerde de zaman geldiğinde askere gitmek için ayrılmam gerekecekti. Çok fazla umduğum gibi işler çıkmayınca mayıs ayındaki KPSS 2016 sınavından sonra tecili bozdurup o yıl askere gitmeyi planlamıştım. Haziranın ortaları gibi askerlik şubesine gidip tecili bozdurduğumda Kasım celbine asker olacağım söylenmişti. Ağustos celbini yaklaşık 15 günle kaçırmış, 5 ay sürecek uzun bir bekleyişe girmiş olacaktım. Buna çok dikkat etmeniz gerekiyor. Bir senede Şubat, Mayıs, Ağustos ve Kasım olmak üzere 4 celp dönemi var. Her bir dönemin de son başvuru tarihi var. Bu tarihleri geçirdiğinizde otomatik olarak bir sonraki celp dönemine sarkıyor.</p>
 
@@ -88,7 +71,9 @@ $bloglar[2] = array(
 	...										\"
 
 	</pre>
-	</p>",
+	</p>
+
+	<a href='#p1' style='float:right; border:1px solid #2288BB; padding:5px;'>Başa Dön</a>",
 	"resim" => "elmasaga_kislasi",
 	"tarih" => "29 Nisan 2017, Cumartesi"
 );
