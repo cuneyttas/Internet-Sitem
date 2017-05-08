@@ -29,7 +29,7 @@ $bloglar[1] = array(
 $bloglar[2] = array(
 	"baslik" => "Vatan-Millet-Sakarya",
 	"kisa_icerik" => "Bu bloğu hem askerlik serüvenim için hatırat, hem de askere gidecekler için yol gösterici rehber olması için yazmaya karar verdim...",
-	"uzun_icerik" => "<p id='p1'>Askerlik görevi, ülkemizde zorunlu olarak uygulanan en önemli vatanî görevlerden biridir. Kimimiz işe başlamak için bir engel olarak görür onu, kimimiz “Askere gtimeyene kız verilmez.” sözüne binaen evlilik hayallerini askerlikten sonraya bırakır. Bir an önce askerliği yapıp önümüzdeki en büyük engeli ortadan kaldırmak isteriz. Yine de ülkemiz tarihinde yüzyıllardan beri süregelen bu vatanî görevimizin kutsallığının farkında olup peygamber ocağı dediğimiz bu vazifeye saygımızı da her daim gösteririz. Gerekirse bu uğurda şehit düşer veya gazi olup sakat kalırız. Bu bloğu hem askerlik serüvenim için <cite>hatırat</cite>, hem de askere gideceklere yol gösterici rehber olması için yazmaya karar verdim. Askerliğimi kısa dönem olarak yaptığım için, bir kısa dönem askerin gözüyle notlar düşeceğim.</p>
+	"uzun_icerik" => "<p>Askerlik görevi, ülkemizde zorunlu olarak uygulanan en önemli vatanî görevlerden biridir. Kimimiz işe başlamak için bir engel olarak görür onu, kimimiz “Askere gtimeyene kız verilmez.” sözüne binaen evlilik hayallerini askerlikten sonraya bırakır. Bir an önce askerliği yapıp önümüzdeki en büyük engeli ortadan kaldırmak isteriz. Yine de ülkemiz tarihinde yüzyıllardan beri süregelen bu vatanî görevimizin kutsallığının farkında olup peygamber ocağı dediğimiz bu vazifeye saygımızı da her daim gösteririz. Gerekirse bu uğurda şehit düşer veya gazi olup sakat kalırız. Bu bloğu hem askerlik serüvenim için <cite>hatırat</cite>, hem de askere gideceklere yol gösterici rehber olması için yazmaya karar verdim. Askerliğimi kısa dönem olarak yaptığım için, bir kısa dönem askerin gözüyle notlar düşeceğim.</p>
 
 	<p>Üniversiteden 2015 yılında mezun olduktan sonra askerlik şubesine gidip askerliğimi 2017 yılına kadar tecil ettirmiştim. Bu arada bir işe girip tecrübe edinme fikri vardı. Aynı zamanda boş kaldığım vakitte KPSS’ye de çalışacaktım. İşler benim umduğum gibi gitmedi. Askerlik her iş ilanında benim için büyük bir engel görünüyordu. Gireceğim işlerde de zaman geldiğinde askere gitmek için ayrılmam gerekecekti. Çok fazla umduğum gibi işler çıkmayınca mayıs ayındaki KPSS 2016 sınavından sonra tecili bozdurup o yıl askere gitmeyi planlamıştım. Haziranın ortaları gibi askerlik şubesine gidip tecili bozdurduğumda Kasım celbine asker olacağım söylenmişti. Ağustos celbini yaklaşık 15 günle kaçırmış, 5 ay sürecek uzun bir bekleyişe girmiş olacaktım. Buna çok dikkat etmeniz gerekiyor. Bir senede Şubat, Mayıs, Ağustos ve Kasım olmak üzere 4 celp dönemi var. Her bir dönemin de son başvuru tarihi var. Bu tarihleri geçirdiğinizde otomatik olarak bir sonraki celp dönemine sarkıyor.</p>
 
@@ -73,7 +73,7 @@ $bloglar[2] = array(
 	</pre>
 	</p>
 
-	<a href='#p1' style='float:right; border:1px solid #2288BB; padding:5px;'>Başa Dön</a>",
+	<a href='#basaDon' style='float:right; border:1px solid #2288BB; padding:5px;'>Başa Dön</a>",
 	"resim" => "elmasaga_kislasi",
 	"tarih" => "29 Nisan 2017, Cumartesi"
 );

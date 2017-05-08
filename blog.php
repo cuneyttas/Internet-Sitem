@@ -99,7 +99,7 @@ if ( !isset($blogNo) ) {
 
 <article class="blog">
 
-	<h1><?=$bloglar[$blogNo]['baslik']?></h1>
+	<h1 id="basaDon"><?=$bloglar[$blogNo]['baslik']?></h1>
 	<figure class="blogResim">
 
 		<img src="resim/<?=$bloglar[$blogNo]['resim']?>_thumb_b.jpg">

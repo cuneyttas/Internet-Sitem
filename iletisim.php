@@ -99,7 +99,7 @@ function sayfaIcerigi() {
 	<ul class="profil">
 
 		<li class="satir"><label class="proBaslik sutun-4">Adres:</label><span class="proBilgi sutun-8"><address>Çorum</address></span></li>
-		<li class="satir"><label class="proBaslik sutun-4">E-posta:</label><span class="proBilgi sutun-8">cuneyttas@hotmail.com.tr</span></li>
+		<li class="satir"><label class="proBaslik sutun-4">E-posta:</label><span class="proBilgi sutun-8"><a href="mailto:cuneyttas@hotmail.com.tr">cuneyttas@hotmail.com.tr</a></span></li>
 
 	</ul>
 

@@ -6,7 +6,7 @@ $(document).ready(function(){
 	   if ( $("div.ana").width() > 768 ){
 
 		   $(this).find("ul:hidden").slideDown("fast");
-		   $(this).children("a:first").addClass("aktif");
+		   $(this).children("a:first").addClass("aktif butonRengiAktif");
 
 	   }
 
@@ -15,7 +15,7 @@ $(document).ready(function(){
 	   if ( $("div.ana").width() > 768 ){
 
 		   $(this).find("ul:visible").slideUp("fast");
-		   $(this).children("a:first").removeClass("aktif");
+		   $(this).children("a:first").removeClass("aktif butonRengiAktif");
 
 	   }
 
@@ -23,8 +23,8 @@ $(document).ready(function(){
 
    $("nav.menu li.acMenu > a").click(function(){
 
-	   $(this).next("ul:visible").slideUp("fast").prev().removeClass("aktif");
-	   $(this).next("ul:hidden").slideDown("fast").prev().addClass("aktif");
+	   $(this).next("ul:visible").slideUp("fast").prev().removeClass("aktif butonRengiAktif");
+	   $(this).next("ul:hidden").slideDown("fast").prev().addClass("aktif butonRengiAktif");
 
 	   return false; // Tıklama işlemini yok saymak için. Yani link olan "a" etiketinin çalışmasını engeller
 

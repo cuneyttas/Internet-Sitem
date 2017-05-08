@@ -29,6 +29,16 @@ body * {
 
 }
 
+.butonRengiAktif{
+
+	background: #3399CC; /* Özelliği desteklemeyen tarayıcılarda */
+    background: -webkit-linear-gradient(25deg, #3399CC,#F1FCFE 115%); /* Safari 5.1 to 6.0 için */
+	background: -o-linear-gradient(25deg, #3399CC,#F1FCFE 115%); /* Opera 11.1 to 12.0 için */
+	background: -moz-linear-gradient(25deg, #3399CC,#F1FCFE 115%); /* Firefox 3.6 to 15 için */
+	background: linear-gradient(25deg, #3399CC,#F1FCFE 115%); /* Standart yazım */
+
+}
+
 hr.cizgi {
 
 	border-color: #39AAE0;
@@ -222,7 +232,6 @@ nav.menu > ul > li > a {
 
 nav.menu > ul > li > a.aktif {
 
-	background-color: #3399CC;
     color: white;
 
 }
@@ -255,6 +264,8 @@ li.acMenu > ul > li:last-child{
 li.acMenu > ul > li:hover {
 
 	background-color: #6BB4D7;
+	-webkit-transition-duration: 0.7s; /* Safari için */
+	transition-duration: 0.7s;
 
 }
 

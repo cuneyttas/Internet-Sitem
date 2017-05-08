@@ -444,6 +444,8 @@
 	    background-color: #6BB4D7;
 	    color: white;
 	    border-color: white;
+	    -webkit-transition-duration: 0.5s; /* Safari */
+	    transition-duration: 0.5s;
 
 	}
 

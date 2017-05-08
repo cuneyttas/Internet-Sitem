@@ -25,7 +25,7 @@ function tema_head($baslik = "") {
  	<meta name="title" content="<?=$siteBaslik?>">
  	<meta name="description" content="<?=$siteBaslik?>">
  	<meta name="author" content="Cüneyt TAŞ">
- 	<meta name="keywords" content="cüneyt, taş, web tasarım, bilgisayar mühendisi, çorum">
+ 	<meta name="keywords" content="cüneyt, taş, cüneyt taş, web tasarım, bilgisayar mühendisi, bilgisayar mühendisliği,  çorum">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
  	<link rel="stylesheet" href="css/bicim.css">
  	<link rel="stylesheet" href="css/mobil.css">
@@ -97,11 +97,11 @@ function tema_menu($sayfa) {
 
 <ul class="sutun-12">
 
-	<li class="golge kivrikKose"><a title="Profil" class="kivrikKose <?php if ($sayfa == "Anasayfa" ) echo "aktif" ?>" href="<?= $anasayfaBaglantisi ?>"><i class="fa fa-user fa-3x menu-ikon"></i><br>Profil</a></li>
-	<li class="golge kivrikKose"><a title="Özgeçmiş" class="kivrikKose <?php if ($sayfa == "Özgeçmiş" ) echo "aktif" ?>" href="ozgecmis.php"><i class="fa fa-file-text fa-3x menu-ikon"></i><br>Özgeçmiş</a></li>
-	<li class="golge kivrikKose"><a title="Galeri" class="kivrikKose <?php if ($sayfa == "Galeri" ) echo "aktif" ?>" href="galeri.php"><i class="fa fa-picture-o fa-3x menu-ikon"></i><br>Galeri</a></li>
-	<li class="golge kivrikKose"><a title="Blog" class="kivrikKose <?php if ($sayfa == "Blog" ) echo "aktif" ?>" href="blog.php"><i class="fa fa-commenting fa-3x menu-ikon"></i><br>Blog</a></li>
-	<li class="golge kivrikKose"><a title="İletişim" class="kivrikKose <?php if ($sayfa == "İletişim" ) echo "aktif" ?>" href="iletisim.php"><i class="fa fa-envelope fa-3x menu-ikon"></i><br>İletişim</a></li>
+	<li class="golge kivrikKose "><a title="Profil" class="kivrikKose <?php if ($sayfa == "Anasayfa" ) echo "aktif butonRengiAktif" ?>" href="<?= $anasayfaBaglantisi ?>"><i class="fa fa-user fa-3x menu-ikon"></i><br>Profil</a></li>
+	<li class="golge kivrikKose"><a title="Özgeçmiş" class="kivrikKose <?php if ($sayfa == "Özgeçmiş" ) echo "aktif butonRengiAktif" ?>" href="ozgecmis.php"><i class="fa fa-file-text fa-3x menu-ikon"></i><br>Özgeçmiş</a></li>
+	<li class="golge kivrikKose"><a title="Galeri" class="kivrikKose <?php if ($sayfa == "Galeri" ) echo "aktif butonRengiAktif" ?>" href="galeri.php"><i class="fa fa-picture-o fa-3x menu-ikon"></i><br>Galeri</a></li>
+	<li class="golge kivrikKose"><a title="Blog" class="kivrikKose <?php if ($sayfa == "Blog" ) echo "aktif butonRengiAktif" ?>" href="blog.php"><i class="fa fa-commenting fa-3x menu-ikon"></i><br>Blog</a></li>
+	<li class="golge kivrikKose"><a title="İletişim" class="kivrikKose <?php if ($sayfa == "İletişim" ) echo "aktif butonRengiAktif" ?>" href="iletisim.php"><i class="fa fa-envelope fa-3x menu-ikon"></i><br>İletişim</a></li>
 	<li class="acMenu golge  kivrikKose">
 
 		<a href="#" class="diger kivrikKose"><i class="fa fa-bars fa-3x menu-ikon"></i><br>Diğer</a>
