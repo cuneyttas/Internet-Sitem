@@ -113,11 +113,21 @@ div.bilgi h1.isim {
 
 }
 
-div.bilgi p.tanitim {
+div.bilgi p.yorum {
 
 	font-size: .9em;
     color: #5FCCFF;
     line-height: 18px;
+    margin-bottom: 0;
+
+}
+
+div.bilgi p.yorumZaman {
+
+	font-size: .7em;
+    color: #5FCCFF;
+    float: right;
+    margin: 0;
 
 }
 

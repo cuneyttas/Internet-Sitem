@@ -3,14 +3,6 @@
 $bloglar = array();
 
 $bloglar[0] = array(
-	"baslik" => "Deneme Sayfam",
-	"kisa_icerik" => "Bu blog deneme sayfası olarak kullanılacaktır. İçerisindeki yazılar anlam bütünlüğü olmayan saçma fakat benim bir şekilde kendime göre anlam çıkaracağım cümlelerden ibarettir. Site misafirlerinin okuması için yazılmamıştır. Bilginize...  ",
-	"uzun_icerik" => "",
-	"resim" => "tavuk_deneme",
-	"tarih" => ""
-);
-
-$bloglar[1] = array(
 	"baslik" => "İnternet Sitem Artık Yayında",
 	"kisa_icerik" => "2015 senesinin yaz mevsiminde yapımına başladığım kişisel internet sitem nihayet 13 Ekim 2016’da kullanıma açıldı...",
 	"uzun_icerik" => "<p>2015 senesinin yaz mevsiminde yapımına başladığım kişisel internet sitem nihayet 13 Ekim 2016’da kullanıma açıldı. Uzun zamandır üzerinde çalıştığım bu site şu an görünümde diğer kişisel sitelerden pek de farklı görünmese de gitgide farklı bir yol izlemeye başlayacak. Facebook, Twitter gibi sosyal ağlardan paylaşımlar yapmak yerine kendi internet sitemden benzer paylaşımlar yapacağım. Tek kullanacağım sosyal iş ağı, LinkedIn olacak. Öncelikli hedefim paylaşımların daha çok kişiye ulaşması olmadığından siteme kaç kişinin girdiği, ne kadar durduğu, ne gibi yorumlar yaptığı gibi hususlar beni pek ilgilendirmeyecek. Bu siteyi geliştirmekteki asıl amacım, internet programlamadaki bilgilerimi tazelemek ve bu site üzerinden test etmek olacak. HTML, CSS, JavaScript, Jquery, PHP ve daha bir çok teknolojiyi bu site üzerinden öğrenip uygulama yapacağım. Dışardan gelen kullanıcılar sitenin bazı sayfalarında gördüğü tuhaf uygulamalara anlam veremeyebilirler. Ama aslında o anlamsız gibi görünen yerler benim test sayfam olabilecek.</p>
@@ -26,7 +18,7 @@ $bloglar[1] = array(
 	"tarih" => "24 Nisan 2017, Pazartesi"
 );
 
-$bloglar[2] = array(
+$bloglar[1] = array(
 	"baslik" => "Vatan-Millet-Sakarya",
 	"kisa_icerik" => "Bu bloğu hem askerlik serüvenim için hatırat, hem de askere gidecekler için yol gösterici rehber olması için yazmaya karar verdim...",
 	"uzun_icerik" => "<p>Askerlik görevi, ülkemizde zorunlu olarak uygulanan en önemli vatanî görevlerden biridir. Kimimiz işe başlamak için bir engel olarak görür onu, kimimiz “Askere gtimeyene kız verilmez.” sözüne binaen evlilik hayallerini askerlikten sonraya bırakır. Bir an önce askerliği yapıp önümüzdeki en büyük engeli ortadan kaldırmak isteriz. Yine de ülkemiz tarihinde yüzyıllardan beri süregelen bu vatanî görevimizin kutsallığının farkında olup peygamber ocağı dediğimiz bu vazifeye saygımızı da her daim gösteririz. Gerekirse bu uğurda şehit düşer veya gazi olup sakat kalırız. Bu bloğu hem askerlik serüvenim için <cite>hatırat</cite>, hem de askere gideceklere yol gösterici rehber olması için yazmaya karar verdim. Askerliğimi kısa dönem olarak yaptığım için, bir kısa dönem askerin gözüyle notlar düşeceğim.</p>
@@ -77,5 +69,6 @@ $bloglar[2] = array(
 	"resim" => "elmasaga_kislasi",
 	"tarih" => "29 Nisan 2017, Cumartesi"
 );
+
 
 ?>

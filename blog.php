@@ -108,7 +108,7 @@ if ( !isset($blogNo) ) {
 	<?=$bloglar[$blogNo]['uzun_icerik']?>
 	<?php
 
-		if($_GET['blog']==0) include("deneme.php");
+		if($_GET['blog']==0) bloglar[0];
 
 	?>
 

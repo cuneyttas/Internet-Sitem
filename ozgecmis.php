@@ -1151,6 +1151,18 @@ function sayfaIcerigi() {
 				</span>
 
 			</li>
+			<li class="satir">
+
+				<span class="yetenek sutun-8">MS-DOS</span>
+				<span class="seviye sutun-4">
+					<i class="fa fa-tint fa-lg dolu"></i>
+					<i class="fa fa-tint fa-lg dolu"></i>
+					<i class="fa fa-tint fa-lg dolu"></i>
+					<i class="fa fa-tint fa-lg bos"></i>
+					<i class="fa fa-tint fa-lg bos"></i>
+				</span>
+
+			</li>
 
 		</ul>
 		<h2>Sınavlar</h2>
@@ -1185,14 +1197,14 @@ function sayfaIcerigi() {
 
 			<div class="sinavNotu satir">
 
-				<p class="sutun-3">YGS Puanı:</p>
-				<p class="sutun-9">454</p>
+				<p class="sutun-4">YGS Puanı:</p>
+				<p class="sutun-8">454</p>
 
 			</div>
 			<div class="sinavNotu satir">
 
-				<p class="sutun-3">LYS Puanı:</p>
-				<p class="sutun-9">412</p>
+				<p class="sutun-4">LYS Puanı:</p>
+				<p class="sutun-8">412</p>
 
 			</div>
 			<p>YGS-1 ve MF-2 puan türlerinde "alanında" yerleştirme puanım belirtilmektedir.</p>

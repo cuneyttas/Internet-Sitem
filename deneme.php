@@ -1,11 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
 
 
+<?php
+$file=fopen("welcome.txt","r");
+?
+?>
 
-
-
-<style>
-
-
-
-
-</style>
+</body>
+</html>

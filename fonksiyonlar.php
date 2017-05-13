@@ -62,7 +62,17 @@ function tema_solSutun() {
  		<h1 class="isim">Cüneyt TAŞ</h1>
  		<p class="baslik">Bilgisayar Mühendisi</p>
  		<hr class="cizgi">
- 		<p class="tanitim"> Askerliği de bitirdiğime göre arama-kurtarma faaliyetlerine başlamam gerek. (İş) Arama - (Kendimi) Kurtarma...   </p>
+ 		<p class="yorum"> Askerliği de bitirdiğime göre arama-kurtarma faaliyetlerine başlamam gerek. (İş) Arama - (Kendimi) Kurtarma...   </p>
+ 		<p class="yorumZaman">
+
+	 		<?php
+
+	 			$baslangic = strtotime("April 23");
+	 			$son = ceil((time()-$baslangic)/60/60/24);
+	 			echo "( ".$son ." gün oldu )";
+
+			?>
+			</p>
 
 		</div> <!-- bilgi sonu -->
 
@@ -133,7 +143,7 @@ function tema_altKisim() {
 
 	<footer class="sutun-12">
 
-		<p>Telif Hakkı © 2015-2017 Cüneyt TAŞ (Sürüm 2.2)</p>
+		<p>Telif Hakkı © 2016-<?php echo date("Y");?> Cüneyt TAŞ (Sürüm 2.4)</p>
 
 	</footer>
 
