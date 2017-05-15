@@ -1302,7 +1302,7 @@ function sayfaIcerigi() {
 
 				<li>- Akınsoft Firma Profili</li>
 				<li>- Bilişimin İş Hayatındaki Önemi</li>
-				<li>- Akınsoft'ta Kariyer Olanakalrı</li>
+				<li>- Akınsoft'ta Kariyer Olanakları</li>
 
 			</ul></p>
 

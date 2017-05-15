@@ -76,16 +76,16 @@ function sayfaIcerigi() {
 
 			$kime = "cuneyttas@hotmail.com.tr";
 			$epostaKonu = $konu == "" ? "$isim sana internet sitenden mesaj gönderdi!" : $konu;
-			$basliklar = "From: C.T. Site İletişim <iletisim@cuneyt-tas.com> \r\n" .
-			"Reply-To: $isim <$eposta>  \r\n" .
-			"Content-type: text/html; charset=ISO-8859-9 \r\n" .
-			"Content-Language: tr";
-			$basliklar = iconv("UTF-8", "ISO-8859-9", $basliklar);
-			$epostaKonu = iconv("UTF-8", "ISO-8859-9", $epostaKonu);
-			$mesaj = iconv("UTF-8", "ISO-8859-9", $mesaj);
-		    $gonderildi = mail($kime, $epostaKonu, $mesaj, $basliklar);
+			$basliklar =
+			"MIME-Version: 1.0 \r\n" .
+			"Content-type: text/html; charset=utf-8 \r\n" .
+			"From: $isim <iletisim@cuneyt-tas.com> \r\n".
+			"Reply-To: $isim <$eposta>  \r\n";
 
-		    if ($gonderildi) $isim = $eposta = $konu = $mesaj = "";
+			$gonderildi = mail($kime, '=?utf-8?B?'.base64_encode($epostaKonu).'?=', $mesaj, $basliklar);
+
+			if ($gonderildi) $isim = $eposta = $konu = $mesaj = "";
+			else $hatam = print_r(error_get_last(), true);
 
 		}
 
@@ -119,16 +119,17 @@ function sayfaIcerigi() {
 
 		if ($gonderildi){
 
-			echo "<span class='iletimDurumu gitti'>Mesajınız İletildi.</span>";
+			echo "<span class='iletimDurumu gitti'>&bull; Mesajınız İletildi.</span>";
 
 		} else {
 
-			echo "<span class='iletimDurumu gitmedi'>Mesajınız iletilirken hata oluştu. E-posta adresimden göndermeyi deneyin.</span>";
+			echo "<span class='iletimDurumu gitmedi'>&bull; Mesajınız iletilirken hata oluştu. E-posta adresimden göndermeyi deneyin.</span>";
+			//echo "<span class='iletimDurumu gitmedi'>".$hatam."</span>";
 
 		}
 	}
 	?>
-	<form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post" class="formMesaj">
+	<form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post" class="formMesaj" accept-charset="utf-8">
 
 		<input class="girisKutusu" id="mesajAdi" type="text" value="<?= $isim ?>" name="isim" placeholder="İsim..." required>
 		<input class="girisKutusu" id="mesajEposta" type="email" value="<?= $eposta ?>" name="eposta" placeholder="E-posta..." required>

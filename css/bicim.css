@@ -380,7 +380,6 @@ div.icerik p {
 	font-size: .9em;
     line-height: 1.5em;
     margin: 10px 0 0;
-    text-align: justify;
     text-indent: 20px;
 
 }
@@ -730,6 +729,12 @@ a.buton:hover {
 
 	color: white;
 	background-color: #2288BB;
+
+}
+
+article p {
+
+    text-align: justify;
 
 }
 

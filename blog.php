@@ -106,11 +106,6 @@ if ( !isset($blogNo) ) {
 
 	</figure>
 	<?=$bloglar[$blogNo]['uzun_icerik']?>
-	<?php
-
-		if($_GET['blog']==0) bloglar[0];
-
-	?>
 
 </article>
 <div class="temizle"></div>
