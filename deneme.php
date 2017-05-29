@@ -4,8 +4,10 @@
 
 
 <?php
-$file=fopen("welcome.txt","r");
-?
+
+	echo time();
+
+
 ?>
 
 </body>

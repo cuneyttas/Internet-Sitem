@@ -1,6 +1,28 @@
 <?php
 
+// Veritabanı bağlantısı
+include("veritabani_ayarlar.php");
+
+try {
+
+	$baglanti = new PDO("mysql:host=$sunucuAdi;dbname=$veritabaniAdi", $kullaniciAdi, $parola);
+	$baglanti->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$baglanti->query("SET NAMES 'utf8'"); // Türkçe karakter sorununu düzeltmek için
+
+} catch(PDOException $i) {
+
+	echo "Bağlantı başarısız oldu: " . $i->getMessage();
+
+}
+
+
+// Zaman Türkçeleştirmesi
+setlocale(LC_TIME, 'tr_TR');
+
+
+// Site Başlığı
 $siteBaslik = "Cüneyt TAŞ Kişisel İnternet Sitesi";
+
 
 // Head etiketi fonksiyonu başı
 function tema_head($baslik = "") {
@@ -45,9 +67,10 @@ function tema_head($baslik = "") {
 } // Head etiketi fonksiyonu sonu
 
 
-
 // Sol Sütun fonksiyonu başı
 function tema_solSutun() {
+
+	global $yorumlar, $baglanti;
 
 ?>
 
@@ -62,14 +85,46 @@ function tema_solSutun() {
  		<h1 class="isim">Cüneyt TAŞ</h1>
  		<p class="baslik">Bilgisayar Mühendisi</p>
  		<hr class="cizgi">
- 		<p class="yorum"> Askerliği de bitirdiğime göre arama-kurtarma faaliyetlerine başlamam gerek. (İş) Arama - (Kendimi) Kurtarma...   </p>
+ 		<p class="yorum">
+
+	 		<?php
+
+		 		try {
+
+		 			$ifade = $baglanti->prepare("SELECT yorum, yorum_tarih FROM Yorumlar ORDER BY yorum_ID DESC LIMIT 1");
+				    $ifade->execute();
+				    $sonuc = $ifade->setFetchMode(PDO::FETCH_ASSOC);
+					$yorumlar = $ifade->fetchAll();
+
+
+				} catch(PDOException $i) {
+
+					echo "Yorum verileri çekilemedi: " . $i->getMessage();
+
+				}
+
+	 			//print_r($yorumlar);
+	 			echo $yorumlar[0]["yorum"];
+
+	 		?>
+		</p>
  		<p class="yorumZaman">
 
 	 		<?php
 
-	 			$baslangic = strtotime("April 23");
-	 			$son = ceil((time()-$baslangic)/60/60/24);
-	 			echo "( ".$son ." gün oldu )";
+	 			$baslangic = strtotime($yorumlar[0]["yorum_tarih"]);
+	 			$son = ceil((time()-$baslangic)/60/60/24)-1;
+
+	 			if ($son == 0 || $son == -1) {
+
+	 				echo "( Bugün yazıldı )";
+
+	 			} else {
+
+		 			echo "( ".$son ." gün oldu )";
+
+	 			}
+
 
 			?>
 			</p>
@@ -191,6 +246,9 @@ function tema_sablon($sayfa) {
 
 
 <?php
+
+	$baglanti = null; // Veritabanı bağlantısı sonlandırıldı.
 }
+
 ?>
 

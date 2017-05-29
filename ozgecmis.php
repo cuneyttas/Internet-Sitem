@@ -3,6 +3,9 @@
 	$sayfa = "Özgeçmiş";
 
 function sayfaIcerigi() {
+
+	global $baglanti;
+
 ?>
 <div class="ozSol sutun-6">
 
@@ -21,77 +24,61 @@ function sayfaIcerigi() {
 
 	</ul>
 	<h2>İş Deneyimleri</h2>
+
+	<?php
+
+		try {
+
+			$ifade = $baglanti->prepare("SELECT unvan, is_baslama_tarihi, is_bitis_tarihi, sirket, gorev_tanimi FROM Is_Deneyimi ORDER BY is_baslama_tarihi DESC");
+			$ifade->execute();
+			$sonuc = $ifade->setFetchMode(PDO::FETCH_ASSOC);
+			$deneyimler = $ifade->fetchAll();
+
+		} catch(PDOException $i) {
+
+			echo "İş deneyimi verileri çekilemedi: " . $i->getMessage();
+
+		}
+
+/*
+		echo "<pre>";
+		print_r($deneyimler);
+		echo "</pre>";
+*/
+
+	?>
+
 	<ul class="basliklar">
 
+		<?php
+
+			function zamanDuzenle($zaman) { // Zaman formatını düzenleme
+
+				return strftime( '%B %Y', strtotime($zaman) );
+
+			}
+
+			foreach($deneyimler as $deneyim){
+		?>
 		<li>
 
 			<div class="deneyim satir">
 
-				<h3 class="baslik sutun-6">Bilgi Teknolojileri Uzman Yardımcısı</h3>
-				<span class="periyot sutun-6">Aralık 2015 - Şubat 2016</span>
+				<h3 class="baslik sutun-6"><?= $deneyim["unvan"] ?></h3>
+				<span class="periyot sutun-6"><?= zamanDuzenle($deneyim["is_baslama_tarihi"]) ?> - <?= $deneyim["is_bitis_tarihi"] == "0000-00-00" ? "?" : zamanDuzenle($deneyim["is_bitis_tarihi"]) ?></span>
 
 			</div>
 
 			<h4 class="isAdi">
 
 	 		<i class="fa fa-suitcase"></i>
-	 		Greyder Bilgi Teknolojileri Departmanı
+	 		<?= $deneyim["sirket"] ?>
 
 			</h4>
-			<p>Çorum Merkez ve İskilip Greyder fabrikalarının sunucu ve bilgisayarlarının bakım ve onarımı, ülke genelindeki mağazalara uzaktan teknik destek gibi işlerden sorumluydum. </p>
+			<p><?= $deneyim["gorev_tanimi"] ?></p>
 
 		</li>
-		<li>
-
-			<div class="deneyim satir">
-
-				<h3 class="baslik sutun-6">Stajyer</h3>
-				<span class="periyot sutun-6">Ağustos 2014</span>
-
-			</div>
-
-			<h4 class="isAdi">
-
-	 		<i class="fa fa-suitcase"></i>
-	 		Hitit Üniversitesi Eğitim ve Araştırma Hastanesi Bilgi İşlem Birimi
-
-			</h4>
-			<p>Birimler arası ağ kablolama ve teknik destek gibi alanlarda çalıştım.</p>
-
-		</li>
-		<li>
-			<div class="deneyim satir">
-
-				<h3 class="baslik sutun-6">Stajyer</h3>
-				<span class="periyot sutun-6">Haziran 2014 - Temmuz 2014</span>
-
-			</div>
-			<h4 class="isAdi">
-
-	 		<i class="fa fa-suitcase"></i>
-			Çorum Valiliği Bilgi İşlem Müdürlüğü
-
-			</h4>
-			<p> Sunucuya Windows Server 2008 işletim sisteminin kurulumunun öğrenilmesi; DNS, DHCP ve Active Directory kurulumu, Labris UTM-52 Güvenlik Cihazının Kontrolü, IP Dağıtma gibi işlemler yaptım. </p>
-
-		</li>
-		<li>
-
-			<div class="deneyim satir">
-
-				<h3 class="baslik sutun-6">Stajyer</h3>
-				<span class="periyot sutun-6">Temmuz 2013 - Ağustos 2013</span>
-
-			</div>
-			<h4 class="isAdi">
-
-	 		<i class="fa fa-suitcase"></i>
-	 		OSOA Yazılım ve Danışmanlık
-
-			</h4>
-			<p> C# programlama dili üzerine çalışarak bununla ilgili uygulamalar yaptım.</p>
-
-		</li>
+		<?php } ?>
 
 	</ul>
 	<h2>Eğitim Bilgileri</h2>
@@ -584,587 +571,80 @@ function sayfaIcerigi() {
 	<div class="ozSag sutun-6">
 
 		<h2>Yetenekler</h2>
-		<h3 class="yetBaslik">Programlama Dilleri</h3>
-		<ul class="basliklar">
 
-			<li class="satir">
+<?php
 
-				<span class="yetenek sutun-8">PHP</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
+	// Yetenek kategorilerini veritabanından çekiyoruz
+	try {
 
-			</li>
-			<li class="satir">
+		$ifade = $baglanti->prepare("SELECT y_kat_ID, y_kat_adi FROM Yetenek_Kategorileri ORDER BY y_kat_sira");
+		$ifade->execute();
+		$sonuc = $ifade->setFetchMode(PDO::FETCH_ASSOC);
+		$yKategorileri = $ifade->fetchAll();
 
-				<span class="yetenek sutun-8">JSP</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
+	} catch(PDOException $i) {
 
-			</li>
-			<li class="satir">
+		echo "Yetenek kategorisi verileri çekilemedi: " . $i->getMessage();
 
-				<span class="yetenek sutun-8">Java</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
+	}
 
-			</li>
-			<li class="satir">
+	foreach($yKategorileri as $yKategorisi) {
+?>
 
-				<span class="yetenek sutun-8">PIC Assembly</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
 
-			</li>
-			<li class="satir">
+<h3 class="yetBaslik"><?= $yKategorisi["y_kat_adi"] ?></h3>
 
-				<span class="yetenek sutun-8">MIPS Assembly</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
+<?php
 
-			</li>
-			<li class="satir">
+	// Yetenekleri veritabanından çekiyoruz
+	 try {
 
-				<span class="yetenek sutun-8">MATLAB</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
+		$ifade = $baglanti->prepare("SELECT yetenek_adi, seviye FROM Yetenekler WHERE y_kat_ID = ".$yKategorisi['y_kat_ID']." ORDER BY yetenek_sira");
+		$ifade->execute();
+		$sonuc = $ifade->setFetchMode(PDO::FETCH_ASSOC);
+		$yetenekler = $ifade->fetchAll();
 
-			</li>
-			<li class="satir">
+	} catch(PDOException $i) {
 
-				<span class="yetenek sutun-8">VHDL</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
+		echo "Yetenek verileri çekilemedi: " . $i->getMessage();
 
-			</li>
-			<li class="satir">
+	}
 
-				<span class="yetenek sutun-8">C#</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
+	echo "<ul class='basliklar'>";
+	foreach($yetenekler as $yetenek) {
 
-			</li>
-			<li class="satir">
+?>
 
-				<span class="yetenek sutun-8">Lisp</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
+<li class="satir">
 
-			</li>
-			<li class="satir">
+	<span class="yetenek sutun-8"><?= $yetenek["yetenek_adi"] ?></span>
+	<span class="seviye sutun-4">
+		<?php
+			$seviyeSay = 1;
+			while($seviyeSay <= $yetenek["seviye"]) {
 
-				<span class="yetenek sutun-8">Prolog</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
+				echo "<i class='fa fa-tint fa-lg dolu'></i> ";
 
-			</li>
+				$seviyeSay++;
+			}
 
-		</ul>
-		<h3 class="yetBaslik">Web Tasarım</h3>
-		<ul class="basliklar">
+			$seviyeSay = 1;
+			while($seviyeSay <= 5 - $yetenek["seviye"]) {
 
-			<li class="satir">
+				echo "<i class='fa fa-tint fa-lg bos'></i> ";
 
-				<span class="yetenek sutun-8">HTML/HTML5</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-				</span>
+				$seviyeSay++;
+			}
 
-			</li>
-			<li class="satir">
+		?>
+	</span>
 
-				<span class="yetenek sutun-8">CSS/CSS3</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-				</span>
+</li>
 
-			</li>
-			<li class="satir">
+<?php } echo "</ul>"; } ?>
 
-				<span class="yetenek sutun-8">JavaScript</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
 
-			</li>
-			<li class="satir">
 
-				<span class="yetenek sutun-8">jQuery</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Bootstrap</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Wordpress</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-
-		</ul>
-		<h3 class="yetBaslik">Yazılım Geliştirme Araçları</h3>
-		<ul class="basliklar">
-
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Coda</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Netbeans</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Eclipse</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">MPLAB</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Adobe Dreamweaver</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Xcode</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Microsoft Visual Studio 2010</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Clisp</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-
-		</ul>
-
-		<h3 class="yetBaslik">Veritabanı</h3>
-		<ul class="basliklar">
-
-			<li class="satir">
-
-				<span class="yetenek sutun-8">SQL</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">MySQL</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">phpMyAdmin</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">MySQL Workbench</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">SQL Server 2005</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-
-		</ul>
-		<h3 class="yetBaslik">Elektronik</h3>
-		<ul class="basliklar">
-
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Microchip PIC</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Proteus</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Electronics Workbench</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">XBee</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Arduino</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-
-		</ul>
-		<h3 class="yetBaslik">Ağlar</h3>
-		<ul class="basliklar">
-
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Opnet</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Duyarga(Sensör) Ağları</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-
-		</ul>
-		<h3 class="yetBaslik">Grafik</h3>
-		<ul class="basliklar">
-
-			<li class="satir">
-
-				<span class="yetenek sutun-8">OpenGL</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-
-		</ul>
-		<h3 class="yetBaslik">İşletim Sistemleri</h3>
-		<ul class="basliklar">
-
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Mac OS</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Windows 7 ve Sonrası</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Windows Server 2008</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Ubuntu</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Windows XP</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Windows 98</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">Windows 3.1</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-				</span>
-
-			</li>
-			<li class="satir">
-
-				<span class="yetenek sutun-8">MS-DOS</span>
-				<span class="seviye sutun-4">
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg dolu"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-					<i class="fa fa-tint fa-lg bos"></i>
-				</span>
-
-			</li>
-
-		</ul>
 		<h2>Sınavlar</h2>
 		<ul class="basliklar">
 
@@ -1172,18 +652,72 @@ function sayfaIcerigi() {
 
 			<div class="deneyim satir">
 
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>KPSS (Ortaöğretim)</h3>
-				<span class="tarih sutun-6">Eylül 2008</span>
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>YDS</h3>
+				<span class="tarih sutun-6">Eylül 2016</span>
 
 			</div>
 
 			<div class="sinavNotu satir">
 
 				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">77</p>
+				<p class="sutun-10">37</p>
 
 			</div>
-			<p>KPSS P94 puan türü belirtilmektedir.</p>
+			<p>YDS'den başarılı sayılabilmek için en az 50 puan almak gerekiyor. Önceki sene çalışmadan girdiğim sınavdan 36 almıştım. Bu sene yaklaşık 1 hafta dil bilgisi çalıştıktan sonra 1 soru daha fazla doğru cevaplandırarak 37 puana yükseltmeyi başardım. Çalışmalarım devam ediyor. </p>
+
+		</li>
+		<li>
+
+			<div class="deneyim satir">
+
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>KPSS (Lisans)</h3>
+				<span class="tarih sutun-6">Mayıs 2016</span>
+
+			</div>
+
+			<div class="sinavNotu satir">
+
+				<p class="sutun-2">Puan:</p>
+				<p class="sutun-10">88</p>
+
+			</div>
+			<p>KPSS P3 puan türü belirtilmektedir.</p>
+
+		</li>
+		<li>
+
+			<div class="deneyim satir">
+
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ALES</h3>
+				<span class="tarih sutun-6">Mayıs 2016</span>
+
+			</div>
+
+			<div class="sinavNotu satir">
+
+				<p class="sutun-2">Puan:</p>
+				<p class="sutun-10">74</p>
+
+			</div>
+			<p>ALES Sayısal Puanı belirtilmektedir.</p>
+
+		</li>
+		<li>
+
+			<div class="deneyim satir">
+
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>GUYS</h3>
+				<span class="tarih sutun-6">Kasım 2015</span>
+
+			</div>
+
+			<div class="sinavNotu satir">
+
+				<p class="sutun-2">Puan:</p>
+				<p class="sutun-10">68</p>
+
+			</div>
+			<p>Gelir İdaresi Başkanlığının açmış olduğu Gelir Uzman Yardımcılığı Sınavı. Bu sınavdan geçmek için 70 alınması gerekiyorken 2 puanla kaçırmıştım.</p>
 
 		</li>
 		<li>
@@ -1214,72 +748,18 @@ function sayfaIcerigi() {
 
 			<div class="deneyim satir">
 
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>GUYS</h3>
-				<span class="tarih sutun-6">Kasım 2015</span>
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>KPSS (Ortaöğretim)</h3>
+				<span class="tarih sutun-6">Eylül 2008</span>
 
 			</div>
 
 			<div class="sinavNotu satir">
 
 				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">68</p>
+				<p class="sutun-10">77</p>
 
 			</div>
-			<p>Gelir İdaresi Başkanlığının açmış olduğu Gelir Uzman Yardımcılığı Sınavı. Bu sınavdan geçmek için 70 alınması gerekiyorken 2 puanla kaçırmıştım.</p>
-
-		</li>
-		<li>
-
-			<div class="deneyim satir">
-
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ALES</h3>
-				<span class="tarih sutun-6">Mayıs 2016</span>
-
-			</div>
-
-			<div class="sinavNotu satir">
-
-				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">74</p>
-
-			</div>
-			<p>ALES Sayısal Puanı belirtilmektedir.</p>
-
-		</li>
-		<li>
-
-			<div class="deneyim satir">
-
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>KPSS (Lisans)</h3>
-				<span class="tarih sutun-6">Mayıs 2016</span>
-
-			</div>
-
-			<div class="sinavNotu satir">
-
-				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">88</p>
-
-			</div>
-			<p>KPSS P3 puan türü belirtilmektedir.</p>
-
-		</li>
-		<li>
-
-			<div class="deneyim satir">
-
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>YDS</h3>
-				<span class="tarih sutun-6">Eylül 2016</span>
-
-			</div>
-
-			<div class="sinavNotu satir">
-
-				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">37</p>
-
-			</div>
-			<p>YDS'den başarılı sayılabilmek için en az 50 puan almak gerekiyor. Önceki sene çalışmadan girdiğim sınavdan 36 almıştım. Bu sene yaklaşık 1 hafta dil bilgisi çalıştıktan sonra 1 soru daha fazla doğru cevaplandırarak 37 puana yükseltmeyi başardım. </p>
+			<p>KPSS P94 puan türü belirtilmektedir.</p>
 
 		</li>
 
