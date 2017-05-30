@@ -1,11 +1,10 @@
 <?php
 	include("fonksiyonlar.php");
-	include("galeri_veriler.php");
 	$sayfa = "Galeri";
 
 function sayfaIcerigi() {
 
-	global $kategoriler, $fotograflar;
+	global $kategoriler, $fotograflar, $baglanti;
 
 ?>
 
@@ -14,44 +13,82 @@ function sayfaIcerigi() {
 	<h2>Galeri</h2>
 	<ul class="kategori sekmeler">
 
-		<?php
-		$i = 0;
-		foreach($kategoriler as $kategNo => $kategBilgi) { $i++;
-		?>
+<?php
 
-			<li><a href="#" class="btn grup <?= $i==1 ? "aktif" : "" ?>" data-sayfa="<?= $kategNo ?>"><?= $kategBilgi["isim"] ?></a></li>
+	try {
 
-		<?php
-		}
-		?>
+		$ifade = $baglanti->prepare("SELECT r_kat_ID, r_kat_adi FROM Resim_Kategorileri WHERE r_kat_ID != 4 AND r_kat_ID != 5 ORDER BY r_kat_adi");
+		$ifade->execute();
+		$sonuc = $ifade->setFetchMode(PDO::FETCH_ASSOC);
+		$resimKategorileri = $ifade->fetchAll();
+
+	} catch(PDOException $i) {
+
+		echo "Galeri Kategorisi verileri çekilemedi: " . $i->getMessage();
+
+	}
+
+	$i = 0;
+	foreach($resimKategorileri as $kategori) { $i++;
+
+?>
+
+		<li><a href="#" class="btn grup <?= $i==1 ? "aktif" : "" ?>" data-sayfa="<?= $kategori["r_kat_ID"] ?>"><?= $kategori["r_kat_adi"] ?></a></li>
+
+<?php
+
+	}
+
+?>
 
 	</ul>
 	<div class="temizle"></div>
 
-    <?php
+
+<?php
+
 	$i = 0;
-	foreach ($kategoriler as $kategNo => $kategBilgi) { $i++;
-	?>
+	foreach ($resimKategorileri as $kategori) { $i++;
 
-	<ul class="resimler" data-sayfa="<?= $kategNo ?>" style="display: <?= $i==1 ? "block" : "none" ?>;">
+?>
 
-		<?php
+	<ul class="resimler" data-sayfa="<?= $kategori["r_kat_ID"] ?>" style="display: <?= $i==1 ? "block" : "none" ?>;">
 
-		foreach ($fotograflar as $fotoNo => $fotoBilgi) {
+<?php
 
-			if ($fotoBilgi["kategori_no"] != $kategNo ) continue;
+	try {
 
-		?>
-		<li><a href="resim/<?= $fotoBilgi["dosya_ismi"]."_b.".$fotoBilgi["dosya_uzantisi"] ?>" title="<?= $fotoBilgi["aciklama"] ?>"><img src="resim/<?= $fotoBilgi["dosya_ismi"]."_k.".$fotoBilgi["dosya_uzantisi"] ?>" alt="<?= $fotoBilgi["aciklama"] ?>" width="220" hight="165"></a></li>
-		<?php
+		$ifade = $baglanti->prepare("SELECT resim_baslik, resim FROM Resimler WHERE r_kat_ID != 4 AND r_kat_ID != 5 AND r_kat_ID = ".$kategori['r_kat_ID']);
+		$ifade->execute();
+		$sonuc = $ifade->setFetchMode(PDO::FETCH_ASSOC);
+		$resimler = $ifade->fetchAll();
+
+	} catch(PDOException $i) {
+
+		echo "Galeri verileri çekilemedi: " . $i->getMessage();
+
+	}
+
+	foreach ($resimler as $resim) {
+
+		$resimUzantisi = explode(".", $resim["resim"]);
+
+?>
+		<li><a href="resim/<?= $resimUzantisi[0]."_b.".$resimUzantisi[1] ?>" title="<?= $resim["resim_baslik"] ?>"><img src="resim/<?= $resimUzantisi[0]."_k.".$resimUzantisi[1] ?>" alt="<?= $resim["resim_baslik"] ?>" width="220" hight="165"></a></li>
+
+<?php
+
 		}
-		?>
+
+?>
 
 	</ul>
 
-	<?php
+<?php
+
 	}
-	?>
+
+?>
 
 </div>
 

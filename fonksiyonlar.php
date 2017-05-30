@@ -17,7 +17,7 @@ try {
 
 
 // Zaman Türkçeleştirmesi
-setlocale(LC_TIME, 'tr_TR');
+setlocale(LC_TIME, 'tr_TR.UTF-8');
 
 
 // Site Başlığı
@@ -198,7 +198,7 @@ function tema_altKisim() {
 
 	<footer class="sutun-12">
 
-		<p>Telif Hakkı © 2016-<?php echo date("Y");?> Cüneyt TAŞ (Sürüm 2.5)</p>
+		<p>Telif Hakkı © 2016-<?php echo date("Y");?> Cüneyt TAŞ (Sürüm 2.6)</p>
 
 	</footer>
 

@@ -648,145 +648,119 @@ function sayfaIcerigi() {
 		<h2>Sınavlar</h2>
 		<ul class="basliklar">
 
+<?php
+
+	// Sınavları veritabanından çekiyoruz
+	try {
+
+		$ifade = $baglanti->prepare("SELECT sinav_adi, sinav_puani, sinav_tarihi, sinav_aciklama FROM Sinavlar ORDER BY sinav_tarihi DESC");
+		$ifade->execute();
+		$sonuc = $ifade->setFetchMode(PDO::FETCH_ASSOC);
+		$sinavlar = $ifade->fetchAll();
+
+	} catch(PDOException $i) {
+
+		echo "Sınav verileri çekilemedi: " . $i->getMessage();
+
+	}
+
+	foreach($sinavlar as $sinav) {
+
+?>
+
 		<li>
 
 			<div class="deneyim satir">
 
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>YDS</h3>
-				<span class="tarih sutun-6">Eylül 2016</span>
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><?= $sinav["sinav_adi"] ?></h3>
+				<span class="tarih sutun-6"><?= zamanDuzenle($sinav["sinav_tarihi"]) ?></span>
 
 			</div>
+
+<?php
+
+	// String'in içinde virgülün geçip geçmediğini sorguluyor
+	if (!strpos($sinav["sinav_puani"], ",")) {
+
+?>
 
 			<div class="sinavNotu satir">
 
 				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">37</p>
+				<p class="sutun-10"><?= $sinav["sinav_puani"] ?></p>
 
 			</div>
-			<p>YDS'den başarılı sayılabilmek için en az 50 puan almak gerekiyor. Önceki sene çalışmadan girdiğim sınavdan 36 almıştım. Bu sene yaklaşık 1 hafta dil bilgisi çalıştıktan sonra 1 soru daha fazla doğru cevaplandırarak 37 puana yükseltmeyi başardım. Çalışmalarım devam ediyor. </p>
 
-		</li>
-		<li>
+<?php
 
-			<div class="deneyim satir">
+} else {
 
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>KPSS (Lisans)</h3>
-				<span class="tarih sutun-6">Mayıs 2016</span>
+	// explode fonksiyonu virgülden ayırıp her bir elemanı diziye atar.
+	$puanlar = explode(",", $sinav["sinav_puani"]);
+	foreach ($puanlar as $puan) {
 
-			</div>
+		$bolunmusPuan = explode(":", $puan);
+?>
 
 			<div class="sinavNotu satir">
 
-				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">88</p>
+				<p class="sutun-4"><?= trim($bolunmusPuan[0]) ?> Puanı:</p>
+				<p class="sutun-8"><?= trim($bolunmusPuan[1]) ?></p>
 
 			</div>
-			<p>KPSS P3 puan türü belirtilmektedir.</p>
+<?php
+
+	}
+
+}
+
+?>
+			<p><?= $sinav["sinav_aciklama"] ?></p>
 
 		</li>
-		<li>
 
-			<div class="deneyim satir">
-
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ALES</h3>
-				<span class="tarih sutun-6">Mayıs 2016</span>
-
-			</div>
-
-			<div class="sinavNotu satir">
-
-				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">74</p>
-
-			</div>
-			<p>ALES Sayısal Puanı belirtilmektedir.</p>
-
-		</li>
-		<li>
-
-			<div class="deneyim satir">
-
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>GUYS</h3>
-				<span class="tarih sutun-6">Kasım 2015</span>
-
-			</div>
-
-			<div class="sinavNotu satir">
-
-				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">68</p>
-
-			</div>
-			<p>Gelir İdaresi Başkanlığının açmış olduğu Gelir Uzman Yardımcılığı Sınavı. Bu sınavdan geçmek için 70 alınması gerekiyorken 2 puanla kaçırmıştım.</p>
-
-		</li>
-		<li>
-
-			<div class="deneyim satir">
-
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ÖSS</h3>
-				<span class="tarih sutun-6">Haziran 2010</span>
-
-			</div>
-
-			<div class="sinavNotu satir">
-
-				<p class="sutun-4">YGS Puanı:</p>
-				<p class="sutun-8">454</p>
-
-			</div>
-			<div class="sinavNotu satir">
-
-				<p class="sutun-4">LYS Puanı:</p>
-				<p class="sutun-8">412</p>
-
-			</div>
-			<p>YGS-1 ve MF-2 puan türlerinde "alanında" yerleştirme puanım belirtilmektedir.</p>
-
-		</li>
-		<li>
-
-			<div class="deneyim satir">
-
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>KPSS (Ortaöğretim)</h3>
-				<span class="tarih sutun-6">Eylül 2008</span>
-
-			</div>
-
-			<div class="sinavNotu satir">
-
-				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">77</p>
-
-			</div>
-			<p>KPSS P94 puan türü belirtilmektedir.</p>
-
-		</li>
+<?php } ?>
 
 	</ul>
 
 	<h2>Sertifikalar</h2>
 	<ul class="basliklar">
 
+<?php
+
+	// Sınavları veritabanından çekiyoruz
+	try {
+
+		$ifade = $baglanti->prepare("SELECT sert_adi, sert_firma, sert_tarih, sert_aciklamasi FROM Sertifikalar ORDER BY sert_tarih DESC");
+		$ifade->execute();
+		$sonuc = $ifade->setFetchMode(PDO::FETCH_ASSOC);
+		$sertifikalar = $ifade->fetchAll();
+
+	} catch(PDOException $i) {
+
+		echo "Sertifika verileri çekilemedi: " . $i->getMessage();
+
+	}
+
+	foreach($sertifikalar as $sertifika) {
+
+?>
+
 		<li>
 
 			<div class="deneyim satir">
 
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-certificate" aria-hidden="true"></i>Akınsoft</h3>
-				<span class="tarih sutun-6">Aralık 2011</span>
+				<h3 class="ozBilgi sutun-6"><i class="fa fa-certificate" aria-hidden="true"></i><?= $sertifika["sert_firma"] ?></h3>
+				<span class="tarih sutun-6"><?= zamanDuzenle($sertifika["sert_tarih"]) ?></span>
 
 			</div>
-			<p>Katılım Sertifikası</p>
+			<p><?= $sertifika["sert_adi"] ?></p>
 
-			<p><ul>
-
-				<li>- Akınsoft Firma Profili</li>
-				<li>- Bilişimin İş Hayatındaki Önemi</li>
-				<li>- Akınsoft'ta Kariyer Olanakları</li>
-
-			</ul></p>
+			<p><ul><?= $sertifika["sert_aciklamasi"] ?></ul></p>
 
 		</li>
+
+<?php } ?>
 
 	</ul>
 
