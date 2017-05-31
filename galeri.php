@@ -4,7 +4,7 @@
 
 function sayfaIcerigi() {
 
-	global $kategoriler, $fotograflar, $baglanti;
+	global $baglanti;
 
 ?>
 

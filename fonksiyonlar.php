@@ -2,6 +2,8 @@
 
 // Veritabanı bağlantısı
 include("veritabani_ayarlar.php");
+//Versiyonun Github'tan otomatik çekilmesi
+include("otomatik_versiyon_guncelleme.php");
 
 try {
 
@@ -70,7 +72,7 @@ function tema_head($baslik = "") {
 // Sol Sütun fonksiyonu başı
 function tema_solSutun() {
 
-	global $yorumlar, $baglanti;
+	global $baglanti;
 
 ?>
 
@@ -198,7 +200,7 @@ function tema_altKisim() {
 
 	<footer class="sutun-12">
 
-		<p>Telif Hakkı © 2016-<?php echo date("Y");?> Cüneyt TAŞ (Sürüm 2.6)</p>
+		<p>Telif Hakkı © 2016-<?php echo date("Y");?> Cüneyt TAŞ (Sürüm <?=versiyonGuncelle()?>)</p>
 
 	</footer>
 

@@ -15,7 +15,7 @@ if ( !isset($_GET['blog']) || !is_numeric($_GET['blog']) ) {
 
 function sayfaIcerigi() {
 
-	global $bloglar, $baglanti;
+	global $baglanti;
 
 	function zamanDuzenle($zaman) { // Zaman formatını düzenleme
 
@@ -180,11 +180,20 @@ if ( !isset($blogNo) ) {
 		<!-- Bloglar Düğmesi -->
 		<a class="buton" href="blog.php"><i class="fa fa-arrow-left blog-ikon"></i>Bloglar</a>
 
+<?php
+
+	$ilkBlogId = $baglanti->query('SELECT blog_ID FROM Bloglar ORDER BY blog_tarih LIMIT 1', PDO::FETCH_ASSOC)->fetchAll()[0]["blog_ID"];
+	$sonBlogId = $baglanti->query('SELECT blog_ID FROM Bloglar ORDER BY blog_tarih DESC LIMIT 1', PDO::FETCH_ASSOC)->fetchAll()[0]["blog_ID"];
+	$oncekiBlogId = $baglanti->query("SELECT blog_ID FROM Bloglar WHERE blog_ID = (SELECT MAX(blog_ID) from Bloglar where blog_ID < $blogNo)", PDO::FETCH_ASSOC)->fetchAll()[0]["blog_ID"];
+	$sonrakiBlogId = $baglanti->query("SELECT blog_ID FROM Bloglar WHERE blog_ID = (SELECT MIN(blog_ID) from Bloglar where blog_ID > $blogNo)", PDO::FETCH_ASSOC)->fetchAll()[0]["blog_ID"];
+
+?>
+
 		<!-- Önceki Blog Düğmesi -->
-		<a class="buton <?php if ($blogNolari[0]==$blogNo) echo "deaktif"; ?>" href="<?php if ($blogNolari[0]==$blogNo) echo "#"; else echo "?blog=".($blogNolari[$oncekiBlogSira]); ?>"><i class="fa fa-arrow-left"></i></a>
+		<a class="buton <?php if ($blogNo==$ilkBlogId) echo "deaktif"; ?>" href="<?php if ($blogNo==$ilkBlogId) echo "#"; else echo "?blog=".$oncekiBlogId; ?>"><i class="fa fa-arrow-left"></i></a>
 
 		<!-- Sonraki Blog Düğmesi -->
-		<a class="buton <?php if ($blogNolariTersi[0]==$blogNo) echo "deaktif"; ?>" href="<?php if ($blogNolariTersi[0]==$blogNo) echo "#"; else echo "?blog=".($blogNolari[$sonrakiBlogSira]); ?>"><i class="fa fa-arrow-right"></i></a>
+		<a class="buton <?php if ($blogNo==$sonBlogId) echo "deaktif"; ?>" href="<?php if ($blogNo==$sonBlogId) echo "#"; else echo "?blog=".$sonrakiBlogId; ?>"><i class="fa fa-arrow-right"></i></a>
 
 
 	</div> <!-- blogMenu sonu -->
@@ -196,11 +205,10 @@ if ( !isset($blogNo) ) {
 
 ?>
 
-
-
 </div> <!-- sutun-12 sonu -->
 
 <?php
+
 }
 
 tema_sablon( $sayfaBasligi );
