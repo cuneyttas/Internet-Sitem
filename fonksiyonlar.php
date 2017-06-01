@@ -62,7 +62,7 @@ function tema_head($baslik = "") {
  	<script src="js/senaryo.js"></script>
  	<?php include_once("analitik_izleme.php") ?>
 
-	</head>
+</head>
 
 <?php
 

@@ -9,7 +9,8 @@ if ( !isset($_GET['blog']) || !is_numeric($_GET['blog']) ) {
 
 } else {
 
-	$sayfaBasligi = stripslashes($bloglar[$_GET['blog']]['blog_adi']);
+	$baslikGetir = $baglanti->query("SELECT blog_adi FROM Bloglar WHERE blog_ID =".$_GET['blog'], PDO::FETCH_ASSOC)->fetchAll()[0]['blog_adi'];
+	$sayfaBasligi = stripslashes($baslikGetir);
 
 }
 

@@ -14,6 +14,12 @@ function sayfaIcerigi() {
 
 <?php
 
+	function zamanDuzenle($zaman) { // Zaman formatını düzenleme
+
+				return strftime( '%e %B %Y', strtotime($zaman) );
+
+			}
+
 	function resimGetir($resimID) {
 
 		global $baglanti;
@@ -55,7 +61,7 @@ function sayfaIcerigi() {
 				<li class="satir"><label class="proBaslik sutun-6">Yazar Adı:</label><span class="proBilgi sutun-6"><?= $kitap["kitap_yazar"] ?></span></li>
 				<li class="satir"><label class="proBaslik sutun-6">Sayfa Sayısı:</label><span class="proBilgi sutun-6"><?= $kitap["kitap_sayfa"] ?></span></li>
 				<li class="satir"><label class="proBaslik sutun-6">Basım Yılı:</label><span class="proBilgi sutun-6"><?= $kitap["kitap_basim_yili"] == "0000" ? "?" : $kitap["kitap_basim_yili"] ?></span></li>
-				<li class="satir"><label class="proBaslik sutun-6">Bitirdiğim Tarih:</label><span class="proBilgi sutun-6"><?= $kitap["kitap_bitis_tarihi"] ?></span></li>
+				<li class="satir"><label class="proBaslik sutun-6">Bitirdiğim Tarih:</label><span class="proBilgi sutun-6"><?= $kitap["kitap_bitis_tarihi"] == "?" ? "?" : zamanDuzenle($kitap["kitap_bitis_tarihi"]) ?></span></li>
 
 			</ul>
 			</div> <!-- Kitap Bilgi Alanının Sonu -->
