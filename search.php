@@ -11,9 +11,12 @@ get_header();
 			<?php get_search_form(); ?>
 
 		</div>
-<?php
 
-if (have_posts()) :
+<?php if (have_posts()) : ?>
+
+		<h2 class="aramaBasligi">"<b><i><?php the_search_query(); ?></i></b>" için Arama Sonuçları</h2>
+
+<?php
 
 	while (have_posts()) : the_post();
 
@@ -22,8 +25,6 @@ if (have_posts()) :
 	endwhile;
 
 	echo paginate_links();
-	previous_posts_link('Önceki Sayfaya geçiver');
-	next_posts_link('Sonraki Sayfaya geçiver');
 
 else :
 

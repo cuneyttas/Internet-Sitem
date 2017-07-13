@@ -113,13 +113,13 @@
 
 	}
 
-	nav.menu > ul > li > a.aktif {
+	nav.menu > ul > li.current-menu-item > a {
 
 	    color: #2288BB;
 
 	}
 
-	nav.menu > ul > li > a.aktif i {
+	nav.menu > ul > li.current-menu-item > a i {
 
 	    color: #FFFFFF;
 
@@ -439,7 +439,7 @@
 
 @media only screen and (min-width: 1200px) {
 
-    nav.menu > ul > li > a:hover {
+    nav.menu ul > li > a:hover {
 
 	    background-color: #6BB4D7;
 	    color: white;

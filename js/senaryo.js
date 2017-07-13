@@ -1,12 +1,12 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
 
    // Açılır Menü Tasarımı Başlangıcı
-   $("nav.menu li.acMenu").hover(function(){
+   $("nav.menu li.menu-item-has-children").hover(function(){
 
 	   if ( $("div.ana").width() > 768 ){
 
 		   $(this).find("ul:hidden").slideDown("fast");
-		   $(this).children("a:first").addClass("aktif butonRengiAktif");
+		   $(this).addClass("current-menu-item");
 
 	   }
 
@@ -15,47 +15,24 @@ $(document).ready(function(){
 	   if ( $("div.ana").width() > 768 ){
 
 		   $(this).find("ul:visible").slideUp("fast");
-		   $(this).children("a:first").removeClass("aktif butonRengiAktif");
+		   $(this).removeClass("current-menu-item");
 
 	   }
 
    });
 
-   $("nav.menu li.acMenu > a").click(function(){
+   $("nav.menu li.menu-item-has-children > a").click(function(){
 
-	   $(this).next("ul:visible").slideUp("fast").prev().removeClass("aktif butonRengiAktif");
-	   $(this).next("ul:hidden").slideDown("fast").prev().addClass("aktif butonRengiAktif");
+	   $(this).next("ul:visible").slideUp("fast").prev().removeClass("aktif");
+	   $(this).next("ul:hidden").slideDown("fast").prev().addClass("aktif");
 
 	   return false; // Tıklama işlemini yok saymak için. Yani link olan "a" etiketinin çalışmasını engeller
 
    }); // Açılır Menü Tasarımı Sonu
 
 
-
-   // Galeri Sekmeleri Başlangıcı
-   $("ul.sekmeler a.grup").click(function(){
-
-	   var sayfa = $(this).data("sayfa");
-
-	   $("ul.resimler").hide();
-	   $("ul[data-sayfa='"+sayfa+"']").show();
-
-	   $("ul.sekmeler a.grup").removeClass("aktif");
-	   $(this).addClass("aktif");
-
-	   return false;
-
-   }); // Galeri Sekmeleri Sonu
-
-
     // Colorbox Başlangıcı
-    $("ul.resimler").each(function(){
-
-	    var sayfa = $(this).data("sayfa");
-
-	    $("ul.resimler[data-sayfa='"+sayfa+"'] a").colorbox({rel: sayfa, transition: "fade"});
-
-    }); // Colorbox Sonu
+	$("ul.resimler > li a").colorbox({rel: "grup", transition: "fade"});
 
     //ColorBox Türkçeleştirme Başlangıcı
     jQuery.extend(jQuery.colorbox.settings, {
