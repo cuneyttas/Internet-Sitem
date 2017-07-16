@@ -9,11 +9,9 @@ $args = array_merge( $wp_query->query_vars, array(
 	'posts_per_page' => '30',
 	'meta_key' => 'tarihAnahtari',
 	'orderby' => array(
-
-		'tarihAnahtari' => 'DESC',
-		'date' => 'DESC'
-
-	),
+	    'tarihAnahtari' => 'DESC',
+	    'menu_order' => 'ASC'
+    ),
 	'order' => 'DESC',
 
 ));

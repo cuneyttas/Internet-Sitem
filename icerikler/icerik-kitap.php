@@ -32,7 +32,9 @@
 
 					echo zamanDuzenle( get_post_meta($post->ID, 'tarihAnahtari', true) );
 
-			 	} ?>
+			 	}
+
+			 	?>
 			 </span></li>
 
 		</ul>

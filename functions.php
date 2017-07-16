@@ -923,3 +923,25 @@ function sonVersiyonuGetir() {
 	return $veri['tag_name'];
 
 }
+
+
+// Yönetici sayfasındaki Kitaplar'ın içerisinddeki kitapların sıralanması
+function yoneticiSayfasiKitapSirala( $query ) {
+    // Hiç bir şey yapma
+    if( ! $query->is_main_query() || 'kitap' != $query->get( 'post_type' )  )
+        return;
+
+    //-------------------------------------------
+    // Sıralamanın yapıldığı alan
+    //-------------------------------------------
+
+    $query->set( 'meta_key', 'tarihAnahtari' );
+    $query->set( 'orderby',  array(
+	    'tarihAnahtari' => 'DESC', // Önce kitabın bitirme traihini göze al.
+	    'menu_order' => 'ASC'	   // Daha sonra menünün kendi sırası, yani kitabın yükleme sırasını
+    ) );
+    $query->set( 'order',  'DESC' );
+
+}
+
+is_admin() && add_action( 'pre_get_posts', 'yoneticiSayfasiKitapSirala', 999999999 );

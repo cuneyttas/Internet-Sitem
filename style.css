@@ -740,6 +740,7 @@ ul.resimler li img {
 	opacity: 0.5;
 	filter: alpha(opacity=50); /* IE8 ve öncesi için*/
 	transition: opacity 1s;
+	height: auto;
 
 }
 

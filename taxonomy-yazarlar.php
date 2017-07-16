@@ -1,10 +1,17 @@
 <?php
 global $wp_query;
+
+// Dizideki arama değerini kaldırmak için. Kaldırmamış olsaydık, sayfa başlığını arama sayfası gibi gösteriyor.
+unset($wp_query->query_vars['s']);
+
 $args = array_merge( $wp_query->query_vars, array(
 
 	'posts_per_page' => '30',
 	'meta_key' => 'tarihAnahtari',
-	'orderby' => 'meta_value',
+	'orderby' => array(
+	    'tarihAnahtari' => 'DESC',
+	    'menu_order' => 'ASC'
+    ),
 	'order' => 'DESC',
 
 ));

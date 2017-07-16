@@ -45,6 +45,7 @@
 
 	    height: 38px !important;
 	    width: 38px !important;
+	    font-size: 7px;
 
     }
 
@@ -67,6 +68,19 @@
 
 	    padding-right: 20px;
 	    height: auto;
+
+    }
+
+    div.bilgi {
+
+	    text-align: center;
+	    margin-top: 10px;
+
+    }
+
+    hr.cizgi {
+
+	    margin-top: 5px;
 
     }
 
@@ -106,12 +120,13 @@
 
     }
 
-    i.menu-ikon {
+    .menuIkon a:before {
 
-	    margin-top: 9px;
-	    margin-bottom: 10px;
+	    margin-top: 5px;
+	    margin-bottom: -4px;
+	    font-size: 16px;
 
-	}
+    }
 
 	nav.menu > ul > li.current-menu-item > a {
 
@@ -122,6 +137,12 @@
 	nav.menu > ul > li.current-menu-item > a i {
 
 	    color: #FFFFFF;
+
+	}
+
+	li.menu-item-has-children > ul > li > a {
+
+		padding: 0;
 
 	}
 
@@ -162,6 +183,12 @@
 
 	}
 
+	ul.resimler li {
+
+		width: 100%;
+
+	}
+
 	div.blogOzet {
 
 		margin-top: 10px;
@@ -174,9 +201,21 @@
 
 	}
 
+	figure.blogResim img {
+
+		height: 100%;
+
+	}
+
 	div.blogMenu {
 
 		margin-top: 10px;
+
+	}
+
+	input#araText {
+
+		border: 1px solid gray;
 
 	}
 }
@@ -189,6 +228,39 @@
         width: 100%;
 
     }
+
+    .menuIkon a:before {
+
+		margin-top: 13px;
+	    margin-bottom: 5px;
+	    font-size: 26px;
+
+    }
+
+    li.menu-item-has-children > ul > li > a {
+
+		padding: 5px;
+
+	}
+
+	div.bilgi p.yorumum {
+
+	    font-size: 8px;
+	    line-height: 10px;
+
+	}
+
+	div.sosyal p {
+
+		margin-top: 0px;
+
+	}
+
+	div.textwidget img {
+
+		height: auto;
+
+	}
 
     div.ozetResim figure {
 
@@ -212,8 +284,11 @@
 
 	}
 
+	input#araText {
 
+		border: 1px solid gray;
 
+	}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1200px){
@@ -432,6 +507,7 @@
 	    position: static;
 	    padding: 0;
 	    margin-left: 0;
+	    margin-top: 40px;
 
     }
 
