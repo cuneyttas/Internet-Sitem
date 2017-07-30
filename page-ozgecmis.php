@@ -30,6 +30,24 @@ if (have_posts()) :
 
 			<div class="deneyim satir">
 
+				<h3 class="baslik sutun-6">Web Geliştiricisi</h3>
+				<span class="periyot sutun-6">Mayıs 2017 - ?</span>
+
+			</div>
+
+			<h4 class="isAdi">
+
+	 		<i class="fa fa-suitcase"></i>
+	 		Twelve12
+
+			</h4>
+			<p>Şirketin Web Geliştirme departmanında PHP ve Wordpress kullanarak internet sitesi (web) geliştiriyorum. </p>
+
+		</li>
+		<li>
+
+			<div class="deneyim satir">
+
 				<h3 class="baslik sutun-6">Bilgi Teknolojileri Uzman Yardımcısı</h3>
 				<span class="periyot sutun-6">Aralık 2015 - Şubat 2016</span>
 

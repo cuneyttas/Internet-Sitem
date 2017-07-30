@@ -37,7 +37,7 @@ if (have_posts()) :
 
 						foreach ($kategoriler as $kategori) {
 
-							$yazim .='<a href="'.get_category_link($kategori->term_id).'">'.$kategori->cat_name.'</a>'.$ayrac;
+							$yazim .='<a href="'.get_category_link($kategori->term_id).'"> '.$kategori->cat_name.'</a>'.$ayrac;
 
 						}
 
