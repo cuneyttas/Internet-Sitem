@@ -30,9 +30,6 @@
 		</div> <!-- bilgi sonu -->
 
 		<div class="sosyal">
-
- 		<span>Sosyal Hesaplar</span>
- 		<hr class="cizgi">
  		<?php
 
  		// Bileşen (widget) alanı

@@ -46,9 +46,9 @@ function bilesenleriBaslat() {
 		'name'          => 'Mavi Alan',
 		'id'            => 'mavi-alan',
 		'before_widget' => '',
-		'after_widget'  => ''
-		//'before_widget' => '<div class="yorumum">',
-		//'after_widget'  => '</div><br>'
+		'after_widget'  => '',
+		'before_title' => '<span>',
+		'after_title' => '</span><hr class="cizgi">'
 
 	));
 
@@ -797,102 +797,6 @@ function sonrakiTusu() {
 }
 
 
-
-
-
-
-
-
-
-function example_insert_category() {
-
-
-
-	require_once ('MysqliDb.php');
-
-	$db = new MysqliDb ('localhost', 'cuneytta_cuneyt', 'b,0#;uH9%hKT', 'cuneytta_cuneyt-tas');
-
-	$db->join("resimler r", "k.resim_ID = r.resim_ID", "LEFT");
-	$kitaplar = $db->get('Kitaplar k');
-
-
-
-
-	foreach ($kitaplar as $kitap) {
-
-
-		$post_arr = array(
-			'post_type' 	=> 'kitap',
-		    'post_status'  => 'publish',
-		    'post_title'   => $kitap["kitap_adi"],
-		    'post_author'  => get_current_user_id(),
-		    'tax_input'    => array(
-			    'yazarlar' => $kitap["kitap_yazar"]
-			),
-		    'meta_input'   => array(
-		        'sayfaSayisiAnahtari' => $kitap["kitap_sayfa"],
-		        'basimYiliAnahtari' => $kitap["kitap_basim_yili"] == "0000" ? "" : $kitap["kitap_basim_yili"],
-		        'hatirlamaBasimYiliAnahtari' => $kitap["kitap_basim_yili"] == "0000" ? "Hatırlamıyorum" : "",
-		        'tarihAnahtari' => $kitap["kitap_bitis_tarihi"] == "?" ? "" : $kitap["kitap_bitis_tarihi"],
-		        'hatirlamaTarihAnahtari' => $kitap["kitap_bitis_tarihi"] == "?" ? "Hatırlamıyorum" : "",
-		    ),
-		);
-
-		//print_r($post_arr);
-
-		// Insert the post into the database
-		$post_ID = wp_insert_post( $post_arr );
-
-
-
-
-
-
-		// $filename should be the path to a file in the upload directory.
-		$filename = WP_CONTENT_DIR.'/uploads/2017/07/'.$kitap['resim'];
-
-		// The ID of the post this attachment is for.
-		$parent_post_id = $post_ID;
-
-		// Check the type of file. We'll use this as the 'post_mime_type'.
-		$filetype = wp_check_filetype( basename( $filename ), null );
-
-		// Get the path to the upload directory.
-		$wp_upload_dir = wp_upload_dir();
-
-		// Prepare an array of post data for the attachment.
-		$attachment = array(
-			'guid'           => $wp_upload_dir['url'] . '/' . basename( $filename ),
-			'post_mime_type' => $filetype['type'],
-			'post_title'     => preg_replace( '/\.[^.]+$/', '', basename( $filename ) ),
-			'post_content'   => '',
-			'post_status'    => 'inherit'
-		);
-
-		// Insert the attachment.
-		$attach_id = wp_insert_attachment( $attachment, $filename, $parent_post_id );
-
-		// Make sure that this file is included, as wp_generate_attachment_metadata() depends on it.
-		require_once( ABSPATH . 'wp-admin/includes/image.php' );
-
-		// Generate the metadata for the attachment, and update the database record.
-		$attach_data = wp_generate_attachment_metadata( $attach_id, $filename );
-		wp_update_attachment_metadata( $attach_id, $attach_data );
-
-		set_post_thumbnail( $parent_post_id, $attach_id );
-
-
-	} // The kitap loop
-
-
-
-
-}
-
-if (isset($_GET['aktar'])) add_action( 'init', 'example_insert_category' );
-
-
-
 // Zaman formatını düzenleme
 function zamanDuzenle($zaman) {
 
@@ -925,7 +829,7 @@ function sonVersiyonuGetir() {
 }
 
 
-// Yönetici sayfasındaki Kitaplar'ın içerisinddeki kitapların sıralanması
+// Yönetici sayfasındaki Kitaplar'ın içerisindeki kitapların sıralanması
 function yoneticiSayfasiKitapSirala( $query ) {
     // Hiç bir şey yapma
     if( ! $query->is_main_query() || 'kitap' != $query->get( 'post_type' )  )

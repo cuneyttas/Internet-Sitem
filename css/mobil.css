@@ -207,10 +207,22 @@
 
 	}
 
+	div.blogBilgi {
+
+		text-align: center;
+	    margin-bottom: 10px;
+
+	}
+
 	div.blogMenu {
 
 		margin-top: 10px;
+		margin-left: 35px;
 
+	}
+
+	pre {
+		font-size: 11px;
 	}
 
 	input#araText {
@@ -218,6 +230,13 @@
 		border: 1px solid gray;
 
 	}
+
+	ul.kitaplik > li {
+
+		width: 100% !important;
+
+	}
+
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px){
@@ -287,6 +306,12 @@
 	input#araText {
 
 		border: 1px solid gray;
+
+	}
+
+	ul.kitaplik > li {
+
+		width: 50% !important;
 
 	}
 }
@@ -497,6 +522,12 @@
 	    width: 100%;
 
     }
+
+    ul.kitaplik > li {
+
+		width: 33.3% !important;
+
+	}
 
 }
 

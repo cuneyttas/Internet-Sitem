@@ -144,7 +144,7 @@ if (have_posts()) :
 		</div> <!-- sutun-6 sonu -->
 		<div class="sutun-6">
 
-			<h2>Bana Mesaj Gönderin</h2>
+			<h2>Buradan Mesaj Gönderebilirsiniz</h2>
 			<ul class="hataMesajlari">
 
 				<li><?= $isimHata ?></li>
@@ -183,7 +183,7 @@ if (have_posts()) :
 
 			<div class="harita sutun-12">
 
-				<h2>Haritada Neredeyim?</h2>
+				<h2>Şu An Neredeyim?</h2>
 				<?= $haritaBilgisiDegeri ?>
 
 			</div>	<!-- harita sonu -->
