@@ -22,8 +22,8 @@ if (have_posts()) :
 	endwhile;
 
 	echo paginate_links();
-	previous_posts_link('Önceki Sayfaya geçiver');
-	next_posts_link('Sonraki Sayfaya geçiver');
+	previous_posts_link('Önceki Sayfa');
+	next_posts_link('Sonraki Sayfa');
 
 else :
 

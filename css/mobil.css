@@ -30,468 +30,245 @@
     display: block;
 }
 
-@media only screen and (max-width: 385px) {
-	/* küçük cep telefonları için: */
+
+/* Yatay konumdaki tabletler için */
+@media only screen and (max-width: 1199px) {
 
 	nav.menu > ul > li {
 
-    	font-size: 0.4em !important;
-    	width: 40px !important;
-    	margin-right: 3px !important;
-
-    }
-
-    nav.menu > ul > li > a {
-
-	    height: 38px !important;
-	    width: 38px !important;
-	    font-size: 7px;
-
-    }
-
-}
-
-@media only screen and (max-width: 480px) {
-    /* dik cep telefonları için: */
-
-    [class*="sutun-"] {
-        width: 100%;
-    }
-
-    div.ana {
-
-		overflow-x: visible;
+		margin-right: 15px;
 
 	}
 
-    section.solSutun {
+	nav.menu > ul > li > a {
 
-	    padding-right: 20px;
-	    height: auto;
-
-    }
-
-    div.bilgi {
-
-	    text-align: center;
-	    margin-top: 10px;
-
-    }
-
-    hr.cizgi {
-
-	    margin-top: 5px;
-
-    }
-
-    div.sosyal {
-
-	    position: static;
-	    padding: 30px 0 0 0;
-	    margin-left: 0;
-    }
-
-    div.icerik {
-
-	    position: static;
-	    height: auto;
-	    margin-right: 0;
-
-    }
-
-    div.altKisim {
-
-	    position: static;
-
-    }
-
-    nav.menu > ul > li {
-
-    	font-size: 0.6em;
-    	width: 50px;
-    	margin-right: 5px;
-
-    }
-
-    nav.menu > ul > li > a {
-
-	    height: 48px;
-	    width: 48px;
-
-    }
-
-    .menuIkon a:before {
-
-	    margin-top: 5px;
-	    margin-bottom: -4px;
-	    font-size: 16px;
-
-    }
-
-	nav.menu > ul > li.current-menu-item > a {
-
-	    color: #2288BB;
+		height: 80px;
 
 	}
 
-	nav.menu > ul > li.current-menu-item > a i {
+	nav.menu > ul > li > a:before {
 
-	    color: #FFFFFF;
-
-	}
-
-	li.menu-item-has-children > ul > li > a {
-
-		padding: 0;
-
-	}
-
-    ul.ders > li {
-
-		border-right: none;
-
-	}
-
-	span.periyot {
-
-		text-align: left;
-
-	}
-
-	span.seviye {
-
-		margin-top: 5px;
-		text-align: left;
-
-	}
-
-	div.ozetResim figure {
-
-		width: 100%;
-
-	}
-
-	[class*="sutun-"] {
-
-    	padding: 20px;
-
-	}
-
-	div.maviAlan {
-
-		padding: 20px;
-
-	}
-
-	ul.resimler li {
-
-		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 12px;
+		font-size: 35px;
 
 	}
 
 	div.blogOzet {
 
-		margin-top: 10px;
+		width: 58.33%;
 
 	}
 
-	figure.blogResim {
+	[class*="sutun-"] {
 
-		width: 100%;
-
-	}
-
-	figure.blogResim img {
-
-		height: 100%;
+		padding: 20px;
 
 	}
 
-	div.blogBilgi {
+	div.icerik > .sutun-6:nth-child(odd) {
 
-		text-align: center;
-	    margin-bottom: 10px;
-
-	}
-
-	div.blogMenu {
-
-		margin-top: 10px;
-		margin-left: 35px;
+		padding-right: 10px;
 
 	}
 
-	pre {
-		font-size: 11px;
-	}
+	div.icerik > .sutun-6:nth-child(even) {
 
-	input#araText {
-
-		border: 1px solid gray;
+		padding-left: 10px;
 
 	}
 
-	ul.kitaplik > li {
+	ul.profil > li {
 
-		width: 100% !important;
+		font-size: 0.7em;
+
+	}
+
+	div.icerik {
+
+		top: 120px;
+		left: 20px;
+		right: 20px;
 
 	}
 
 }
 
-@media only screen and (min-width: 480px) and (max-width: 768px){
-	/* yan cep telefonları için: */
 
-	div.icerik [class*="sutun-"] {
+/* Dik konumdaki tabletler için */
+@media only screen and (max-width: 991px) {
 
-        width: 100%;
+	h3 {
 
-    }
+		font-size: 16.7px;
 
-    .menuIkon a:before {
+	}
 
+	nav.menu > ul > li {
+
+		font-size: 0.8em;
+
+	}
+
+	nav.menu > ul > li > a {
+
+		height: 65px;
+
+	}
+
+	nav.menu > ul > li > a:before {
+
+		font-size: 25px;
 		margin-top: 13px;
-	    margin-bottom: 5px;
-	    font-size: 26px;
+		margin-bottom: 3px;
 
-    }
+	}
 
-    li.menu-item-has-children > ul > li > a {
+	div.maviAlan {
+
+		padding: 15px;
+		font-size: 15px;
+
+	}
+
+	div.maviAlan div.sosyal {
+
+		padding: 15px;
+		margin-left: -15px;
+
+	}
+
+	div.icerik {
+
+		top: 100px;
+
+	}
+
+	span.periyot, span.tarih {
+
+		font-size: 8px;
+
+	}
+
+	h3.baslik {
+
+		font-size: 1em;
+
+	}
+
+	span.seviye {
+
+		font-size: 0.7em;
+
+	}
+
+	figure.ozetResim {
+
+		width: 60% !important;
+		margin: 0 20%;
+
+	}
+
+	div.blogOzet {
+
+		margin-top: 20px;
+		margin-left: 0;
+		width: 100%;
+
+	}
+
+	ul.kitaplik > li.sutun-4 {
+
+		width: 50%;
+
+	}
+
+}
+
+
+/* Yatay konumdaki telefonlar için */
+@media only screen and (max-width: 767px) {
+
+	[class*="sutun-"] {
+
+		padding: 10px;
+
+	}
+
+	h3 {
+
+		font-size: 20px;
+
+	}
+
+	div.icerik > [class*="sutun-"] {
+
+		width: 100%;
+
+	}
+
+	nav.menu > ul > li {
+
+		font-size: 0.6em;
+		width: 14%;
+		margin-right: 10px;
+
+	}
+
+	li.menu-item-has-children > ul > li > a {
 
 		padding: 5px;
 
 	}
 
+	div.maviAlan {
+
+		padding: 10px;
+
+	}
+
+	div.bilgi {
+
+		margin-top: 5px;
+
+	}
+
+	div.bilgi h1.isim {
+
+		font-size: 17px;
+
+	}
+
+	div.bilgi p.baslik {
+
+		font-size: 9px;
+
+	}
+
 	div.bilgi p.yorumum {
 
-	    font-size: 8px;
-	    line-height: 10px;
+		font-size: 8px;
+		line-height: 10px;
+
+	}
+
+	div.bilgi p.yorumumZaman {
+
+		font-size: 0.5em;
+		margin-top: 5px;
+
+	}
+
+	div.sosyal {
+
+		padding: 10px !important;
+		margin-left: -10px !important;
 
 	}
 
 	div.sosyal p {
 
 		margin-top: 0px;
-
-	}
-
-	div.textwidget img {
-
-		height: auto;
-
-	}
-
-    div.ozetResim figure {
-
-	    margin-left: auto;
-	    margin-right: auto;
-	    margin-bottom: 10px;
-
-    }
-
-	figure.blogResim {
-
-		margin-right: 0;
-		width: 100%;
-
-	}
-
-	div.blogMenu {
-
-		margin-top: 10px;
-		margin-bottom: 10px;
-
-	}
-
-	input#araText {
-
-		border: 1px solid gray;
-
-	}
-
-	ul.kitaplik > li {
-
-		width: 50% !important;
-
-	}
-}
-
-@media only screen and (min-width: 480px) and (max-width: 1200px){
-	/* yan cep telefonları ve tabletler için: */
-
-	[class*="sutun-"] {
-
-        padding: 10px;
-
-    }
-
-    div.icerik {
-
-		top: 82px;
-		bottom: 10px;
-		left: 10px;
-		right: 10px;
-
-	}
-
-    h3.baslik, span.periyot {
-
-	    width: 50% !important;
-
-    }
-
-    span.yetenek {
-
-	    width: 75% !important;
-
-    }
-
-    span.seviye {
-
-	    width: 25% !important;
-
-    }
-
-	nav.menu > ul > li {
-
-    	font-size: 0.6em;
-    	width: 14%;
-    	margin-right: 10px;
-
-    }
-
-    nav.menu > ul > li > a {
-
-    	height: 62px;
-    	padding-bottom: 5px;
-    	padding-top: 5px;
-
-    }
-
-    i.menu-ikon {
-
-	    margin: 0;
-
-	}
-
-	div.maviAlan {
-
-	    height: 100%;
-	    padding: 10px;
-
-    }
-
-    div.bilgi p:last-child {
-
-	    display: none;
-
-    }
-
-    div.bilgi h1.isim {
-
-    	font-size: 17px;
-
-    }
-
-    div.bilgi {
-
-	    margin-top: 5px;
-
-    }
-
-    div.bilgi p.baslik {
-
-    	font-size: 9px;
-
-    }
-
-    div.bilgi p.tanitim {
-
-		line-height: 12px;
-		margin-bottom: 5px;
-		font-size: 10px;
-
-	}
-
-	div.sosyal span {
-
-		font-size: 0.7em;
-
-	}
-
-	div.sosyal a img {
-
-		max-width: 70%;
-
-	}
-
-	div.sosyal {
-
-	    padding: 10px !important;
-		margin-left: -10px !important;
-		position: absolute !important;
-
-    }
-
-    div.altKisim {
-
-	    height: 10px;
-	    right: 10px;
-
-    }
-
-    footer {
-
-	    font-size: 0.4em;
-	    line-height: 10px;
-
-	}
-
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1200px){
-	/* yan tabletler için */
-
-	span.yetenek {
-
-	    width: 70% !important;
-
-    }
-
-    span.seviye {
-
-	    width: 30% !important;
-
-    }
-
-    div.bilgi p:last-child {
-
-	    display: block;
-
-    }
-
-    div.bilgi h1.isim {
-
-    	font-size: 25.6px;
-
-    }
-
-    div.bilgi {
-
-	    margin-top: 20px;
-
-    }
-
-    div.bilgi p.baslik {
-
-    	font-size: 1em;
-
-    }
-
-    div.bilgi p.tanitim {
-
-		line-height: 18px;
-		font-size: .9em;
 
 	}
 
@@ -503,47 +280,247 @@
 
 	div.sosyal a img {
 
-		max-width: 100%;
+		max-width: 50%;
+
+	}
+
+	div.icerik {
+
+		top: 82px;
+		bottom: 10px;
+		left: 10px;
+		right: 10px;
+
+	}
+
+	h3.baslik, span.periyot {
+
+		width: 50% !important;
+		font-size: 0.9em;
+
+	}
+
+	span.tarih {
+
+		font-size: 15px;
+
+	}
+
+	span.yetenek {
+
+		width: 75% !important;
+
+	}
+
+	span.seviye {
+
+		width: 25% !important;
+		font-size: 0.9em;
+
+	}
+
+	figure.blogResim {
+
+		width: 100%;
+
+	}
+
+	div.blogMenu {
+
+		margin-bottom: 10px;
+
+	}
+
+	footer {
+
+		height: 10px;
+		right: 10px;
+
+	}
+
+	footer > div {
+
+		font-size: 0.4em;
+		line-height: 10px;
+
+	}
+
+}
+
+/* Dik konumdaki telefonlar için */
+@media only screen and (max-width: 479px) {
+
+	[class*="sutun-"] {
+
+	    padding: 20px;
+
+	}
+
+	div.ana > [class*="sutun-"] {
+
+	    width: 100%;
+
+	}
+
+	div.ana {
+
+	    overflow-x: visible;
+
+	}
+
+	section.solSutun {
+
+	    padding-right: 20px;
+	    height: auto;
+
+	}
+
+	div.maviAlan {
+
+	    padding: 20px;
+
+	}
+
+	div.bilgi {
+
+	    text-align: center;
+	    font-size: 20px;
+
+	}
+
+	div.bilgi h1.isim {
+
+	    font-size: 40px;
+
+	}
+
+	div.bilgi p.baslik {
+
+	    font-size: 17px;
+
+	}
+
+	div.bilgi p.yorumum {
+
+	    font-size: 15px;
+	    line-height: 20px;
+
+    }
+
+	hr.cizgi {
+
+	    margin-top: 5px;
+
+	}
+
+	div.sosyal {
+
+	    position: static;
+	    padding: 30px 0 0 0 !important;
+	    margin-left: 0 !important;
+	}
+
+	nav.menu {
+
+		margin-bottom: 15px;
+
+	}
+
+	nav.menu > ul > li > a {
+
+	    height: auto;
+
+	}
+
+	div.icerik {
+
+	    position: static;
+
+	}
+
+	ul.resimler li {
+
+	    width: 100%;
+	    margin-bottom: 15px;
 
 	}
 
 	div.blogOzet {
 
-		padding: 10px;
+	    margin-top: 10px;
 
 	}
 
-}
+	div.blogBilgi {
 
-@media only screen and (max-width: 1280px) {
-
-    div.ana {
-
-	    width: 100%;
-
-    }
-
-    ul.kitaplik > li {
-
-		width: 33.3% !important;
+	    display: block;
+	    text-align: center;
+	    margin-bottom: 10px;
 
 	}
 
-}
+	div.blogMenu {
 
-@media only screen and (max-height: 620px) {
+	    margin-top: 23px;
+	    float: none;
+	    text-align: center;
+	    display: block;
 
-    div.sosyal {
+	}
+
+	pre {
+	    font-size: 11px;
+	}
+
+	ul.kitaplik > li {
+
+	    width: 100% !important;
+
+	}
+
+	footer {
 
 	    position: static;
-	    padding: 0;
-	    margin-left: 0;
-	    margin-top: 40px;
+
+	}
+
+}
+
+
+
+/* küçük cep telefonları için: */
+@media only screen and (max-width: 385px) {
+
+	nav.menu > ul > li {
+
+    	margin-right: 8px;
+
+    }
+
+    nav.menu > ul > li > a {
+
+	    font-size: 6.8px;
+
+    }
+
+    nav.menu > ul > li > a:before {
+
+		font-size: 16px;
+	    margin-top: 3px;
+	    margin-bottom: 0px;
+
+    }
+
+    span.seviye {
+
+	    font-size: 0.5em;
 
     }
 
 }
 
+
+/* Menü efektlerinin sadece bilgisayarlarda geçerli olması için */
 @media only screen and (min-width: 1200px) {
 
     nav.menu ul > li > a:hover {
@@ -558,3 +535,14 @@
 
 }
 
+
+
+/* Retina Ayarları */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+ 	   only screen and (-o-min-device-pixel-ratio: 3/2),
+ 	   only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+
+
+}

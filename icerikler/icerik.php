@@ -1,14 +1,10 @@
 <article class="ozet satir">
 
-	<div class="ozetResim sutun-4">
+	<figure class="ozetResim sutun-4">
 
-		<figure>
+		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'blog-liste' ); ?></a>
 
-			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'blog-liste' ); ?></a>
-
-		</figure>
-
-	</div> <!-- ozetResim sonu -->
+	</figure> <!-- ozetResim sonu -->
 	<div class="blogOzet sutun-8">
 
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

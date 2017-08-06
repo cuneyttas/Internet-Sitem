@@ -139,8 +139,8 @@ if (have_posts()) :
 
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">1. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">1. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Fizik-1</li>
 		 			<li>Matematik-1</li>
@@ -154,8 +154,8 @@ if (have_posts()) :
 				</div> <!-- sinifBolumu sonu  -->
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">2. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">2. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Meslekî İngilizce-1</li>
 		 			<li>Lineer Cebir</li>
@@ -178,8 +178,8 @@ if (have_posts()) :
 				</div> <!-- sinifBolumu sonu  -->
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">3. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">3. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Programlama Dilleri</li>
 		 			<li>Ekonomi</li>
@@ -199,8 +199,8 @@ if (have_posts()) :
 				</div> <!-- sinifBolumu sonu  -->
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">4. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">4. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Endüstri Sosyolojisi</li>
 		 			<li>Duyarga Ağları</li>
@@ -244,8 +244,8 @@ if (have_posts()) :
 
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">1. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">1. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Genel Fizik Laboratuvarı-1</li>
 		 			<li>Genel Kimya Laboratuvarı-1</li>
@@ -265,8 +265,8 @@ if (have_posts()) :
 				</div> <!-- sinifBolumu sonu  -->
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">2. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">2. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Bilgisayar-1</li>
 		 			<li>İngilizce-1</li>
@@ -308,8 +308,8 @@ if (have_posts()) :
 
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">Hazırlık Sınıfı</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">Hazırlık Sınıfı</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Türkçe</li>
 		 			<li>İngilizce</li>
@@ -322,8 +322,8 @@ if (have_posts()) :
 				</div> <!-- sinifBolumu sonu  -->
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">1. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">1. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Türk Dili ve Edebiyatı</li>
 		 			<li>Din Kültürü ve Ahlak Bilgisi</li>
@@ -344,8 +344,8 @@ if (have_posts()) :
 				</div> <!-- sinifBolumu sonu  -->
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">2. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">2. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Türk Dili ve Edebiyatı</li>
 		 			<li>Din Kültürü ve Ahlak Bilgisi</li>
@@ -367,8 +367,8 @@ if (have_posts()) :
 				</div> <!-- sinifBolumu sonu  -->
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">3. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">3. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Türk Dili ve Edebiyatı</li>
 		 			<li>Din Kültürü ve Ahlak Bilgisi</li>
@@ -412,8 +412,8 @@ if (have_posts()) :
 
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">4. - 5. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">4. - 5. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Türkçe</li>
 		 			<li>Matematik</li>
@@ -431,8 +431,8 @@ if (have_posts()) :
 				</div> <!-- sinifBolumu sonu  -->
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">6. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">6. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Türkçe</li>
 		 			<li>Matematik</li>
@@ -452,8 +452,8 @@ if (have_posts()) :
 				</div> <!-- sinifBolumu sonu  -->
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">7. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">7. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Türkçe</li>
 		 			<li>Matematik</li>
@@ -473,8 +473,8 @@ if (have_posts()) :
 				</div> <!-- sinifBolumu sonu  -->
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">8. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">8. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Türkçe</li>
 		 			<li>Matematik</li>
@@ -518,8 +518,8 @@ if (have_posts()) :
 
 				<div class="sinifBolumu satir">
 
-	 			<h6 class="sinif sutun-3">1. - 2. - 3. Sınıf</h6>
-	 			<ul class="ders sutun-9">
+	 			<h6 class="sinif sutun-2">1. - 2. - 3. Sınıf</h6>
+	 			<ul class="ders sutun-10">
 
 		 			<li>Türkçe</li>
 		 			<li>Matematik</li>
@@ -1193,15 +1193,15 @@ if (have_posts()) :
 
 			<div class="deneyim satir">
 
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>KPSS (Ortaöğretim)</h3>
-				<span class="tarih sutun-6">Eylül 2008</span>
+				<h3 class="ozBilgi sutun-8"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>KPSS (Ortaöğretim)</h3>
+				<span class="tarih sutun-4">Eylül 2008</span>
 
 			</div>
 
 			<div class="sinavNotu satir">
 
-				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">77</p>
+				<p class="sutun-3">Puan:</p>
+				<p class="sutun-9">77</p>
 
 			</div>
 			<p>KPSS P94 puan türü belirtilmektedir.</p>
@@ -1211,21 +1211,21 @@ if (have_posts()) :
 
 			<div class="deneyim satir">
 
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ÖSS</h3>
-				<span class="tarih sutun-6">Haziran 2010</span>
+				<h3 class="ozBilgi sutun-8"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ÖSS</h3>
+				<span class="tarih sutun-4">Haziran 2010</span>
 
 			</div>
 
 			<div class="sinavNotu satir">
 
-				<p class="sutun-4">YGS Puanı:</p>
-				<p class="sutun-8">454</p>
+				<p class="sutun-3">YGS Puanı:</p>
+				<p class="sutun-9">454</p>
 
 			</div>
 			<div class="sinavNotu satir">
 
-				<p class="sutun-4">LYS Puanı:</p>
-				<p class="sutun-8">412</p>
+				<p class="sutun-3">LYS Puanı:</p>
+				<p class="sutun-9">412</p>
 
 			</div>
 			<p>YGS-1 ve MF-2 puan türlerinde "alanında" yerleştirme puanım belirtilmektedir.</p>
@@ -1235,15 +1235,15 @@ if (have_posts()) :
 
 			<div class="deneyim satir">
 
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>GUYS</h3>
-				<span class="tarih sutun-6">Kasım 2015</span>
+				<h3 class="ozBilgi sutun-8"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>GUYS</h3>
+				<span class="tarih sutun-4">Kasım 2015</span>
 
 			</div>
 
 			<div class="sinavNotu satir">
 
-				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">68</p>
+				<p class="sutun-3">Puan:</p>
+				<p class="sutun-9">68</p>
 
 			</div>
 			<p>Gelir İdaresi Başkanlığının açmış olduğu Gelir Uzman Yardımcılığı Sınavı. Bu sınavdan geçmek için 70 alınması gerekiyorken 2 puanla kaçırmıştım.</p>
@@ -1253,15 +1253,15 @@ if (have_posts()) :
 
 			<div class="deneyim satir">
 
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ALES</h3>
-				<span class="tarih sutun-6">Mayıs 2016</span>
+				<h3 class="ozBilgi sutun-8"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>ALES</h3>
+				<span class="tarih sutun-4">Mayıs 2016</span>
 
 			</div>
 
 			<div class="sinavNotu satir">
 
-				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">74</p>
+				<p class="sutun-3">Puan:</p>
+				<p class="sutun-9">74</p>
 
 			</div>
 			<p>ALES Sayısal Puanı belirtilmektedir.</p>
@@ -1271,15 +1271,15 @@ if (have_posts()) :
 
 			<div class="deneyim satir">
 
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>KPSS (Lisans)</h3>
-				<span class="tarih sutun-6">Mayıs 2016</span>
+				<h3 class="ozBilgi sutun-8"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>KPSS (Lisans)</h3>
+				<span class="tarih sutun-4">Mayıs 2016</span>
 
 			</div>
 
 			<div class="sinavNotu satir">
 
-				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">88</p>
+				<p class="sutun-3">Puan:</p>
+				<p class="sutun-9">88</p>
 
 			</div>
 			<p>KPSS P3 puan türü belirtilmektedir.</p>
@@ -1289,15 +1289,15 @@ if (have_posts()) :
 
 			<div class="deneyim satir">
 
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>YDS</h3>
-				<span class="tarih sutun-6">Eylül 2016</span>
+				<h3 class="ozBilgi sutun-8"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>YDS</h3>
+				<span class="tarih sutun-4">Eylül 2016</span>
 
 			</div>
 
 			<div class="sinavNotu satir">
 
-				<p class="sutun-2">Puan:</p>
-				<p class="sutun-10">37</p>
+				<p class="sutun-3">Puan:</p>
+				<p class="sutun-9">37</p>
 
 			</div>
 			<p>YDS'den başarılı sayılabilmek için en az 50 puan almak gerekiyor. Önceki sene çalışmadan girdiğim sınavdan 36 almıştım. Bu sene yaklaşık 1 hafta dil bilgisi çalıştıktan sonra 1 soru daha fazla doğru cevaplandırarak 37 puana yükseltmeyi başardım. </p>
@@ -1313,8 +1313,8 @@ if (have_posts()) :
 
 			<div class="deneyim satir">
 
-				<h3 class="ozBilgi sutun-6"><i class="fa fa-certificate" aria-hidden="true"></i>Akınsoft</h3>
-				<span class="tarih sutun-6">Aralık 2011</span>
+				<h3 class="ozBilgi sutun-8"><i class="fa fa-certificate" aria-hidden="true"></i>Akınsoft</h3>
+				<span class="tarih sutun-4">Aralık 2011</span>
 
 			</div>
 			<p>Katılım Sertifikası</p>

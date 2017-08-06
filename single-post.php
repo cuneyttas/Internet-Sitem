@@ -23,7 +23,7 @@ if (have_posts()) :
 		<div class="temizle"></div>
 		<div class="blogAlt satir" style="margin-top: 50px;">
 
-			<div class="blogBilgi sutun-9">
+			<div class="blogBilgi">
 
 				<span class="blogBilgi"><?php the_date(); ?> |
 
@@ -49,7 +49,7 @@ if (have_posts()) :
 				</span>
 
 			</div> <!-- blogBilgi sonu -->
-			<div class="blogMenu sutun-3">
+			<div class="blogMenu">
 
 				<!-- Bloglar Düğmesi -->
 				<a class="buton" href="<?= site_url('blog') ?>"><i class="fa fa-arrow-left blog-ikon"></i>Bloglar</a>

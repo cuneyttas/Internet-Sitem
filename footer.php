@@ -1,14 +1,14 @@
 			</div> <!-- icerik sonu -->
 
- 			<div class="altKisim satir">
+ 			<footer class="satir">
 
-				<footer class="sutun-12">
+				<div class="sutun-12">
 
 					<p>Telif Hakkı © 2016-<?php echo date("Y");?> Cüneyt TAŞ (Sürüm <?=sonVersiyonuGetir()?>)</p>
 
-				</footer>
+				</div>
 
-			</div> <!-- altKisim satir sonu -->
+			</footer> <!-- altKisim satir sonu -->
 
 
  		</section>	<!-- sagSutun sonu -->

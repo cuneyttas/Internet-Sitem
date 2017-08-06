@@ -2,7 +2,7 @@
 Theme Name: Cüneyt TAŞ Kişisel İnternet Sitesi
 Author: Cüneyt TAŞ
 Author URI: http://www.cuneyt-tas.com
-Version: 3.2
+Version: 3.3
 */
 
 html, body {
@@ -55,13 +55,15 @@ hr.cizgi {
 a {
 
 	text-decoration: none;
+	outline: none;
 
 }
 
 div.ana {
 
 	margin: 0 auto;
-	width: 1200px;
+	max-width: 1200px;
+	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
 
@@ -172,9 +174,9 @@ div.sosyal a {
 
 }
 
-div.sosyal a img {
+div.textwidget img {
 
-	max-width: 100%;
+	height: auto;
 
 }
 
@@ -182,12 +184,6 @@ section.sagSutun {
 
 	position: relative;
 	height: 100%;
-
-}
-
-nav.menu {
-
-	margin-bottom: 30px;
 
 }
 
@@ -256,7 +252,7 @@ nav.menu > ul > li {
     line-height: 18px;
 	float: left;
 	text-align: center;
-	width: 102px;
+	width: 12%;
 	margin: 0px;
 	padding: 0px;
 	margin-right: 30px;
@@ -349,6 +345,7 @@ li.menu-item-has-children > ul > li > a{
 li.menu-item-has-children > ul > li > a:hover{
 
 	color: white;
+	background: #44AADD;
 
 }
 
@@ -374,6 +371,8 @@ div.arama {
 
 	vertical-align: top;
 	padding: 4px;
+	border: 1px solid #C7C4C7;
+	height: 24px;
 
 }
 
@@ -394,6 +393,18 @@ div.icerik {
     right: 30px;
     left: 30px;
     overflow-y: scroll;
+
+}
+
+div.icerik > .sutun-6:nth-child(odd) {
+
+	padding-right: 15px;
+
+}
+
+div.icerik > .sutun-6:nth-child(even) {
+
+	padding-left: 15px;
 
 }
 
@@ -447,6 +458,7 @@ ul.profil > li {
 	border-left-style: solid;
 	border-color: #55AADD;
     font-size: .8em;
+    line-height: 15px;
 }
 
 label {
@@ -489,7 +501,7 @@ img.anaResim {
 
 }
 
-div.altKisim {
+footer {
 
 	position: absolute;
     bottom: 0;
@@ -498,7 +510,7 @@ div.altKisim {
 
 }
 
-footer {
+footer > div {
 
     text-align: right;
     font-size: .7em;
@@ -507,7 +519,7 @@ footer {
 
 }
 
-footer p {
+footer > div p {
 
 	margin: 0;
 
@@ -540,14 +552,17 @@ ul.basliklar > li {
 }
 
 h3 {
+
     color: #636262;
     font-size: 17.5px;
+    line-height: 25px;
+
 }
 
 h3.baslik {
 
 	font-size: 1.2em;
-    line-height: 1em;
+    line-height: 1.2em;
     margin-bottom: 5px;
     font-weight: inherit;
     margin-top: 0px;
@@ -570,6 +585,7 @@ h4.isAdi {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	color: #4AD;
+	line-height: 1.3em;
 }
 
 h5.dersler {
@@ -634,7 +650,7 @@ h3.yetBaslik {
 span.yetenek {
 
 	font-size: 1.2em;
-    line-height: 1em;
+    line-height: 1.4em;;
     font-weight: inherit;
     padding: 0;
 
@@ -759,16 +775,9 @@ ul.kategori li a.aktif {
 
 }
 
-div.ozetResim {
-
-	padding: 0;
-
-}
-
-div.ozetResim figure {
+figure.ozetResim {
 
 	width: 241px;
-	height: 171px;
 	overflow: hidden;
 	border: 1px solid #2288BB;
 	margin: 0px;
@@ -780,12 +789,14 @@ figure img {
 
 	width: 100%;
 	display: block;
+	height: auto;
 
 }
 
 div.blogOzet {
 
 	padding: 0;
+	margin-left: 15px;
 
 }
 
@@ -889,6 +900,7 @@ div.blogBilgi {
 
 	margin-top: 0;
 	padding: 0;
+    display: inline-block;
 
 }
 
@@ -901,8 +913,9 @@ span.blogBilgi {
 
 div.blogMenu {
 
-	width: 175px;
 	padding: 0;
+	display: inline-block;
+    float: right;
 
 }
 
