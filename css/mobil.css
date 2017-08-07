@@ -266,23 +266,12 @@
 
 	}
 
-	div.sosyal p {
-
-		margin-top: 0px;
-
-	}
-
 	div.sosyal span {
 
 		font-size: 1em;
 
 	}
 
-	div.sosyal a img {
-
-		max-width: 50%;
-
-	}
 
 	div.icerik {
 
@@ -308,13 +297,13 @@
 
 	span.yetenek {
 
-		width: 75% !important;
+		width: 60% !important;
 
 	}
 
 	span.seviye {
 
-		width: 25% !important;
+		width: 40% !important;
 		font-size: 0.9em;
 
 	}
@@ -478,6 +467,13 @@
 
 	}
 
+	div.arama {
+
+	    float: none;
+		text-align: center;
+
+	}
+
 	footer {
 
 	    position: static;
@@ -513,7 +509,7 @@
 
     span.seviye {
 
-	    font-size: 0.5em;
+	    font-size:  0.7em;
 
     }
 
@@ -542,7 +538,5 @@
  	   only screen and (-o-min-device-pixel-ratio: 3/2),
  	   only screen and (min--moz-device-pixel-ratio: 1.5),
        only screen and (min-device-pixel-ratio: 1.5) {
-
-
 
 }
