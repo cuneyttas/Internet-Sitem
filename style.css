@@ -5,6 +5,16 @@ Author URI: http://www.cuneyt-tas.com
 Version: 3.4
 */
 
+/* Kullanılması gereksiz olabilecekler (???) ile gösterilmektedir. */
+
+
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+			*-------  Genel Ayarlar  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
+
 html, body {
 
 	margin: 0;
@@ -24,6 +34,61 @@ body * {
 	font-family: Ubuntu, sans-serif;
 }
 
+a {
+
+	text-decoration: none;
+	outline: none;
+	color: #44AADD;
+
+}
+
+h2 {
+
+	color: #44AADD;
+	font-size: 1.3em;
+	line-height: 1.2em;
+	margin: 0px;
+	font-weight: inherit;
+	border-bottom: 1px solid #44AADD;
+	padding-bottom: 6px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+
+}
+
+h3 {
+
+    color: #636262;
+    font-size: 17.5px;
+    line-height: 25px;
+
+}
+
+ul {
+
+	list-style: none;
+	padding: 0px;
+
+}
+
+label {
+
+	color: #55AADD;
+
+}
+
+/* Yazıyı tararken oluşan rengin ayarlanması */
+::-moz-selection { /* Mozilla Firefox için */
+    color: white;
+    background: #5FCCFF;
+}
+
+::selection {
+    color: white;
+    background: #5FCCFF;
+}
+
+
 .golge {
 
 	box-shadow: 6px 6px 20px 0px rgba(0,0,0,0.2);
@@ -36,26 +101,9 @@ body * {
 
 }
 
-hr.cizgi {
-
-	border-color: #39AAE0;
-    margin: 0;
-    border-top: 0;
-    margin-bottom: 10px;
-
-}
-
-
-.temizle {
+.temizle { /* ??? */
 
 	clear: both;
-
-}
-
-a {
-
-	text-decoration: none;
-	outline: none;
 
 }
 
@@ -70,7 +118,76 @@ div.ana {
 }
 
 
-section.solSutun {
+/* Arama Çubuğu */
+
+div.arama {
+
+	float: right;
+
+}
+
+#araText {
+
+	vertical-align: top;
+	padding: 4px;
+	border: 1px solid #C7C4C7;
+	height: 24px;
+
+}
+
+#araButonu {
+
+	font-size: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	vertical-align: top;
+	color: white;
+	background-color: #3399CC;
+	border: 1px solid #444444;
+
+}
+
+h2.aramaBasligi {
+
+	font-size: 25px;
+	color: gray;
+
+}
+
+
+/* Butonların Ayarları  */
+div.sayfalama {
+
+	margin-top: 25px;
+	text-align: center;
+
+}
+
+a.buton, div.sayfalama a {
+
+	margin-top: 10px;
+	color: #2288BB;
+	border: 1px solid #2288BB;
+	font-size: .9em;
+    padding: 8px;
+
+}
+
+a.buton:hover , div.sayfalama a:hover{
+
+	color: white;
+	background-color: #2288BB;
+
+}
+
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+			*-------  Mavi Yan Alan  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
+
+aside.solSutun {
 
 	height: 100%;
 	padding-top: 0;
@@ -103,13 +220,29 @@ div.bilgi {
 
 }
 
-
 div.bilgi h1.isim,
 div.bilgi h1.isim a {
 
 	font-size: 25.6px;
 	color: white;
 	margin: 0;
+
+}
+
+div.bilgi p.baslik {
+
+	line-height: 1.5em;
+	color: white;
+	margin: 0;
+
+}
+
+hr.cizgi {
+
+	border-color: #39AAE0;
+    margin: 0;
+    border-top: 0;
+    margin-bottom: 10px;
 
 }
 
@@ -132,15 +265,6 @@ div.bilgi p.yorumumZaman {
 
 }
 
-div.bilgi p.baslik {
-
-	font-size: 1em;
-	line-height: 1.5em;
-	color: white;
-	margin: 0;
-
-}
-
 div.sosyal {
 
 	width: 100%;
@@ -157,6 +281,7 @@ div.sosyal a {
     font-size: 35px;
     padding: 0;
     color: white;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 
 }
@@ -170,17 +295,18 @@ div.sosyal a:hover {
 div.sosyal span {
 
     margin: 0;
-	font-size: 1em;
-	line-height: 1.5em;
+	line-height: 25px;
 	color: white;
 
 }
 
-div.textwidget img {
 
-	height: auto;
 
-}
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+			*-------  Ana Menü  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
 
 section.sagSutun {
 
@@ -189,6 +315,115 @@ section.sagSutun {
 
 }
 
+nav.menu > ul {
+
+	padding: 0px;
+	margin: 0px;
+
+}
+
+nav.menu > ul > li {
+
+	font-size: .9em;
+    line-height: 18px;
+	float: left;
+	width: 12%;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	margin-right: 30px;
+	border-radius: 15px;
+
+}
+
+nav.menu > ul > li:last-child {
+
+	float: right;
+	margin-right: 0;
+
+}
+
+nav.menu > ul > li > a {
+
+	color: #3399CC;
+	background-color: rgba(241, 254, 255, 0.91);
+	border: 1px solid;
+	border-color: #5FCCFF;
+	height: 100px;
+	width: 100%;
+	padding: 0px;
+	text-align: center;
+	display: block;
+	border-radius: 15px;
+
+}
+
+nav.menu ul > li.current-menu-item > a {
+
+	background: #3399CC; /* Özelliği desteklemeyen tarayıcılarda */
+    background: -webkit-linear-gradient(25deg, #3399CC,#F1FCFE 115%); /* Safari 5.1 to 6.0 için */
+	background: -o-linear-gradient(25deg, #3399CC,#F1FCFE 115%); /* Opera 11.1 to 12.0 için */
+	background: -moz-linear-gradient(25deg, #3399CC,#F1FCFE 115%); /* Firefox 3.6 to 15 için */
+	background: linear-gradient(25deg, #3399CC,#F1FCFE 115%); /* Standart yazım */
+    color: white;
+
+}
+
+#ust_menu li.menu-item > ul { /* Açılır Menü */
+
+	position: absolute;
+	z-index: 10;
+	right: 30px;
+	display: none;
+
+}
+
+#ust_menu li.menu-item-has-children > ul > li {
+
+	padding: 0;
+	background-color: #F0FCFD;
+	border-left: 1px solid #5FCCFF;
+	border-right: 1px solid #5FCCFF;
+	border-top: 1px solid #5FCCFF;
+
+}
+
+li.menu-item-has-children > ul > li:last-child{
+
+	border-bottom: 1px solid #5FCCFF;
+
+}
+
+li.menu-item-has-children > ul > li:hover {
+
+	background-color: #6BB4D7;
+	-webkit-transition-duration: 0.7s; /* Safari için */
+	transition-duration: 0.7s;
+
+}
+
+li.menu-item-has-children > ul > li > a {
+
+	color: #3399CC;
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding: 10px;
+
+}
+
+li.menu-item-has-children > ul > li > a:hover { /* ??? */
+
+	color: white;
+	background: #44AADD;
+
+}
+
+#ust_menu li.menu-item-has-children > ul > li a:before {
+
+	display: none;  /* İleride ikon eklersem kaldırırım */
+
+}
 
 .menuIkon a:before {
 
@@ -237,153 +472,12 @@ section.sagSutun {
 }
 
 
-nav.menu > ul {
 
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
 
-	padding: 0px;
-	list-style-type: none;
-	margin: 0px;
+	*-------  İçerik (Beyaz Kısım)  -------*
 
-
-}
-
-nav.menu > ul > li {
-
-	font-size: .9em;
-    color: #5FCCFF;
-    line-height: 18px;
-	float: left;
-	text-align: center;
-	width: 12%;
-	margin: 0px;
-	padding: 0px;
-	margin-right: 30px;
-	border-radius: 15px;
-
-}
-
-nav.menu > ul > li:last-child {
-
-	float: right;
-	margin-right: 0;
-
-}
-
-nav.menu > ul > li > a {
-
-	color: #3399CC;
-	background-color: rgba(241, 254, 255, 0.91);
-	border: 1px solid;
-	border-color: #5FCCFF;
-	height: 100px;
-	width: 100%;
-	padding: 0px;
-	text-align: center;
-	display: block;
-	border-radius: 15px;
-
-}
-
-nav.menu ul > li.current-menu-item > a {
-
-	background: #3399CC; /* Özelliği desteklemeyen tarayıcılarda */
-    background: -webkit-linear-gradient(25deg, #3399CC,#F1FCFE 115%); /* Safari 5.1 to 6.0 için */
-	background: -o-linear-gradient(25deg, #3399CC,#F1FCFE 115%); /* Opera 11.1 to 12.0 için */
-	background: -moz-linear-gradient(25deg, #3399CC,#F1FCFE 115%); /* Firefox 3.6 to 15 için */
-	background: linear-gradient(25deg, #3399CC,#F1FCFE 115%); /* Standart yazım */
-    color: white;
-
-}
-
-#ust_menu li.menu-item > ul {
-
-	position: absolute;
-	z-index: 10;
-	right: 30px;
-	display: none;
-
-}
-
-#ust_menu li.menu-item-has-children > ul > li {
-
-	padding: 0;
-	background-color: #F0FCFD;
-	border-left: 1px solid #5FCCFF;
-	border-right: 1px solid #5FCCFF;
-	border-top: 1px solid #5FCCFF;
-
-}
-
-#ust_menu li.menu-item-has-children > ul > li a:before {
-
-	display: none;  /* İleride ikon eklersem kaldırırım */
-
-}
-
-li.menu-item-has-children > ul > li:last-child{
-
-	border-bottom: 1px solid #5FCCFF;
-
-}
-
-li.menu-item-has-children > ul > li:hover {
-
-	background-color: #6BB4D7;
-	-webkit-transition-duration: 0.7s; /* Safari için */
-	transition-duration: 0.7s;
-
-}
-
-li.menu-item-has-children > ul > li > a{
-
-	color: #3399CC;
-	width: 100%;
-	height: 100%;
-	display: block;
-	padding: 10px;
-
-}
-
-li.menu-item-has-children > ul > li > a:hover{
-
-	color: white;
-	background: #44AADD;
-
-}
-
-div.arama {
-
-	float: right;
-
-}
-
-#araButonu {
-
-	font-size: 15px;
-	padding-left: 30px;
-	padding-right: 30px;
-	vertical-align: top;
-	color: white;
-	background-color: #3399CC;
-	border: 1px solid #444444;
-
-}
-
-#araText {
-
-	vertical-align: top;
-	padding: 4px;
-	border: 1px solid #C7C4C7;
-	height: 24px;
-
-}
-
-h2.aramaBasligi {
-
-	font-size: 25px;
-	color: gray;
-
-}
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
 
 div.icerik {
 
@@ -410,6 +504,12 @@ div.icerik > .sutun-6:nth-child(even) {
 
 }
 
+div.icerik h2:first-child {
+
+	margin-top: 0;
+
+}
+
 div.icerik p {
 
 	color: #666666;
@@ -419,89 +519,13 @@ div.icerik p {
 
 }
 
-h2 {
-
-	color: #44AADD;
-	font-size: 1.3em;
-	line-height: 1.2em;
-	margin: 0px;
-	font-weight: inherit;
-	border-bottom: 1px solid #44AADD;
-	padding-bottom: 6px;
-    margin-bottom: 15px;
-    margin-top: 20px;
-
-}
-
-a {
-
-	color: #44AADD;
-
-}
-
-div.icerik h2:first-child {
-
-	margin-top: 0;
-
-}
-
-ul {
-
-	list-style: none;
-	padding: 0px;
-
-}
-
-ul.profil > li {
-
-	margin: 0px;
-	padding: 5px 10px;
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-color: #55AADD;
-    font-size: .8em;
-    line-height: 15px;
-}
-
-label {
-
-	color: #55AADD;
-
-}
-
-label.proBaslik, span.proBilgi {
-
-	padding: 0;
 
 
-}
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
 
-::-moz-selection { /* Mozilla Firefox için */
-    color: white;
-    background: #5FCCFF;
-}
+			*-------  Taban (Alt Kısım) -------*
 
-::selection {
-    color: white;
-    background: #5FCCFF;
-}
-
-span.yazar {
-
-	color: #39C;
-    font-size: .9em;
-    margin: 10px 0 0;
-    display: block;
-}
-
-img.anaResim {
-
-	height: auto;
-	max-width: 100%;
-	margin: 0 auto;
-    display: block;
-
-}
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
 
 footer {
 
@@ -527,17 +551,51 @@ footer > div p {
 
 }
 
-ul.basliklar {
 
-	background: 0 0;
-    margin: 15px 0 30px;
-    padding: 0 0 1px;
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+			*-------  Profil  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
+
+ul.profil > li {
+
+	margin: 0px;
+	padding: 5px 10px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-color: #55AADD;
+    font-size: .8em;
+    line-height: 15px;
+}
+
+label.proBaslik, span.proBilgi {
+
+	padding: 0;
 
 }
 
-h3.baslik, span.periyot, span.tarih {
+img.anaResim {
 
-	padding: 0;
+	height: auto;
+	max-width: 100%;
+	margin: 0 auto;
+    display: block;
+
+}
+
+
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+			*-------  Özgeçmiş  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
+
+ul.basliklar {
+
+    margin: 15px 0 30px;
 
 }
 
@@ -553,11 +611,9 @@ ul.basliklar > li {
 
 }
 
-h3 {
+ul.basliklar i {
 
-    color: #636262;
-    font-size: 17.5px;
-    line-height: 25px;
+	margin-right: 5px;
 
 }
 
@@ -571,9 +627,14 @@ h3.baslik {
 
 }
 
+h3.baslik, span.periyot, span.tarih {
+
+	padding: 0;
+
+}
+
 span.periyot, span.tarih {
 
-	float: right;
     color: #999;
 	font-size: 11px;
 	text-align: right;
@@ -582,7 +643,6 @@ span.periyot, span.tarih {
 
 h4.isAdi {
 
-	font-size: 1em;
 	font-weight: inherit;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -601,14 +661,12 @@ h5.dersler {
 
 }
 
-
 ul.ders {
 
 	margin-bottom: 20px;
 	padding: 0;
 
 }
-
 
 ul.ders > li {
 
@@ -627,16 +685,10 @@ div.dersBolumu h6.sinif {
 	float: right;
 	margin: 0;
 	margin-top: 5px;
-	font-weight: bold;
 	font-size: 12px;
 	text-align: center;
 	padding: 0;
-
-}
-
-ul.basliklar i {
-
-	margin-right: 5px;
+	font-weight: 300;
 
 }
 
@@ -646,6 +698,7 @@ h3.yetBaslik {
     display: inline;
     padding-bottom: 3px;
     padding-right: 40px;
+    font-weight: 300;
 
 }
 
@@ -653,7 +706,6 @@ span.yetenek {
 
 	font-size: 1.2em;
     line-height: 1.4em;;
-    font-weight: inherit;
     padding: 0;
 
 }
@@ -683,7 +735,7 @@ h3.ozBilgi {
 	padding: 0;
 	margin: 0;
 	border-bottom: 1px solid;
-	line-height: 25px;
+	font-weight: 300;
 
 }
 
@@ -694,10 +746,24 @@ div.sinavNotu > p {
 
 }
 
-ul.kategori li{
+
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+			*-------  Galeri  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
+
+ul.kategori li {
 
 	margin: 0 5px 8px 0;
     float: left;
+
+}
+
+ul.kategori li a.aktif {
+
+	background-color: #3399CC;
 
 }
 
@@ -719,7 +785,6 @@ a.btn {
 
 	margin: 0 5px 0 0;
 	font-size: .9em;
-	font-weight: 300;
 	display: inline-block;
 
 }
@@ -727,19 +792,6 @@ a.btn {
 a.btn:hover {
 
 	background-color: #39C;
-
-}
-
-#cboxTitle {
-
-    left: 40px !important;
-
-}
-
-#cboxOverlay {
-
-    background: none !important;
-    background-color: #2288bb !important;
 
 }
 
@@ -756,7 +808,9 @@ ul.resimler li img {
 	border: 1px solid #FFF;
 	display: block;
 	opacity: 0.5;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	filter: alpha(opacity=50); /* IE8 ve öncesi için*/
+	-webkit-transition: opacity 1s;
 	transition: opacity 1s;
 	height: auto;
 
@@ -765,17 +819,31 @@ ul.resimler li img {
 ul.resimler li img:hover {
 
 	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	filter: alpha(opacity=100); /* IE8 ve öncesi için*/
 
 }
 
+#cboxTitle {
 
-ul.kategori li a.aktif {
-
-	background-color: #3399CC;
-    color: white;
+    left: 40px !important;
 
 }
+
+#cboxOverlay {
+
+    background: none !important;
+    background-color: #2288bb !important;
+
+}
+
+
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+			*-------  Blog  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
 
 figure.ozetResim {
 
@@ -814,41 +882,7 @@ div.blogOzet span.blogBilgi {
 	margin-top: 10px;
 	font-size: 12px;
 	opacity: 0.8;
-
-}
-
-a.buton, div.sayfalama a {
-
-	margin-top: 10px;
-	color: #2288BB;
-	border: 1px solid #2288BB;
-	font-size: .9em;
-    padding: 8px;
-
-}
-
-a.buton:hover , div.sayfalama a:hover{
-
-	color: white;
-	background-color: #2288BB;
-
-}
-
-article p {
-
-    text-align: justify;
-
-}
-
-article.ozet:first-child {
-
-	padding-top: 0px;
-
-}
-
-article.ozet:last-child {
-
-	border-bottom: none;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 
 }
 
@@ -860,6 +894,14 @@ article.ozet {
 
 }
 
+article.ozet:last-child {
+
+	border-bottom: none;
+
+}
+
+
+/* Blog İçerik Sayfası */
 figure.blogResim {
 
 	width: 385px;
@@ -873,9 +915,9 @@ figure.blogResim {
 
 }
 
-article.blog p{
+article p {
 
-    text-indent: 20px;
+    text-align: justify;
 
 }
 
@@ -892,7 +934,13 @@ article.blog > h1 {
 
 }
 
-article.blog p:first-of-type:first-letter {
+article.blog p { /* Paragraf Başı */
+
+    text-indent: 20px;
+
+}
+
+article.blog p:first-of-type:first-letter { /* İlk Harfi  Büyütme */
 
 	font-size: 40px;
 
@@ -921,11 +969,6 @@ div.blogMenu {
 
 }
 
-i.blog-ikon {
-
-	margin-right: 5px;
-
-}
 
 div.blogMenu a {
 
@@ -943,9 +986,22 @@ a.buton.deaktif {
 a.buton.deaktif:hover {
 
 	background-color: white;
-	color: grey;
 
 }
+
+i.okIkonu {
+
+	margin-right: 5px;
+
+}
+
+
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+			*-------  İletişim  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
 
 address {
 
@@ -1027,7 +1083,6 @@ textarea#mesajAlani {
 input#mesajTemizle {
 
 	font-size: .9em;
-    font-weight: 300;
 	color: #FFFFFF;
     background-color: #999999;
     border-color: #999999;
@@ -1037,7 +1092,6 @@ input#mesajTemizle {
 
 input#mesajTemizle:hover {
 
-	color: #FFFFFF;
     background-color: #666666;
     border-color: #666666;
     cursor: pointer;
@@ -1047,7 +1101,6 @@ input#mesajTemizle:hover {
 input#mesajGonder {
 
 	font-size: .9em;
-    font-weight: 300;
 	color: #FFFFFF;
     background-color: #4AD;
     border-color: #4AD;
@@ -1058,23 +1111,35 @@ input#mesajGonder {
 
 input#mesajGonder:hover {
 
-	color: #FFFFFF;
     background-color: #28B;
     border-color: #28B;
     cursor: pointer;
 
 }
 
+
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*--*
+
+			*-------  Okuduğum Kitaplar  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
+
 ul.kitaplik {
 
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 
 }
 
 ul.kitaplik > li {
 
-    padding: 7px;
+    padding: 7px;,
+	display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
 }
@@ -1095,18 +1160,18 @@ div.kitAlani img {
 
 }
 
+div.kitBilgi {
+
+	margin: 10px -10px 0 -10px;
+
+}
+
 h2.kitIsmi {
 
 	text-align: center;
 	line-height: 25px;
 	border-bottom-width: 3px;
 	min-height: 60px;
-
-}
-
-div.kitBilgi {
-
-	margin: 10px -10px 0 -10px;
 
 }
 
@@ -1117,19 +1182,13 @@ span.kalemSimgesi {
 
 }
 
-div.sayfalama {
 
-	margin-top: 25px;
-	text-align: center;
 
-}
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*--*
 
-/* -*--*--*--*--*--*--*--*--*--*
+			*-------  404 Sayfası  -------*
 
-	---  404 Sayfası  ---
-
-*__*__*__*__*__*__*__*__*__*__*/
-
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
 
 figure.sayfaYok {
 

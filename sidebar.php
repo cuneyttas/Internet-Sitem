@@ -1,4 +1,4 @@
-<section class="solSutun sutun-3 golge">
+<aside class="solSutun sutun-3 golge">
 
 	<div class="maviAlan">
 
@@ -42,4 +42,4 @@
 
 	</div> <!-- maviAlan sonu -->
 
-</section> <!-- solSutun sonu -->
+</aside> <!-- solSutun sonu -->

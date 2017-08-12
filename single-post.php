@@ -52,7 +52,7 @@ if (have_posts()) :
 			<div class="blogMenu">
 
 				<!-- Bloglar Düğmesi -->
-				<a class="buton" href="<?= site_url('blog') ?>"><i class="fa fa-arrow-left blog-ikon"></i>Bloglar</a>
+				<a class="buton" href="<?= site_url('blog') ?>"><i class="fa fa-arrow-left okIkonu"></i>Bloglar</a>
 
 				<!-- Önceki Blog Düğmesi -->
 				<a class="buton <?= oncekiTusu() == '#' ? 'deaktif' : '' ?>" href="<?= oncekiTusu() ?>"><i class="fa fa-arrow-left"></i></a>

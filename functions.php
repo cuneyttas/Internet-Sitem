@@ -38,6 +38,7 @@ function kurulum() {
 add_action('after_setup_theme', 'kurulum');
 
 
+
 // Bileşenlerin Kurulumu
 function bilesenleriBaslat() {
 
@@ -55,6 +56,7 @@ function bilesenleriBaslat() {
 }
 
 add_action('widgets_init', 'bilesenleriBaslat' );
+
 
 
 // Özelleştirmelerin Kurulumu
@@ -101,6 +103,8 @@ function ozellestirmeleriBaslat($ozellestirme) {
 
 add_action('customize_register', 'ozellestirmeleriBaslat' );
 
+
+
 // CSS'lerin Özelleştirilmesi
 function cssOzellestir() { ?>
 
@@ -125,6 +129,7 @@ function cssOzellestir() { ?>
 <?php }
 
 add_action('wp_head', 'cssOzellestir');
+
 
 
 // Özelleştirmeyle (Customize) mavi alan ayarları yapma
@@ -190,6 +195,7 @@ function maviAlaniOzellestir($ozellestirme) {
 add_action('customize_register', 'maviAlaniOzellestir');
 
 
+
 // Yönetilebilir Kitap sayfası hazırlama
 function yonetilirKitapSayfasiYap() {
 
@@ -231,7 +237,7 @@ function yonetilirKitapSayfasiYap() {
 
 		),
 		//'taxonomies' => array('category'),
-		'menu_position' => 5,
+		'menu_position' => 100,
 		'exclude_from_search' => false,
 		'show_in_admin_bar' => true,
 		'menu_icon' => 'dashicons-book'
@@ -243,6 +249,7 @@ function yonetilirKitapSayfasiYap() {
 }
 
 add_action('init', 'yonetilirKitapSayfasiYap');
+
 
 
 // Her bir yönetilebilir sayfaya özel kategoriler ekleme
@@ -313,6 +320,7 @@ function kitapBilgiKutusuIcerigiEkle($gonderi) { //gonderi = post
 	$hatirlamaBasimYiliDegeri = get_post_meta($gonderi->ID, 'hatirlamaBasimYiliAnahtari', true);
 	$tarihDegeri = get_post_meta($gonderi->ID, 'tarihAnahtari', true);
 	$hatirlamaTarihDegeri = get_post_meta($gonderi->ID, 'hatirlamaTarihAnahtari', true);
+	$puanDegeri = get_post_meta($gonderi->ID, 'puanAnahtari', true);
 
 	$basimYiliHatirlama = isset( $hatirlamaBasimYiliDegeri ) ? esc_attr( $hatirlamaBasimYiliDegeri ) : '';
 	$tarihHatirlama = isset( $hatirlamaTarihDegeri ) ? esc_attr( $hatirlamaTarihDegeri ) : '';
@@ -320,20 +328,37 @@ function kitapBilgiKutusuIcerigiEkle($gonderi) { //gonderi = post
 	?>
 
 	<p>
+
 		<label for="sayfaSayisiAnahtari">Sayfa Sayısı:</label>
 		<input type="number" name="sayfaSayisiAnahtari" value="<?= $sayfaSayisiDegeri ?>">
+
 	</p>
 
 	<p>
+
 		<label for="basimYiliAnahtari">Basım Yılı:</label>
 		<input type="number" name="basimYiliAnahtari" value="<?= $basimYiliDegeri ?>">
 		<input type="checkbox" name="hatirlamaBasimYiliAnahtari" value="Hatırlamıyorum" <?php checked( $basimYiliHatirlama, 'Hatırlamıyorum' ); ?>> Hatırlamıyorum
+
 	</p>
 
 	<p>
+
 		<label for="tarihAnahtari">Bitiş Tarihi:</label>
 		<input type="date" name="tarihAnahtari" value="<?= $tarihDegeri ?>">
 		<input type="checkbox" name="hatirlamaTarihAnahtari" value="Hatırlamıyorum" <?php checked( $tarihHatirlama, 'Hatırlamıyorum' ); ?>> Hatırlamıyorum
+
+	</p>
+
+	<p>
+
+		<label for="puanAnahtari">Puan Sıralaması:</label><br>
+		<input type="radio" name="puan" value="1"> Çok Düşük <br>
+		<input type="radio" name="puan" value="2"> Düşük <br>
+		<input type="radio" name="puan" value="3"> Orta <br>
+		<input type="radio" name="puan" value="4"> Yüksek <br>
+		<input type="radio" name="puan" value="5"> Çok Yüksek
+
 	</p>
 
 	<?php
@@ -456,7 +481,7 @@ function yonetilirGaleriSayfasiYap() {
 
 		),
 
-		'menu_position' => 30,
+		'menu_position' => 101,
 		'exclude_from_search' => false,
 		'show_in_admin_bar' => true,
 		'menu_icon' => 'dashicons-format-gallery'
@@ -468,6 +493,7 @@ function yonetilirGaleriSayfasiYap() {
 }
 
 add_action('init', 'yonetilirGaleriSayfasiYap');
+
 
 
 // Her bir yönetilebilir sayfaya özel kategoriler ekleme
@@ -535,6 +561,58 @@ function kategoriGetir($postID, $kategoriAdi, $ayrac = ', ') {
 }
 
 
+
+// Yönetici sayfasındaki Galeri ve Kitaplar kısımlarının kolonlarına resimlerin eklenmesi
+function resimKolonuOlustur($kolonlar) {
+
+	$yeniKolon = $kolonlar;
+	array_splice( $yeniKolon, 1 ); //İlk kolondan sonraki kolona koymak için
+	$yeniKolon['resim'] = 'Resim';
+	return array_merge( $yeniKolon, $kolonlar );
+
+}
+
+add_filter('manage_galeri_posts_columns', 'resimKolonuOlustur');
+add_filter('manage_kitap_posts_columns', 'resimKolonuOlustur');
+
+
+function resimKolonunuAyarla($kolon) {
+
+	switch ($kolon) {
+
+		case 'resim' :
+
+			the_post_thumbnail('thumbnail');
+
+		break;
+
+	}
+
+}
+
+add_action('manage_galeri_posts_custom_column', 'resimKolonunuAyarla');
+add_action('manage_kitap_posts_custom_column', 'resimKolonunuAyarla');
+
+
+
+// Yönetici sayfası Resim kolonu genişliğini ayarlama
+function galeriResimKolonuGenisliginiAyarla() {
+?>
+
+	<style>
+
+		.column-resim {
+			width: 10%;
+		}
+
+	</style>
+
+<?php
+}
+add_action('admin_head', 'galeriResimKolonuGenisliginiAyarla'); //head etiketinin için CSS'lerimizi koyduk
+
+
+
 // Yönetilebilir Durum Mesajı sayfası hazırlama
 function yonetilirDurumMesajiSayfasiYap() {
 
@@ -564,7 +642,7 @@ function yonetilirDurumMesajiSayfasiYap() {
 		'show_in_menu' => true,
 		'capability_type' => 'post',
 		'hierarchical' => false,
-		'menu_position' => 35,
+		'menu_position' => 102,
 		'supports' => array(
 
 			'title',
@@ -580,6 +658,7 @@ function yonetilirDurumMesajiSayfasiYap() {
 }
 
 add_action('init', 'yonetilirDurumMesajiSayfasiYap');
+
 
 function yeniDurumMesajiKolonlariOlustur($kolonlar) {
 
@@ -598,6 +677,7 @@ function yeniDurumMesajiKolonlariOlustur($kolonlar) {
 // Aşağıdaki add_filter ve add_action fonksiyonlarının ilk parametresi içerisindeki register_post_type değişkenine dikkat et!!!
 add_filter('manage_durum_mesaji_posts_columns', 'yeniDurumMesajiKolonlariOlustur');
 
+
 function durumMesajiKolonlariniDuzelt($kolon) {
 
 	if ($kolon == 'yorum') {
@@ -609,6 +689,7 @@ function durumMesajiKolonlariniDuzelt($kolon) {
 }
 
 add_action('manage_durum_mesaji_posts_custom_column', 'durumMesajiKolonlariniDuzelt', 10, 1); // 10 varsayılan öncelik sırası, 2 parametre adedi
+
 
 
 // Admin sayfasına İletişim sayfasından gönderilen mesajların bölümünü oluşturmak
@@ -638,7 +719,7 @@ function mesajlariOlustur() {
 		'show_in_menu' => true,
 		'capability_type' => 'post',
 		'hierarchical' => false,
-		'menu_position' => 20,
+		'menu_position' => 103,
 		'supports' => array(
 
 			'title',
@@ -697,6 +778,7 @@ function mesajKolonlariniDuzelt($kolon, $mesajID) {
 }
 
 add_action('manage_mesaj_posts_custom_column', 'mesajKolonlariniDuzelt', 10, 2); // 10 varsayılan öncelik sırası, 2 parametre adedi
+
 
 
 // İletişim admin sayfası bilgi kutuları (meta box) oluşturma
@@ -758,6 +840,7 @@ function epostaVerisiKaydet($gonderiID) {
 add_action('save_post', 'epostaVerisiKaydet');
 
 
+
 // Kısa kod örneği
 function cuneytTasiKisalt(){ //Parametre de alabiliyor.
 
@@ -766,6 +849,7 @@ function cuneytTasiKisalt(){ //Parametre de alabiliyor.
 }
 
 add_shortcode( 'ct', 'cuneytTasiKisalt' );
+
 
 
 // Sayfalamalarda önceki tuşun fonksiyonu
@@ -780,6 +864,7 @@ function oncekiTusu() {
 	return $oncekiGonderiBaglantisi;
 
 }
+
 
 
 // Sayfalamalarda sonraki tuşun fonksiyonu
@@ -797,6 +882,7 @@ function sonrakiTusu() {
 }
 
 
+
 // Zaman formatını düzenleme
 function zamanDuzenle($zaman) {
 
@@ -809,6 +895,7 @@ function zamanDuzenle($zaman) {
 	return strftime( '%e %B %Y', strtotime($zaman) );
 
 }
+
 
 
 // Github'tan son versiyon bilgisi alma
@@ -827,6 +914,7 @@ function sonVersiyonuGetir() {
 	return $veri['tag_name'];
 
 }
+
 
 
 // Yönetici sayfasındaki Kitaplar'ın içerisindeki kitapların sıralanması
@@ -849,3 +937,23 @@ function yoneticiSayfasiKitapSirala( $query ) {
 }
 
 is_admin() && add_action( 'pre_get_posts', 'yoneticiSayfasiKitapSirala', 999999999 );
+
+
+
+// Admin sayfasındaki Yazılar (Bloglar) kısmında Yazar Kolonunu Kaldırma
+function yazarKolonunuKaldir( $kolonlar ) {
+
+  unset($kolonlar['author']);
+  return $kolonlar;
+
+}
+
+function kolonKaldirmayiBaslat() {
+
+  add_filter( 'manage_posts_columns' , 'yazarKolonunuKaldir' );
+
+}
+
+add_action( 'admin_init' , 'kolonKaldirmayiBaslat' );
+
+
