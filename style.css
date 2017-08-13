@@ -180,6 +180,13 @@ a.buton:hover , div.sayfalama a:hover{
 
 }
 
+/* Puanlama Yıldızı */
+.yildizPuan {
+	text-align: center;
+    margin-bottom: 4px;
+    font-size: 18px;
+    color: #FFD600;
+}
 
 /*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
 
@@ -946,6 +953,12 @@ article.blog p:first-of-type:first-letter { /* İlk Harfi  Büyütme */
 
 }
 
+div.blogAlt {
+
+	margin-top: 50px;
+
+}
+
 div.blogBilgi {
 
 	margin-top: 0;
@@ -1172,6 +1185,7 @@ h2.kitIsmi {
 	line-height: 25px;
 	border-bottom-width: 3px;
 	min-height: 60px;
+	margin-top: 0;
 
 }
 
@@ -1182,6 +1196,56 @@ span.kalemSimgesi {
 
 }
 
+/* Kitap içerik sayfası*/
+section.kitapIcerik {
+
+	padding-bottom: 15px;
+	padding-top: 30px;
+
+}
+
+section.kitapIcerik .yildizPuan {
+
+	font-size: 25px;
+	text-align: left;
+
+}
+
+section.kitapIcerik ul.profil>li {
+
+    font-size: 15px;
+    line-height: 25px;
+
+}
+
+figure.kitapAnaResim {
+
+	margin: 0;
+	padding: 20px;
+	background-color: #3399CC;
+
+}
+
+div.kitapAlt {
+
+	margin-top: 20px;
+	text-align: center;
+
+}
+
+div.kitapMenu {
+
+	padding: 0;
+	display: inline-block;
+    float: none;
+
+}
+
+div.kitapMenu a {
+
+	margin-left: 5px;
+
+}
 
 
 /*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*--*

@@ -21,7 +21,7 @@ if (have_posts()) :
 
 		</article>
 		<div class="temizle"></div>
-		<div class="blogAlt satir" style="margin-top: 50px;">
+		<div class="blogAlt satir">
 
 			<div class="blogBilgi">
 

@@ -31,7 +31,13 @@
 }
 
 
-/* Yatay konumdaki tabletler için */
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+	*-------  Yatay konumdaki tabletler için  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
+
 @media only screen and (max-width: 1199px) {
 
 	nav.menu > ul > li {
@@ -95,7 +101,13 @@
 }
 
 
-/* Dik konumdaki tabletler için */
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+	*-------  Dik konumdaki tabletler için  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
+
 @media only screen and (max-width: 991px) {
 
 	h3 {
@@ -183,10 +195,41 @@
 
 	}
 
+	.single-kitap article {
+
+		padding: 0 20px;
+
+	}
+
+	.single-kitap ul {
+
+		margin: 0;
+
+	}
+
+	section.kitapIcerik ul.profil>li {
+
+	    font-size: 16px;
+	    line-height: 19px;
+
+	}
+
+	figure.kitapAnaResim {
+
+   		padding: 13px;
+
+	}
+
 }
 
 
-/* Yatay konumdaki telefonlar için */
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+	*-------  Yatay konumdaki telefonlar için  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
+
 @media only screen and (max-width: 767px) {
 
 	[class*="sutun-"] {
@@ -268,8 +311,14 @@
 
 	div.sosyal span {
 
-		font-size: 1em;
+		font-size: 8px;
+		line-height: 15px;
 
+	}
+
+	div.sosyal a {
+		font-size: 20px;
+		line-height: 20px;
 	}
 
 
@@ -334,9 +383,35 @@
 
 	}
 
+	section.kitapIcerik ul.profil>li {
+
+	    font-size: 10px;
+	    line-height: 12px;
+
+	}
+
+	section.kitapIcerik .yildizPuan {
+
+    	font-size: 17px;
+
+    }
+
+    figure.kitapAnaResim {
+
+	    padding: 10px;
+
+	}
+
 }
 
-/* Dik konumdaki telefonlar için */
+
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+	*-------  Dik konumdaki telefonlar için  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
+
 @media only screen and (max-width: 479px) {
 
 	[class*="sutun-"] {
@@ -357,7 +432,7 @@
 
 	}
 
-	section.solSutun {
+	aside.solSutun {
 
 	    padding-right: 20px;
 	    height: auto;
@@ -407,6 +482,18 @@
 	    position: static;
 	    padding: 30px 0 0 0 !important;
 	    margin-left: 0 !important;
+	}
+
+	div.sosyal span {
+
+		font-size: 16px;
+
+	}
+
+	div.sosyal a {
+
+		font-size: 35px;
+
 	}
 
 	nav.menu {
@@ -467,6 +554,44 @@
 
 	}
 
+	section.kitapIcerik {
+
+		padding-top: 0;
+
+	}
+
+	figure.kitapAnaResim.sutun-4,
+	section.kitapIcerik > .sutun-8 {
+
+		width: 100%;
+
+	}
+
+	section.kitapIcerik > .sutun-8 {
+
+		padding: 0;
+		margin-top: 15px;
+
+	}
+
+	section.kitapIcerik h3 {
+
+	    text-align: center;
+
+	}
+
+	section.kitapIcerik > article {
+
+		padding: 0;
+
+	}
+
+	div.kitapMenu a.buton {
+
+		font-size: 0.8em;
+
+	}
+
 	div.arama {
 
 	    float: none;
@@ -484,7 +609,12 @@
 
 
 
-/* küçük cep telefonları için: */
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+	*-------  Küçük cep telefonları için  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
+
 @media only screen and (max-width: 385px) {
 
 	nav.menu > ul > li {
@@ -516,7 +646,13 @@
 }
 
 
-/* Menü efektlerinin sadece bilgisayarlarda geçerli olması için */
+
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*
+
+*-------  Menü efektlerinin sadece bilgisayarlarda geçerli olması için  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-*/
+
 @media only screen and (min-width: 1200px) {
 
     nav.menu ul > li > a:hover {
@@ -533,7 +669,12 @@
 
 
 
-/* Retina Ayarları */
+/*--*--*--*--*--*--*--*--*--*--*-*--*--*--*--*--*--*--*--*
+
+			*-------  Retina Ayarları  -------*
+
+-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*/
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
  	   only screen and (-o-min-device-pixel-ratio: 3/2),
  	   only screen and (min--moz-device-pixel-ratio: 1.5),

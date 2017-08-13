@@ -321,6 +321,8 @@ function kitapBilgiKutusuIcerigiEkle($gonderi) { //gonderi = post
 	$tarihDegeri = get_post_meta($gonderi->ID, 'tarihAnahtari', true);
 	$hatirlamaTarihDegeri = get_post_meta($gonderi->ID, 'hatirlamaTarihAnahtari', true);
 	$puanDegeri = get_post_meta($gonderi->ID, 'puanAnahtari', true);
+	$kitapAciklamaDegeri = get_post_meta($gonderi->ID, 'kitapAciklamaAnahtari', true);
+	$kitapYorumDegeri = get_post_meta($gonderi->ID, 'kitapYorumAnahtari', true);
 
 	$basimYiliHatirlama = isset( $hatirlamaBasimYiliDegeri ) ? esc_attr( $hatirlamaBasimYiliDegeri ) : '';
 	$tarihHatirlama = isset( $hatirlamaTarihDegeri ) ? esc_attr( $hatirlamaTarihDegeri ) : '';
@@ -329,7 +331,7 @@ function kitapBilgiKutusuIcerigiEkle($gonderi) { //gonderi = post
 
 	<p>
 
-		<label for="sayfaSayisiAnahtari">Sayfa Sayısı:</label>
+		<label for="sayfaSayisiAnahtari" style="bold:">Sayfa Sayısı:</label>
 		<input type="number" name="sayfaSayisiAnahtari" value="<?= $sayfaSayisiDegeri ?>">
 
 	</p>
@@ -353,11 +355,25 @@ function kitapBilgiKutusuIcerigiEkle($gonderi) { //gonderi = post
 	<p>
 
 		<label for="puanAnahtari">Puan Sıralaması:</label><br>
-		<input type="radio" name="puan" value="1"> Çok Düşük <br>
-		<input type="radio" name="puan" value="2"> Düşük <br>
-		<input type="radio" name="puan" value="3"> Orta <br>
-		<input type="radio" name="puan" value="4"> Yüksek <br>
-		<input type="radio" name="puan" value="5"> Çok Yüksek
+		<input type="radio" name="puanAnahtari" value="1" <?php checked(1, $puanDegeri, true); ?>> Çok Düşük <br>
+		<input type="radio" name="puanAnahtari" value="2" <?php checked(2, $puanDegeri, true); ?>> Düşük <br>
+		<input type="radio" name="puanAnahtari" value="3" <?php checked(3, $puanDegeri, true); ?>> Orta <br>
+		<input type="radio" name="puanAnahtari" value="4" <?php checked(4, $puanDegeri, true); ?>> Yüksek <br>
+		<input type="radio" name="puanAnahtari" value="5" <?php checked(5, $puanDegeri, true); ?>> Çok Yüksek
+
+	</p>
+
+	<p>
+
+		<label for="puanAnahtari">Kitap Açıklaması:</label><br>
+		<textarea name="kitapAciklamaAnahtari" rows="6" cols="100"><?= $kitapAciklamaDegeri ?></textarea>
+
+	</p>
+
+	<p>
+
+		<label for="puanAnahtari">Kitap Hakkındaki Yorumum:</label><br>
+		<textarea name="kitapYorumAnahtari" rows="6" cols="100"><?= $kitapYorumDegeri ?></textarea>
 
 	</p>
 
@@ -371,6 +387,9 @@ function kitapVerisiKaydet($gonderiID) {
 	$hatirlamaBasimYiliVerilerim = esc_html($_POST['hatirlamaBasimYiliAnahtari']);
 	$tarihVerilerim = esc_html($_POST['tarihAnahtari']);
 	$hatirlamaTarihVerilerim = esc_html($_POST['hatirlamaTarihAnahtari']);
+	$puanVerilerim = esc_html($_POST['puanAnahtari']);
+	$kitapAciklamaVerilerim = esc_html($_POST['kitapAciklamaAnahtari']);
+	$kitapYorumVerilerim = esc_html($_POST['kitapYorumAnahtari']);
 
 	if (!isset($_POST['kitapBilgiKutusu'])) {
 
@@ -431,6 +450,24 @@ function kitapVerisiKaydet($gonderiID) {
 	} else {
 
 		delete_post_meta($gonderiID, 'hatirlamaTarihAnahtari');
+
+	}
+
+	if (isset($_POST['puanAnahtari']) && ($_POST['puanAnahtari'] != '')) {
+
+		update_post_meta($gonderiID, 'puanAnahtari', $puanVerilerim);
+
+	}
+
+	if (isset($_POST['kitapAciklamaAnahtari']) && ($_POST['kitapAciklamaAnahtari'] != '')) {
+
+		update_post_meta($gonderiID, 'kitapAciklamaAnahtari', $kitapAciklamaVerilerim);
+
+	}
+
+	if (isset($_POST['kitapYorumAnahtari']) && ($_POST['kitapYorumAnahtari'] != '')) {
+
+		update_post_meta($gonderiID, 'kitapYorumAnahtari', $kitapYorumVerilerim);
 
 	}
 
@@ -956,4 +993,40 @@ function kolonKaldirmayiBaslat() {
 
 add_action( 'admin_init' , 'kolonKaldirmayiBaslat' );
 
+
+
+// Yıldızlarla Puan Durumu Gösterme
+function puanGoster($yildiz) {
+
+	if ($yildiz == 1) {
+
+		echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>';
+
+	}
+
+	elseif ($yildiz == 2) {
+
+		echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>';
+
+	}
+
+	elseif ($yildiz == 3) {
+
+		echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>';
+
+	}
+
+	elseif ($yildiz == 4) {
+
+		echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>';
+
+	}
+
+	elseif ($yildiz == 5) {
+
+		echo '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
+
+	}
+
+}
 

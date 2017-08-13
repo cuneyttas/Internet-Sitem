@@ -2,42 +2,54 @@
 
 	<div class="kitAlani">
 
-		<?php the_post_thumbnail( 'kitap' ); ?>
+		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'kitap' ); ?></a>
 		<div class="kitBilgi">
-		<h2 class="kitIsmi"><?php the_title(); ?></h2>
-	    <ul class="profil">
 
-			<li class="satir"><label class="proBaslik sutun-6">Yazar Adı:</label><span class="proBilgi sutun-6"><?= kategoriGetir($post->ID, 'yazarlar', $ayrac = '<br>') ?></span></li>
-			<li class="satir"><label class="proBaslik sutun-6">Kategori:</label><span class="proBilgi sutun-6"><?= kategoriGetir($post->ID, 'kitaplar', $ayrac = ', ') ?></span></li>
-			<li class="satir"><label class="proBaslik sutun-6">Sayfa Sayısı:</label><span class="proBilgi sutun-6"><?= get_post_meta($post->ID, 'sayfaSayisiAnahtari', true) ?></span></li>
-			<li class="satir"><label class="proBaslik sutun-6">Basım Yılı:</label><span class="proBilgi sutun-6"><?php
+			<div class="yildizPuan">
 
-				if(get_post_meta($post->ID, 'hatirlamaBasimYiliAnahtari', true) == 'Hatırlamıyorum') {
+				<?php
 
-				    echo '?';
+					$yildiz = get_post_meta($post->ID, 'puanAnahtari', true);
+					puanGoster($yildiz);
 
-				} else {
+				?>
 
-					echo get_post_meta($post->ID, 'basimYiliAnahtari', true);
+			</div>
+			<a href="<?php the_permalink(); ?>"><h2 class="kitIsmi"><?php the_title(); ?></h2></a>
+		    <ul class="profil">
 
-			 	} ?>
-			 </span></li>
-			<li class="satir"><label class="proBaslik sutun-6">Bitirdiğim Tarih:</label><span class="proBilgi sutun-6"><?php
+				<li class="satir"><label class="proBaslik sutun-6">Yazar Adı:</label><span class="proBilgi sutun-6"><?= kategoriGetir($post->ID, 'yazarlar', $ayrac = '<br>') ?></span></li>
+				<li class="satir"><label class="proBaslik sutun-6">Kategori:</label><span class="proBilgi sutun-6"><?= kategoriGetir($post->ID, 'kitaplar', $ayrac = ', ') ?></span></li>
+				<li class="satir"><label class="proBaslik sutun-6">Sayfa Sayısı:</label><span class="proBilgi sutun-6"><?= get_post_meta($post->ID, 'sayfaSayisiAnahtari', true) ?></span></li>
+				<li class="satir"><label class="proBaslik sutun-6">Basım Yılı:</label><span class="proBilgi sutun-6"><?php
 
-				if(get_post_meta($post->ID, 'hatirlamaTarihAnahtari', true) == 'Hatırlamıyorum') {
+					if(get_post_meta($post->ID, 'hatirlamaBasimYiliAnahtari', true) == 'Hatırlamıyorum') {
 
-				    echo '?';
+					    echo '?';
 
-				} else {
+					} else {
 
-					echo zamanDuzenle( get_post_meta($post->ID, 'tarihAnahtari', true) );
+						echo get_post_meta($post->ID, 'basimYiliAnahtari', true);
 
-			 	}
+				 	} ?>
+				 </span></li>
+				<li class="satir"><label class="proBaslik sutun-6">Bitirdiğim Tarih:</label><span class="proBilgi sutun-6"><?php
 
-			 	?>
-			 </span></li>
+					if(get_post_meta($post->ID, 'hatirlamaTarihAnahtari', true) == 'Hatırlamıyorum') {
 
-		</ul>
+					    echo '?';
+
+					} else {
+
+						echo zamanDuzenle( get_post_meta($post->ID, 'tarihAnahtari', true) );
+
+				 	}
+
+				 	?>
+				 </span></li>
+
+			</ul>
+
 		</div> <!-- Kitap Bilgi Alanının Sonu -->
 
 	</div> <!-- Kitap Alanının Sonu -->
