@@ -38,10 +38,10 @@ if (have_posts()) :
 			<h4 class="isAdi">
 
 	 		<i class="fa fa-suitcase"></i>
-	 		Twelve12
+	 		<a href="https://www.twelve12.com/about-us/" target="_blank">Twelve12</a>
 
 			</h4>
-			<p>Şirketin Web Geliştirme departmanında PHP ve Wordpress kullanarak internet sitesi (web) geliştiriyorum. </p>
+			<p>Şirketin Web Geliştirme departmanında PHP ve Wordpress kullanarak internet sitesi (web) geliştirme ve bakımından sorumluyum. </p>
 
 		</li>
 		<li>
@@ -56,7 +56,7 @@ if (have_posts()) :
 			<h4 class="isAdi">
 
 	 		<i class="fa fa-suitcase"></i>
-	 		Greyder Bilgi Teknolojileri Departmanı
+	 		<a href="https://www.greyder.com/" target="_blank">Greyder Bilgi Teknolojileri Departmanı</a>
 
 			</h4>
 			<p>Çorum Merkez ve İskilip Greyder fabrikalarının sunucu ve bilgisayarlarının bakım ve onarımı, ülke genelindeki mağazalara uzaktan teknik destek gibi işlerden sorumluydum. </p>
@@ -74,7 +74,7 @@ if (have_posts()) :
 			<h4 class="isAdi">
 
 	 		<i class="fa fa-suitcase"></i>
-	 		Hitit Üniversitesi Eğitim ve Araştırma Hastanesi Bilgi İşlem Birimi
+	 		<a href="http://corumeah.saglik.gov.tr/" target="_blank">Hitit Üniversitesi Eğitim ve Araştırma Hastanesi Bilgi İşlem Birimi</a>
 
 			</h4>
 			<p>Birimler arası ağ kablolama ve teknik destek gibi alanlarda çalıştım.</p>
@@ -90,7 +90,7 @@ if (have_posts()) :
 			<h4 class="isAdi">
 
 	 		<i class="fa fa-suitcase"></i>
-			Çorum Valiliği Bilgi İşlem Müdürlüğü
+			<a href="http://www.corum.gov.tr/bilgi-islem-sube-mudurlugu" target="_blank">Çorum Valiliği Bilgi İşlem Müdürlüğü</a>
 
 			</h4>
 			<p> Sunucuya Windows Server 2008 işletim sisteminin kurulumunun öğrenilmesi; DNS, DHCP ve Active Directory kurulumu, Labris UTM-52 Güvenlik Cihazının Kontrolü, IP Dağıtma gibi işlemler yaptım. </p>
@@ -107,7 +107,7 @@ if (have_posts()) :
 			<h4 class="isAdi">
 
 	 		<i class="fa fa-suitcase"></i>
-	 		OSOA Yazılım ve Danışmanlık
+	 		<a href="http://www.osoa.com.tr/" target="_blank">OSOA Yazılım ve Danışmanlık</a>
 
 			</h4>
 			<p> C# programlama dili üzerine çalışarak bununla ilgili uygulamalar yaptım.</p>
@@ -129,7 +129,7 @@ if (have_posts()) :
 			<h4 class="isAdi">
 
 				<i class="fa fa-graduation-cap"></i>
-				Fırat Üniversitesi Mühendislik Fakültesi Bilgisayar Mühendisliği
+				<a href="http://bil.muh.firat.edu.tr/" target="_blank">Fırat Üniversitesi Mühendislik Fakültesi Bilgisayar Mühendisliği</a>
 
 			</h4>
 			<p>Yarım dönem gecikmeli olarak bitirdim. Mezuniyet puanım 4'lük sisteme göre 2.38'dir.</p>
@@ -234,7 +234,7 @@ if (have_posts()) :
 			<h4 class="isAdi">
 
 				<i class="fa fa-graduation-cap"></i>
-				Amasya Üniversitesi Eğitim Fakültesi Fen Bilgisi Öğretmenliği
+				<a href="https://egitim.amasya.edu.tr/bolumler/matematik-ve-fen-bilimleri-egitimi-bolumu/fen-bilgisi-egitimi-anabilim-dali.aspx" target="_blank">Amasya Üniversitesi Eğitim Fakültesi Fen Bilgisi Öğretmenliği</a>
 
 			</h4>
 			<p>2. sınıfın sonunda yeniden ÖSS'ye girip diğer bölümü kazandığımdan okulu bıraktım. Aşağıda öğrenim gördüğüm süre içerisinde başarılı olup geçtiğim dersler listelenmiştir.</p>
@@ -298,7 +298,7 @@ if (have_posts()) :
 			<h4 class="isAdi">
 
 				<i class="fa fa-graduation-cap"></i>
-				Çorum Fatih Lisesi (Yabancı Dil Ağırlıklı)
+				<a href="http://corumfatihanadolulisesi.meb.k12.tr/" target="_blank">Çorum Fatih Lisesi (Yabancı Dil Ağırlıklı)</a>
 
 			</h4>
 			<p>Süper lise olarak da adlandırılan İngilizce ağırlıklı liseydi. Lise 2. sınıfta Fen Bilimleri (Sayısal) alanını seçtim. Mezuniyet puanım 100'lük not sistemine göre 83'tür.</p>
@@ -402,7 +402,7 @@ if (have_posts()) :
 			<h4 class="isAdi">
 
 				<i class="fa fa-graduation-cap"></i>
-				Çorum Mimar Sinan İlköğretim Okulu
+				<a href="http://corummimarsinanortaokulu.meb.k12.tr/" target="_blank">Çorum Mimar Sinan İlköğretim Okulu</a>
 
 			</h4>
 			<p>4. sınıftan ortaokul 3. sınıfın sonuna kadar da bu okulda öğrenim gördüm. 1998 yılında, 8 yıllık eğitime geçilince eski okulum kapanmış ve bu okula taşınmıştık.</p>
@@ -1313,7 +1313,7 @@ if (have_posts()) :
 
 			<div class="deneyim satir">
 
-				<h3 class="ozBilgi sutun-8"><i class="fa fa-certificate" aria-hidden="true"></i>Akınsoft</h3>
+				<h3 class="ozBilgi sutun-8"><i class="fa fa-certificate" aria-hidden="true"></i><a href="http://www.akinsoft.com.tr/" target="_blank">Akınsoft</a></h3>
 				<span class="tarih sutun-4">Aralık 2011</span>
 
 			</div>
