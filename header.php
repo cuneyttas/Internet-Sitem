@@ -8,7 +8,7 @@
 	 	<meta name="title" content="<?php bloginfo('name'); ?>">
 	 	<meta name="description" content="<?php bloginfo('name'); ?>">
 	 	<meta name="author" content="Cüneyt TAŞ">
-	 	<meta name="keywords" content="cüneyt, taş, cüneyt taş, web tasarım, bilgisayar mühendisi, bilgisayar mühendisliği, çorum">
+	 	<meta name="keywords" content="cüneyt, taş, cüneyt taş, web tasarım, web geliştirici, bilgisayar mühendisi, bilgisayar mühendisliği, çorum, twelve12">
 	 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	 	<link rel="shortcut icon" type="image/x-icon" href="<?= get_stylesheet_directory_uri() ?>/images/favicon.ico">
 	 	<?php wp_head(); ?>

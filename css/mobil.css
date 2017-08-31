@@ -551,6 +551,13 @@
 	ul.kitaplik > li {
 
 	    width: 100% !important;
+	    display: block;
+
+	}
+
+	ul.profil > li {
+
+		font-size: 0.8em;
 
 	}
 
